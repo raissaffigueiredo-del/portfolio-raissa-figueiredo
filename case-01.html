@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Estudo de caso de Raissa Figueiredo: do piloto ao lançamento de uma solução de pagamentos integrados para uma rede de franquias, com esteira de acompanhamento, pilotos, manuais e treinamento.">
+<title>Case 01 · Pagamentos Integrados · Raissa Figueiredo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8F4EF;color:#2A1F33;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#B5546A}a:hover{color:#2A1F33}
+:focus-visible{outline:3px solid #B5546A;outline-offset:3px;border-radius:8px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.disp{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:.96}
+.disp2{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#B5546A}
+.body{font-size:16px;line-height:1.7;color:#4F4556}
+.sec{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(24px,4vw,64px);padding:clamp(40px,5vw,64px) 0;border-top:2px solid #E2D9D3}
+.sec-label{display:flex;flex-direction:column;gap:6px}
+.sec-label .n{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;font-size:28px;color:#B5546A}
+.sec-label h2{margin:0;font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em;font-size:34px;line-height:1.05}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:2px solid #2A1F33;padding-top:24px}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;white-space:nowrap}
+.sim{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#F8F4EF;background:#B5546A;border-radius:999px;padding:7px 12px}
+.card{background:#FFFFFF;border:2px solid #E2D9D3;border-radius:20px;padding:clamp(20px,3vw,32px)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.li{background:#FFFFFF;border:2px solid #E2D9D3;border-radius:14px;padding:14px 16px;font-size:15px;line-height:1.5}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.step{min-height:110px;border-radius:16px;padding:16px;text-align:left;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;flex-direction:column;gap:6px;transition:background .2s,color .2s,transform .2s}
+.step:hover{transform:translateY(-2px)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.who div{background:#FFFFFF;border:2px solid #E2D9D3;border-radius:14px;padding:14px;font-size:14px;line-height:1.5}
+.who b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#B5546A;margin-bottom:4px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;transition:background .2s,color .2s}
+.b-out{border:2px solid #2A1F33;color:#2A1F33;background:#FFFFFF}
+.zoom-btn:hover img{box-shadow:0 20px 40px -24px rgba(42,31,51,.5)}.b-out:hover{background:#2A1F33;color:#F8F4EF}
+@media (max-width:900px){.sec{grid-template-columns:minmax(0,1fr)}.meta{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.steps{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<script src="assets/runtime.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<template data-dc>
+<div style="background: #F8F4EF; min-height: 100vh">
+
+<header style="border-bottom: 2px solid #E2D9D3; background: #F8F4EF">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 76px; flex-wrap: wrap">
+<a href="index.html" class="btn b-out" style="min-height: 44px; padding: 0 16px"><span aria-hidden="true">←</span> Voltar ao portfólio</a>
+<span class="disp2" style="font-size: 20px">Raissa Figueiredo</span>
+<a href="case-02.html" style="text-decoration: none; font-size: 14px; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center; gap: 8px">Próximo case <span aria-hidden="true">→</span></a>
+</div>
+</header>
+
+<main>
+<section style="padding: clamp(56px,8vw,112px) 0 clamp(40px,5vw,64px)">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="pill" style="background: #2A1F33; color: #F8F4EF">Case 01</span><span class="pill" style="background: #E4DBE6">Product Management</span><span class="pill" style="background: #E4DBE6">Service Design</span><span class="pill" style="background: #E4DBE6">UX Writing</span><span class="pill" style="background: #E4DBE6">Go-to-market</span></div>
+<h1 class="disp" style="margin: 0; font-size: clamp(48px,7vw,104px); max-width: 1050px">Pagamentos Integrados: <span style="color: #B5546A">do piloto ao lançamento.</span></h1>
+<p style="margin: 0; font-size: clamp(18px,1.6vw,21px); line-height: 1.6; color: #4F4556; max-width: 780px">Como um produto sem visibilidade de ritmo virou um lançamento com esteira de acompanhamento, quatro pilotos, manuais de apoio, treinamento da rede e oito unidades interessadas no dia da apresentação.</p>
+<div class="meta">
+<div><p class="kick" style="margin: 0 0 6px; font-size: 11px">Contexto</p><p style="margin: 0; font-size: 15px">Aurora Tecnologia SaaS (fictícia) · SaaS B2B</p></div>
+<div><p class="kick" style="margin: 0 0 6px; font-size: 11px">Cliente</p><p style="margin: 0; font-size: 15px">Rede TodoSorriso (fictícia) · franqueadora de clínicas odontológicas</p></div>
+<div><p class="kick" style="margin: 0 0 6px; font-size: 11px">Período</p><p style="margin: 0; font-size: 15px">Mai. 2025 a nov. 2026 · minha atuação desde fev. 2026</p></div>
+<div><p class="kick" style="margin: 0 0 6px; font-size: 11px">Lançamento</p><p style="margin: 0; font-size: 15px">9 de novembro de 2026, na reunião mensal da rede</p></div>
+</div>
+<p style="margin: 0; font-size: 13px; color: #857A8C; display: flex; gap: 10px; align-items: center; flex-wrap: wrap"><span class="sim">Confidencialidade</span>Nomes de empresa, cliente e parceiros são fictícios. Datas, etapas e resultados são relatados pela autora; valores e dados internos não são exibidos.</p>
+</div>
+</section>
+
+<div class="wrap">
+
+<section class="sec" aria-labelledby="s1"><div class="sec-label"><span class="n">01</span><h2 id="s1">Visão geral</h2></div>
+<p class="body" style="margin: 0; font-size: 18px">Pagamentos Integrados é uma solução de pagamento via TEF, com PIX como condição de pagamento associada para as unidades de uma rede de franquias de clínicas odontológicas. O projeto começou em maio de 2025, mas até dezembro de 2025 ninguém tinha visibilidade do seu ritmo. A partir de fevereiro de 2026, assumi a gestão do produto: organizei o acompanhamento, conduzi quatro pilotos com a rede, em duas ondas, estruturei os manuais de apoio e, com Customer Success, apresentei o produto no lançamento para toda a franqueadora, em 9 de novembro de 2026.</p></section>
+
+<section class="sec" aria-labelledby="s2"><div class="sec-label"><span class="n">02</span><h2 id="s2">Contexto</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="body" style="margin: 0">Empresa SaaS B2B com equipe técnica reduzida e um conselho que define prioridades. O cliente é uma franqueadora de clínicas odontológicas; cada unidade tem sua supervisora, e a rede conta com uma central de suporte e um time de assessoria próprios. A solução envolve ainda uma integradora e um parceiro financeiro, responsável pelas contas e pela TEF.</p>
+<div class="who">
+<div><b>Aurora</b>Produto, desenvolvimento, QA, Customer Success e Tech Lead</div>
+<div><b>Rede TodoSorriso</b>Supervisora da rede, central de suporte, assessoria e supervisoras das unidades</div>
+<div><b>Integradora</b>Conexão técnica entre sistema e meios de pagamento</div>
+<div><b>Parceiro financeiro</b>Abertura de contas, TEF, custos e repasses</div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s3"><div class="sec-label"><span class="n">03</span><h2 id="s3">Problema</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="disp2" style="margin: 0; font-size: clamp(26px,2.6vw,36px)">De maio a dezembro de 2025, o projeto andava, mas ninguém sabia dizer em que ritmo, nem o que estava gerando valor.</p>
+<ul class="two" style="margin: 0; padding: 0; list-style: none">
+<li class="li">O conselho não tinha noção de quais entregáveis geravam valor para o negócio.</li>
+<li class="li">O time acompanhava o produto apenas pelos tickets do Runrun.it, sem a visão do produto como negócio.</li>
+<li class="li">Não havia estimativas reais de lançamento para alinhar expectativas com a diretoria.</li>
+<li class="li">O desejo do conselho e o progresso técnico corriam em paralelo, sem um ponto de encontro.</li>
+</ul>
+</div></section>
+
+<section class="sec" aria-labelledby="s4"><div class="sec-label"><span class="n">04</span><h2 id="s4">Meu papel</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="body" style="margin: 0">Gestão do produto desde fevereiro de 2026, da reorganização do acompanhamento até o lançamento.</p>
+<ul class="two" style="margin: 0; padding: 0; list-style: none; gap: 10px">
+<li class="li">Classificação das prioridades do conselho e acompanhamento em uma Esteira de Acompanhamento, apresentada semanalmente ao conselho</li>
+<li class="li">Condução do alinhamento inicial com desenvolvedor, Customer Success, integradora e parceiro financeiro</li>
+<li class="li">Gestão de quatro pilotos com a rede, em duas ondas (duas unidades, depois mais duas), com coleta de feedback, ajustes e padronização</li>
+<li class="li">Elaboração dos manuais de apoio ao lançamento, após processo colaborativo com Tech Lead, desenvolvedor da TEF, CS, QA e um dos sócios</li>
+<li class="li">Criação do board de onboarding e suporte da TEF no Runrun.it, com apoio de CS: etapas, condições de avanço, materiais de apoio e roteiro de perguntas do onboarding</li>
+<li class="li">Apresentação do produto à supervisora da rede e à coordenadora da central de suporte, com CS</li>
+<li class="li">Apresentação do produto no lançamento para toda a franqueadora, com CS</li>
+</ul>
+</div></section>
+
+<section class="sec" aria-labelledby="s5"><div class="sec-label"><span class="n">05</span><h2 id="s5">Restrições</h2></div>
+<ul class="two" style="margin: 0; padding: 0; list-style: none; gap: 10px">
+<li class="li">Equipe técnica reduzida, com o mesmo time atendendo outros produtos e demandas</li>
+<li class="li">Confiança da diretoria e do time de negócio abalada por meses sem visibilidade de prazos e entregas</li>
+<li class="li">Dependência de terceiros: integradora e parceiro financeiro definem parte do fluxo, dos custos e dos prazos</li>
+<li class="li">Produto que envolve dinheiro de clínicas: erro no piloto tem custo real para a unidade</li>
+</ul></section>
+
+<section class="sec" aria-labelledby="s6"><div class="sec-label"><span class="n">06</span><h2 id="s6">Descoberta</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="body" style="margin: 0">Antes de qualquer piloto, reuni desenvolvedor responsável, Customer Success, integradora e parceiro financeiro para levantar o que precisava estar claro para uma clínica operar o produto:</p>
+<div class="who">
+<div><b>Processos</b>Como a unidade orça, aprova, vende e cancela um atendimento com o produto</div>
+<div><b>Fluxos</b>Quem faz o quê, do atendimento ao suporte</div>
+<div><b>Custos e venda</b>Valores de custo, de venda e repasses entre as partes</div>
+<div><b>Desejos reais</b>Durante os pilotos, as clínicas relataram o PIX como condição de pagamento necessária na TEF</div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s7"><div class="sec-label"><span class="n">07</span><h2 id="s7">Processo</h2></div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<p class="body" style="margin: 0">Nove movimentos entre fevereiro e novembro de 2026. Selecione cada um para ver o que foi feito.</p>
+<div class="steps" role="group" aria-label="Etapas do projeto">
+<sc-for list="{{ steps }}" as="st" hint-placeholder-count="9">
+<sc-if value="{{ st.sel }}" hint-placeholder-val="{{ false }}">
+<button type="button" class="step" aria-pressed="true" style="background: #2A1F33; color: #F8F4EF; border: 2px solid #2A1F33"><span class="kick" style="color: #D9A3B0; font-size: 11px">{{ st.when }}</span><span class="disp2" style="font-size: 20px">{{ st.name }}</span></button>
+</sc-if>
+<sc-if value="{{ st.unsel }}" hint-placeholder-val="{{ true }}">
+<button type="button" class="step" aria-pressed="false" onClick="{{ st.pick }}" style="background: #FFFFFF; color: #2A1F33; border: 2px solid #E2D9D3"><span class="kick" style="font-size: 11px">{{ st.when }}</span><span class="disp2" style="font-size: 20px">{{ st.name }}</span></button>
+</sc-if>
+</sc-for>
+</div>
+<div aria-live="polite" class="card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+<div><p class="kick" style="margin: 0 0 8px; font-size: 11px">{{ cur.when }}</p><p class="disp2" style="margin: 0 0 10px; font-size: 30px">{{ cur.name }}</p><p class="body" style="margin: 0; font-size: 15px">{{ cur.text }}</p></div>
+<div style="background: #F3E3E3; border-radius: 14px; padding: 18px"><p class="kick" style="margin: 0 0 8px; font-size: 11px">Quem participou</p><p style="margin: 0; font-size: 14px; line-height: 1.6">{{ cur.who }}</p><p class="kick" style="margin: 14px 0 6px; font-size: 11px">O que mudou</p><p style="margin: 0; font-size: 14px; line-height: 1.6">{{ cur.out }}</p></div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s8"><div class="sec-label"><span class="n">08</span><h2 id="s8">Solução</h2></div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="body" style="margin: 0">Quatro entregas estruturaram a passagem do piloto para a rede inteira.</p>
+<div class="two" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))">
+<article class="card" style="display: flex; flex-direction: column; gap: 12px">
+<span class="pill" style="background: #E4DBE6; align-self: flex-start">Esteira de Acompanhamento</span>
+<p class="disp2" style="margin: 0; font-size: 24px">Prioridades do conselho lado a lado com o progresso dos produtos nível 1</p>
+<p class="body" style="margin: 0; font-size: 14px">Apresentada semanalmente na reunião do conselho. Objetivo: resgatar a confiabilidade em entregas, prazos, estimativas e capacidade do time.</p>
+</article>
+<article class="card" style="display: flex; flex-direction: column; gap: 12px">
+<span class="pill" style="background: #E4DBE6; align-self: flex-start">Manuais de apoio</span>
+<p class="disp2" style="margin: 0; font-size: 24px">Documentação de lançamento escrita por mim após construção colaborativa</p>
+<p class="body" style="margin: 0; font-size: 14px">Orçamento, aprovação, venda e cancelamento com o produto, fluxos de suporte e evoluções previstas, em linguagem para quem atende na clínica.</p>
+</article>
+<article class="card" style="display: flex; flex-direction: column; gap: 12px">
+<span class="pill" style="background: #E4DBE6; align-self: flex-start">Treinamento e lançamento</span>
+<p class="disp2" style="margin: 0; font-size: 24px">Simulação in loco com a assessoria e apresentação na reunião mensal da rede</p>
+<p class="body" style="margin: 0; font-size: 14px">Com CS, desenvolvedor da TEF e QA: simulação de orçamento, aprovação, venda e cancelamento. Dúvidas sanadas antes do dia 9 de novembro.</p>
+</article>
+<article class="card" style="display: flex; flex-direction: column; gap: 12px">
+<span class="pill" style="background: #E4DBE6; align-self: flex-start">Board de onboarding e suporte</span>
+<p class="disp2" style="margin: 0; font-size: 24px">Fluxo da TEF no Runrun.it, com etapas, critérios de avanço e roteiro de onboarding</p>
+<p class="body" style="margin: 0; font-size: 14px">Criado por mim com apoio de CS. Cada etapa tem descrição e condição para o ticket avançar; materiais de apoio anexados; um ticket guarda o roteiro de perguntas que todo onboarding deve responder.</p>
+</article>
+</div>
+<figure style="margin: 8px 0 0; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap"><p class="disp2" style="margin: 0; font-size: 24px">A prancha da esteira apresentada ao conselho</p><span class="sim">Prancha original · nomes substituídos</span></div>
+<button type="button" onClick="{{ openZoom }}" class="zoom-btn" aria-label="Ampliar a prancha da esteira" style="padding: 0; border: 0; background: transparent; cursor: zoom-in; border-radius: 20px; display: block; width: 100%; position: relative">
+<img src="assets/prancha-tef.png" alt="Prancha da Esteira de Acompanhamento sobre Pagamentos Integrados, apresentada ao conselho em 12 de novembro de 2026: linha do tempo com piloto concluído em 4 unidades, lançamento em 9 de novembro, próximo marco de crédito na TEF em 16 de novembro e sustentação contínua; painel de onboarding com 8 franqueados interessados; painel de sustentação com triagem, quadro de chamados, ajustes mapeados e trade-off de capacidade; e quatro critérios propostos para liberar novas unidades" width="1600" height="900" style="width: 100%; height: auto; border-radius: 20px; border: 2px solid #E2D9D3; display: block">
+<span aria-hidden="true" class="pill" style="position: absolute; right: 14px; bottom: 14px; background: #2A1F33; color: #F8F4EF; font-size: 12px">Ampliar ⤢</span>
+</button>
+<figcaption style="font-size: 14px; line-height: 1.6; color: #4F4556">Prancha original da reunião do conselho de 12 de novembro de 2026, três dias após o lançamento, com o mesmo design e conteúdo. Apenas nomes de empresa, rede, unidades, pessoas e parceiro foram substituídos. O formato é o mesmo usado toda semana: linha do tempo com marcos, frentes abertas, trade-offs de capacidade explicitados e critérios submetidos à aprovação do conselho.</figcaption>
+</figure>
+<sc-if value="{{ zoomOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Prancha da esteira ampliada" style="position: fixed; inset: 0; z-index: 100; background: rgba(42,31,51,.92); display: flex; flex-direction: column; padding: clamp(12px,2vw,28px); gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #F8F4EF">
+<p style="margin: 0; font-size: 14px; font-weight: 600">Esteira de Acompanhamento · reunião do conselho de 12/11/2026 · prancha original com nomes substituídos</p>
+<button type="button" onClick="{{ closeZoom }}" aria-label="Fechar ampliação" style="min-height: 44px; min-width: 44px; padding: 0 18px; border: 2px solid #F8F4EF; background: transparent; color: #F8F4EF; border-radius: 999px; font: 700 14px 'DM Sans', sans-serif; cursor: pointer">Fechar ✕</button>
+</div>
+<div style="flex: 1; min-height: 0; overflow: auto; border-radius: 16px; background: #F8F4EF">
+<img src="assets/prancha-tef.png" alt="Prancha da Esteira de Acompanhamento sobre Pagamentos Integrados, apresentada ao conselho em 12 de novembro de 2026: linha do tempo com piloto concluído em 4 unidades, lançamento em 9 de novembro, próximo marco de crédito na TEF em 16 de novembro e sustentação contínua; painel de onboarding com 8 franqueados interessados; painel de sustentação com triagem, quadro de chamados, ajustes mapeados e trade-off de capacidade; e quatro critérios propostos para liberar novas unidades" width="1600" height="900" style="display: block; width: 100%; min-width: 1100px; height: auto">
+</div>
+<button type="button" onClick="{{ closeZoom }}" aria-label="Fechar ampliação" style="position: absolute; inset: 0; z-index: -1; border: 0; background: transparent; cursor: zoom-out"></button>
+</div>
+</sc-if>
+
+</div></section>
+
+<section class="sec" aria-labelledby="s9"><div class="sec-label"><span class="n">09</span><h2 id="s9">Colaboração</h2></div>
+<div class="who">
+<div><b>Customer Success</b>Treinou as supervisoras das unidades piloto, acompanhou o suporte, apoiou a construção do board de onboarding e co-apresentou o produto no lançamento</div>
+<div><b>Desenvolvedor da TEF</b>Alinhamento inicial, ajustes dos pilotos, manuais e treinamento da assessoria</div>
+<div><b>Tech Lead, QA e sócio-coordenador</b>Construção colaborativa dos manuais de apoio; QA também no treinamento in loco</div>
+<div><b>Integradora e parceiro financeiro</b>Processos, fluxos, custos, repasses e abertura de contas das unidades</div>
+<div><b>Rede TodoSorriso</b>Supervisora da rede e coordenadora da central de suporte validaram o produto e a data de lançamento</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s10"><div class="sec-label"><span class="n">10</span><h2 id="s10">Impacto</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<div class="card" style="background: #2A1F33; color: #F8F4EF; border-color: #2A1F33"><p class="disp" style="margin: 0; font-size: 56px; color: #D9A3B0">8</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5">unidades demonstraram interesse imediato após o lançamento, já com o parceiro financeiro para abrir conta e iniciar a obtenção da TEF</p></div>
+<div class="card"><p class="disp" style="margin: 0; font-size: 56px; color: #B5546A">4</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5">pilotos com a rede até o lançamento, em duas ondas, com menos imprevistos na segunda</p></div>
+<div class="card"><p class="disp" style="margin: 0; font-size: 56px; color: #B5546A">~6</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5">meses de piloto até o produto estável, com PIX liberado como condição de pagamento na TEF em 8 de setembro</p></div>
+<div class="card"><p class="disp" style="margin: 0; font-size: 56px; color: #B5546A">1x</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5">por semana, o conselho passou a ver prioridades e progresso na mesma esteira</p></div>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap"><p class="disp2" style="margin: 0; font-size: 24px">Uso real nas unidades piloto</p><span class="pill" style="background: #F3E3E3; font-size: 12px">1º jul. a 15 out. 2026 - relatório de acompanhamento da TEF</span></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px">
+<div style="background: #F8F4EF; border-radius: 14px; padding: 16px"><p class="disp" style="margin: 0; font-size: 40px; color: #B5546A">1.307</p><p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: #4F4556">transações processadas em 3,5 meses, nas 4 unidades piloto</p></div>
+<div style="background: #F8F4EF; border-radius: 14px; padding: 16px"><p class="disp" style="margin: 0; font-size: 40px; color: #B5546A">4,4x</p><p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: #4F4556">de crescimento mensal: de 116 transações em julho para 505 em setembro</p></div>
+<div style="background: #F8F4EF; border-radius: 14px; padding: 16px"><p class="disp" style="margin: 0; font-size: 40px; color: #B5546A">~16</p><p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: #4F4556">transações por dia de operação, em 82 dias com uso</p></div>
+<div style="background: #F8F4EF; border-radius: 14px; padding: 16px"><p class="disp" style="margin: 0; font-size: 40px; color: #B5546A">27%</p><p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: #4F4556">das transações de outubro já por PIX, cinco semanas após a liberação (8 de setembro)</p></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+<div>
+<p class="kick" style="margin: 0 0 12px; font-size: 11px">Transações por mês e unidades ativas</p>
+<div role="img" aria-label="Gráfico de barras: julho 116 transações com 1 unidade, agosto 386 com 4 unidades, setembro 505 com 4 unidades, outubro 300 em 15 dias com 4 unidades" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; align-items: end; height: 180px; border-bottom: 2px solid #2A1F33">
+<sc-for list="{{ months }}" as="m" hint-placeholder-count="4"><div style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 6px; height: 100%"><span style="font-size: 13px; font-weight: 700">{{ m.n }}</span><span style="width: 100%; height: {{ m.h }}; background: {{ m.bg }}; border-radius: 10px 10px 0 0"></span></div></sc-for>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding-top: 8px; font-size: 12px; color: #857A8C; text-align: center">
+<sc-for list="{{ months }}" as="m" hint-placeholder-count="4"><span><strong style="color: #2A1F33">{{ m.l }}</strong><br>{{ m.u }}</span></sc-for>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p class="kick" style="margin: 0; font-size: 11px">Mix de pagamento (por transação)</p>
+<sc-for list="{{ mix }}" as="x" hint-placeholder-count="4"><div style="display: grid; grid-template-columns: 150px minmax(0, 1fr) 44px; gap: 10px; align-items: center; font-size: 13px"><span>{{ x.l }}</span><span style="height: 12px; border-radius: 999px; background: #EFE8E1; overflow: hidden"><span style="display: block; height: 100%; width: {{ x.w }}; background: {{ x.bg }}; border-radius: 999px"></span></span><span style="text-align: right; font-weight: 700">{{ x.p }}</span></div></sc-for>
+<p style="margin: 4px 0 0; font-size: 13px; line-height: 1.55; color: #4F4556">O crédito parcelado é 14% das transações, mas concentra 55% do valor transacionado (média de 5 parcelas): o produto está sendo usado para os tratamentos de maior valor, não só para o caixa do dia.</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 12px; line-height: 1.6; color: #857A8C; border-top: 2px solid #E2D9D3; padding-top: 12px">Entrada escalonada das unidades: 1ª em 1º de julho, 2ª e 3ª na primeira quinzena de agosto, 4ª em 31 de agosto. Outubro cobre apenas 15 dias. Valores financeiros absolutos foram omitidos por confidencialidade; percentuais e quantidades são do relatório de acompanhamento da TEF.</p>
+</div>
+<p class="body" style="margin: 0">Além dos números: a diretoria voltou a ter base para decidir sobre prazos e capacidade, e a rede recebeu o produto com documentação, suporte treinado e uma data combinada, em vez de um lançamento silencioso. O interesse das oito unidades é um sinal de demanda, não contrato assinado; os resultados comerciais serão acompanhados a partir daqui.</p>
+</div></section>
+
+<section class="sec" aria-labelledby="s11"><div class="sec-label"><span class="n">11</span><h2 id="s11">Aprendizados</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<blockquote style="margin: 0; background: #2A1F33; color: #F8F4EF; border-radius: 20px; padding: clamp(28px,4vw,48px)">
+<p class="disp2" style="margin: 0; font-size: clamp(28px,3vw,40px)">“Uma experiência eficiente depende de clareza em toda a jornada, inclusive nas interações que acontecem <span style="color: #D9A3B0">fora da interface.</span>”</p>
+</blockquote>
+<ul class="two" style="margin: 0; padding: 0; list-style: none; gap: 10px">
+<li class="li">Visibilidade vem antes de velocidade: o conselho só voltou a confiar quando passou a ver prioridades e progresso juntos, toda semana.</li>
+<li class="li">Pilotos pequenos e em ondas: quatro ao todo, dois de cada vez, deixaram o suporte direcionado e os imprevistos menores.</li>
+<li class="li">Ouvir o cliente no piloto muda o produto: o PIX entrou porque as clínicas pediram, não porque estava no plano.</li>
+<li class="li">Operação precisa de um lugar: o board com etapas, critérios e roteiro tira o onboarding da cabeça de uma pessoa e coloca ao alcance do time.</li>
+<li class="li">Documentar com quem faz: os manuais ficaram melhores porque Tech Lead, desenvolvedor, CS, QA e sócio construíram o conteúdo antes de eu escrever.</li>
+</ul>
+</div></section>
+
+</div>
+</main>
+
+<footer style="border-top: 2px solid #E2D9D3; margin-top: 48px; padding: 32px 0 48px">
+<div class="wrap" style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center">
+<a href="index.html" style="font-size: 14px; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center">← Todos os projetos</a>
+<a href="case-02.html" style="text-decoration: none; color: #2A1F33; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; min-height: 44px"><span class="kick" style="font-size: 11px">Próximo · Case 02</span><span class="disp2" style="font-size: 28px">Programa Aurora Go! →</span></a>
+</div>
+</footer>
+</div>
+</template>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { sel: 0, zoom: false }; }
+  renderVals() {
+    const data = [
+      { when: 'Fev. 2026', name: 'Esteira de Acompanhamento', text: 'Assumi a gestão do produto e passei a classificar as prioridades do conselho em concomitância com o progresso dos produtos nível 1, em uma esteira apresentada toda semana na reunião do conselho.', who: 'Conselho, diretoria, time de negócio e equipe técnica.', out: 'Prioridades, prazos, estimativas e capacidade do time passaram a ser vistos no mesmo lugar, semanalmente.' },
+      { when: 'Antes do piloto', name: 'Alinhamento das partes', text: 'Reunião com o desenvolvedor responsável, Customer Success, integradora e parceiro financeiro para levantar processos, fluxos, valores de custo e venda e repasses.', who: 'Eu, desenvolvedor do produto, CS, integradora e parceiro financeiro.', out: 'Um fluxo combinado de ponta a ponta antes de qualquer clínica usar o produto.' },
+      { when: 'Antes do piloto', name: 'Treinamento das unidades', text: 'Customer Success treinou as supervisoras das duas unidades piloto: o produto, os benefícios, os fluxos de suporte e as evoluções previstas para a release seguinte.', who: 'CS e supervisoras das duas unidades piloto.', out: 'Unidades entraram no piloto sabendo o que esperar e a quem recorrer.' },
+      { when: 'Jun. 2026', name: 'Piloto 1: duas unidades', text: 'Início do piloto. Coletamos feedbacks, ajustamos rotas, identificamos as ferramentas e os maquinários adequados e padronizamos o processo.', who: 'Unidades piloto, CS, desenvolvedor e eu.', out: 'Processo padronizado e equipamentos definidos para a rede.' },
+      { when: 'Set. 2026', name: 'Piloto 2: mais duas unidades', text: 'Três meses depois, mais duas unidades entraram seguindo o mesmo processo. Menos imprevistos: trabalho e suporte já estavam direcionados e o produto entrava em estabilização.', who: 'Novas unidades, CS, desenvolvedor e eu.', out: 'Confirmação de que o processo era replicável.' },
+      { when: 'Out. 2026', name: 'Estabilização e PIX', text: 'Com quase seis meses de piloto, o produto estava estável e o PIX foi liberado como condição de pagamento associada à TEF, um desejo real relatado pelas clínicas.', who: 'Equipe técnica e unidades piloto.', out: 'Produto pronto para a rede, com a condição de pagamento mais pedida.' },
+      { when: 'Out. 2026', name: 'Manuais e apresentação à rede', text: 'Com Tech Lead, desenvolvedor da TEF, CS, QA e um dos sócios, estruturamos os manuais de apoio; eu os elaborei. Em seguida, eu e CS apresentamos o produto à supervisora da rede e à coordenadora da central de suporte, e marcamos a data do lançamento.', who: 'Tech Lead, desenvolvedor da TEF, CS, QA, sócio-coordenador, supervisora da rede e coordenadora de suporte.', out: 'Documentação pronta e data de lançamento combinada com o cliente.' },
+      { when: 'Out. 2026', name: 'Board de onboarding e suporte', text: 'Depois da reunião com tecnologia e CS, fiquei responsável por criar, com apoio de Customer Success, um board no Runrun.it dedicado ao onboarding e ao suporte da TEF: etapas com o significado de cada uma e a condição para o ticket avançar, materiais de apoio anexados e, em um dos tickets, o roteiro de perguntas a responder sempre que um cliente inicia o onboarding.', who: 'Eu, com apoio de CS; time de tecnologia como usuário do board.', out: 'Onboarding e suporte com etapas, critérios e materiais no mesmo lugar, para todo o time.' },
+      { when: '9 nov. 2026', name: 'Treinamento e lançamento', text: 'Treinamento da assessoria da rede com simulação in loco de orçamento, aprovação, venda e cancelamento. No dia 9 de novembro, na reunião mensal da franqueadora, eu e CS apresentamos o produto para os demais franqueados e clientes externos.', who: 'Eu, CS, desenvolvedor da TEF, QA, assessoria e franqueados.', out: 'Oito unidades demonstraram interesse imediato, já com o parceiro financeiro para abrir conta e iniciar a TEF.' }
+    ];
+    const sel = this.state.sel;
+    const steps = data.map((d, i) => ({ ...d, sel: i === sel, unsel: i !== sel, pick: () => this.setState({ sel: i }) }));
+    const months = [
+      { l: 'Jul', n: '116', u: '1 unidade', h: '23%', bg: '#E4DBE6' },
+      { l: 'Ago', n: '386', u: '4 unidades', h: '76%', bg: '#B5546A' },
+      { l: 'Set', n: '505', u: '4 unidades', h: '100%', bg: '#B5546A' },
+      { l: 'Out (15 dias)', n: '300', u: '4 unidades', h: '59%', bg: '#D9A3B0' }
+    ];
+    const mix = [
+      { l: 'Crédito à vista', p: '40%', w: '40%', bg: '#2A1F33' },
+      { l: 'Débito à vista', p: '39%', w: '39%', bg: '#B5546A' },
+      { l: 'Crédito parcelado', p: '14%', w: '14%', bg: '#D9A3B0' },
+      { l: 'PIX', p: '7%', w: '7%', bg: '#E4DBE6' }
+    ];
+    return { steps, cur: steps[sel], months, mix, zoomOpen: this.state.zoom, openZoom: () => this.setState({ zoom: true }), closeZoom: () => this.setState({ zoom: false }) };
+  }
+}
+</script>
+</body>
+</html>

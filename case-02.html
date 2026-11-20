@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Estudo de caso de Raissa Figueiredo: Programa Aurora Go!, programa de capacitação e premiação para a rede de assessores de uma franqueadora, que zerou chamados técnicos indevidos no primeiro mês.">
+<title>Case 02 · Programa Aurora Go! · Raissa Figueiredo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8F4EF;color:#2A1F33;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#B5546A}a:hover{color:#2A1F33}
+:focus-visible{outline:3px solid #B5546A;outline-offset:3px;border-radius:8px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.disp{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:.96}
+.disp2{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#B5546A}
+.body{font-size:16px;line-height:1.7;color:#4F4556}
+.sec{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(24px,4vw,64px);padding:clamp(40px,5vw,64px) 0;border-top:2px solid #E2D9D3}
+.sec-label{display:flex;flex-direction:column;gap:6px}
+.sec-label .n{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;font-size:28px;color:#B5546A}
+.sec-label h2{margin:0;font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em;font-size:34px;line-height:1.05}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:2px solid #4A3F55;padding-top:24px}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;white-space:nowrap}
+.sim{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#F8F4EF;background:#B5546A;border-radius:999px;padding:7px 12px}
+.card{background:#FFFFFF;border:2px solid #E2D9D3;border-radius:20px;padding:clamp(20px,3vw,32px)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.li{background:#FFFFFF;border:2px solid #E2D9D3;border-radius:14px;padding:14px 16px;font-size:15px;line-height:1.5}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.who div{background:#FFFFFF;border:2px solid #E2D9D3;border-radius:14px;padding:14px;font-size:14px;line-height:1.5}
+.who b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#B5546A;margin-bottom:4px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;transition:background .2s,color .2s}
+.b-out{border:2px solid #2A1F33;color:#2A1F33;background:#FFFFFF}.b-out:hover{background:#2A1F33;color:#F8F4EF}
+.zoom-btn:hover img{box-shadow:0 20px 40px -24px rgba(42,31,51,.5)}
+.qbtn{min-height:48px;padding:0 22px;border-radius:999px;font:700 15px 'DM Sans',sans-serif;cursor:pointer}
+.pick{min-height:48px;min-width:48px;padding:0 18px;border-radius:999px;font:700 15px 'DM Sans',sans-serif;cursor:pointer;border:2px solid #2A1F33;background:#FFFFFF;color:#2A1F33}
+.pick[aria-pressed="true"]{background:#2A1F33;color:#F8F4EF}
+.stat{background:#F8F4EF;border-radius:14px;padding:16px}
+.stat .v{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;font-size:40px;letter-spacing:-.03em;line-height:1;color:#B5546A}
+.stat p{margin:4px 0 0;font-size:13px;line-height:1.5;color:#4F4556}
+.agenda{display:grid;grid-template-columns:90px minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:2px dashed #E2D9D3;font-size:14px}
+@media (max-width:900px){.sec{grid-template-columns:minmax(0,1fr)}.meta{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<script src="assets/runtime.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<template data-dc>
+<div style="background: #F8F4EF; min-height: 100vh">
+
+<header style="border-bottom: 2px solid #E2D9D3">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 76px; flex-wrap: wrap">
+<a href="index.html" class="btn b-out" style="min-height: 44px; padding: 0 16px"><span aria-hidden="true">←</span> Voltar ao portfólio</a>
+<span class="disp2" style="font-size: 20px">Raissa Figueiredo</span>
+<a href="case-03.html" style="text-decoration: none; font-size: 14px; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center; gap: 8px">Próximo case <span aria-hidden="true">→</span></a>
+</div>
+</header>
+
+<main>
+<section style="background: #2A1F33; color: #F8F4EF; padding: clamp(56px,8vw,112px) 0 clamp(48px,6vw,80px); border-radius: 0 0 48px 48px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="pill" style="background: #F8F4EF; color: #2A1F33">Case 02</span><span class="pill" style="background: #4A3F55; color: #F8F4EF">Service Design</span><span class="pill" style="background: #4A3F55; color: #F8F4EF">Product Strategy</span><span class="pill" style="background: #4A3F55; color: #F8F4EF">Customer Experience</span><span class="pill" style="background: #4A3F55; color: #F8F4EF">Stakeholder Management</span></div>
+<h1 class="disp" style="margin: 0; font-size: clamp(56px,8vw,112px)">Programa <span style="color: #D9A3B0">Aurora Go!</span></h1>
+<p style="margin: 0; font-size: clamp(18px,1.6vw,21px); line-height: 1.6; color: #DDD4E0; max-width: 780px">Um programa de capacitação e premiação para a rede de assessores de uma franqueadora que, em vez de uma funcionalidade nova, redesenhou a relação entre pessoas, conhecimento e suporte. No primeiro mês, os chamados técnicos indevidos foram a zero.</p>
+<div class="meta">
+<div><p style="margin: 0 0 6px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #D9A3B0; font-weight: 700">Contexto</p><p style="margin: 0; font-size: 15px">Aurora Tecnologia SaaS (fictícia) · SaaS B2B</p></div>
+<div><p style="margin: 0 0 6px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #D9A3B0; font-weight: 700">Cliente</p><p style="margin: 0; font-size: 15px">Rede TodoSorriso (fictícia) · franqueadora de clínicas odontológicas</p></div>
+<div><p style="margin: 0 0 6px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #D9A3B0; font-weight: 700">Lançamento</p><p style="margin: 0; font-size: 15px">21 de maio de 2026 · evento com a assessoria</p></div>
+<div><p style="margin: 0 0 6px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #D9A3B0; font-weight: 700">Parceria</p><p style="margin: 0; font-size: 15px">Customer Success e supervisora da rede</p></div>
+</div>
+</div>
+</section>
+
+<div class="wrap">
+<p style="margin: 24px 0 0; font-size: 13px; color: #857A8C; display: flex; gap: 10px; align-items: center; flex-wrap: wrap"><span class="sim">Confidencialidade</span>Nomes de empresa, cliente, programa e pessoas são fictícios. Regras, datas e resultados são relatados pela autora; nomes de assessores e unidades não aparecem.</p>
+
+<section class="sec" aria-labelledby="s1" style="margin-top: 24px"><div class="sec-label"><span class="n">01</span><h2 id="s1">Visão geral</h2></div>
+<p class="body" style="margin: 0; font-size: 18px">A rede de assessores da franqueadora era quem orientava as clínicas no uso do sistema, mas não conhecia os produtos. O resultado era uma fila de chamados técnicos que não eram técnicos. Concebi um programa com três pilares (aprender, vender, crescer), regras de premiação progressiva, ranking mensal e um roteiro de triagem. A diretoria liberou o orçamento de imediato; Customer Success conduziu a operação com a supervisora da rede. Desde maio de 2026, o programa também virou o meio de explicar à rede o que é um produto, como ele chega ao lançamento e como funciona a assistência antes, durante e depois da aquisição.</p></section>
+
+<section class="sec" aria-labelledby="s2"><div class="sec-label"><span class="n">02</span><h2 id="s2">Contexto</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="body" style="margin: 0">Empresa SaaS B2B com equipe técnica reduzida e um cliente que é, ao mesmo tempo, uma rede de franquias e uma organização com sócios em comum com a empresa de tecnologia. Esse vínculo cria uma linha tênue entre o que é responsabilidade de uma e de outra: ordens e direcionamentos podem se confundir. O programa precisava funcionar como parceria, preservando a boa convivência, sem deixar de marcar quem decide o quê.</p>
+<div class="who">
+<div><b>Aurora</b>Produto, Customer Success, suporte do sistema e diretoria</div>
+<div><b>Rede TodoSorriso</b>Supervisora da rede, central de suporte e a assessoria que atende as unidades</div>
+<div><b>Assessores</b>Pessoas da franqueadora que orientam as clínicas no dia a dia; público-alvo do programa</div>
+<div><b>Unidades</b>Clínicas odontológicas que usam o sistema e compram os serviços</div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s3"><div class="sec-label"><span class="n">03</span><h2 id="s3">Problema</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="disp2" style="margin: 0; font-size: clamp(26px,2.6vw,36px)">Havia o hábito de achar que tudo era problema do sistema.</p>
+<p class="body" style="margin: 0">Dificuldades de uso chegavam como incidentes ou sustentação "de natureza incerta": eram categorizadas como erro, falha ou problema do sistema e enviadas no mesmo momento ao time de TI. As etapas de triagem dentro da própria rede eram atropeladas. Isso consumia o tempo do suporte, interrompia o desenvolvimento e gerava atrito entre as duas empresas.</p>
+<div aria-hidden="true" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 13px">
+<span class="pill" style="background: #FFFFFF; border: 2px solid #E2D9D3">Dúvida de uso na clínica</span><span style="color: #B5546A">→</span>
+<span class="pill" style="background: #FFFFFF; border: 2px solid #E2D9D3">Assessor não sabe responder</span><span style="color: #B5546A">→</span>
+<span class="pill" style="background: #FFFFFF; border: 2px solid #E2D9D3">Vira "erro do sistema"</span><span style="color: #B5546A">→</span>
+<span class="pill" style="background: #FFFFFF; border: 2px solid #E2D9D3">Chamado técnico direto</span><span style="color: #B5546A">→</span>
+<span class="pill" style="background: #B5546A; color: #F8F4EF">Suporte e TI interrompidos · atrito entre empresas</span>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s4"><div class="sec-label"><span class="n">04</span><h2 id="s4">Meu papel</h2></div>
+<ul class="two" style="margin: 0; padding: 0; list-style: none; gap: 10px">
+<li class="li">Identificação dos assessores como atores estratégicos do problema e da solução</li>
+<li class="li">Concepção do programa: pilares, regras de participação, premiação progressiva, ranking mensal e critérios de desempate</li>
+<li class="li">Organização da comunicação: material de regras para a franqueadora e assessores, convite e cronograma do evento de lançamento</li>
+<li class="li">Direcionamento para a criação do roteiro de triagem de suporte</li>
+<li class="li">Mediação da relação entre as duas empresas: parceria colaborativa, com papéis e direcionamentos claros</li>
+<li class="li">Acompanhamento do ritmo de vendas e efetivações com Customer Success, na planilha de controle do programa</li>
+<li class="li">Criação do flyer de divulgação, do convite e do painel de ranking do programa</li>
+<li class="li">Revisão do processo de comunicação de atualizações: canal direto com a Central da Rede, comunicado padronizado e publicação na Central do Franqueado</li>
+<li class="li">Direcionamento, com QA, da biblioteca de vídeos tutoriais por módulo e por produto em piloto</li>
+</ul></section>
+
+<section class="sec" aria-labelledby="s5"><div class="sec-label"><span class="n">05</span><h2 id="s5">Restrições</h2></div>
+<ul class="two" style="margin: 0; padding: 0; list-style: none; gap: 10px">
+<li class="li">Orçamento condicionado à leitura e ao aceite de CS, suporte e operação antes da liberação pela diretoria</li>
+<li class="li">A operação do programa (treinamentos, acompanhamento, relacionamento) não podia depender do time de produto nem de tecnologia</li>
+<li class="li">Sócios em comum entre as empresas: cuidado para que direcionamento não virasse ordem, nem parceria virasse omissão</li>
+<li class="li">Premiação só por venda efetivada com uso real pela unidade, para não premiar cadastro sem adoção</li>
+</ul></section>
+
+<section class="sec" aria-labelledby="s6"><div class="sec-label"><span class="n">06</span><h2 id="s6">Descoberta</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="background: #F3E3E3; border-radius: 20px; padding: clamp(24px,3vw,36px); display: flex; flex-direction: column; gap: 10px">
+<p class="kick" style="margin: 0; font-size: 11px">Virada de perspectiva</p>
+<p class="disp2" style="margin: 0; font-size: clamp(26px,2.6vw,34px)">O gargalo não estava no sistema nem no suporte. Estava em quem orientava o uso: os assessores não conheciam os produtos.</p>
+</div>
+<div class="who">
+<div><b>Evidência 1</b>Chamados classificados como incidente que, na análise, eram dúvidas de uso ou configuração</div>
+<div><b>Evidência 2</b>Triagem interna da rede pulada: o chamado ia direto para a TI</div>
+<div><b>Evidência 3</b>Assessores sem repertório sobre produtos e funcionalidades para responder às clínicas</div>
+<div><b>Hipótese</b>Se o assessor souber o produto e tiver incentivo para vender e acompanhar, a triagem acontece onde deveria</div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s7"><div class="sec-label"><span class="n">07</span><h2 id="s7">Processo</h2></div>
+<div style="display: flex; flex-direction: column; gap: 40px">
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="disp2" style="margin: 0; font-size: 28px">Três pilares do programa</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px">
+<div class="card" style="display: flex; flex-direction: column; gap: 10px"><span class="kick">01 · Aprender</span><p class="disp2" style="margin: 0; font-size: 22px">Aprender para oferecer com confiança</p><p class="body" style="margin: 0; font-size: 14px">Treinamentos mensais, novos módulos e funcionalidades, cases práticos, materiais de apoio e espaço aberto para dúvidas.</p></div>
+<div class="card" style="display: flex; flex-direction: column; gap: 10px"><span class="kick">02 · Vender</span><p class="disp2" style="margin: 0; font-size: 22px">Ativar e oferecer os serviços</p><p class="body" style="margin: 0; font-size: 14px">Boletos, nota fiscal, TEF e assinatura digital. Premiação progressiva por serviço ativado com uso real.</p></div>
+<div class="card" style="display: flex; flex-direction: column; gap: 10px"><span class="kick">03 · Crescer</span><p class="disp2" style="margin: 0; font-size: 22px">Gerar crescimento para todos</p><p class="body" style="margin: 0; font-size: 14px">Mais serviços usados pelas clínicas, mais resultado no dia a dia, mais crescimento para a rede e para o assessor.</p></div>
+</div>
+</div>
+
+<div class="two" style="align-items: start">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="disp2" style="margin: 0; font-size: 28px">Regras de premiação</p>
+<span class="sim" style="align-self: flex-start">Regras divulgadas à rede · valores reais</span>
+<div class="card" style="padding: 0; overflow: hidden">
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 2px solid #EFE8E1; font-size: 14px"><span>1 serviço ativado no mês</span><strong>R$ 50 por serviço</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 2px solid #EFE8E1; font-size: 14px"><span>2 serviços ativados</span><strong>R$ 70 cada</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 2px solid #EFE8E1; font-size: 14px"><span>3 ou mais serviços</span><strong>R$ 100 cada</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 14px 18px; font-size: 14px; background: #F3E3E3"><span>Ranking mensal</span><strong>1º R$ 500 · 2º R$ 300 · 3º R$ 200</strong></div>
+</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.6; color: #4F4556">Só conta serviço ativado com uso real pela unidade. Em empate, somam-se os prêmios das posições ocupadas e divide-se entre os empatados (três em 1º: R$ 1.000 ÷ 3; dois em 2º: R$ 500 ÷ 2).</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="disp2" style="margin: 0; font-size: 28px">Simule a premiação</p>
+<p style="margin: 0; font-size: 14px; color: #4F4556">A progressão recompensa quem ativa mais de um serviço no mês. Escolha quantos serviços foram ativados com uso real.</p>
+<div role="group" aria-label="Quantidade de serviços ativados" style="display: flex; gap: 8px; flex-wrap: wrap">
+<sc-for list="{{ simOpts }}" as="o" hint-placeholder-count="5">
+<button type="button" class="pick" aria-pressed="{{ o.on }}" onClick="{{ o.pick }}">{{ o.label }}</button>
+</sc-for>
+</div>
+<div aria-live="polite" class="card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; background: #2A1F33; color: #F8F4EF; border-color: #2A1F33">
+<div><p class="kick" style="margin: 0 0 6px; font-size: 11px; color: #D9A3B0">Por serviço</p><p class="disp" style="margin: 0; font-size: 40px">{{ sim.each }}</p></div>
+<div><p class="kick" style="margin: 0 0 6px; font-size: 11px; color: #D9A3B0">Total no mês</p><p class="disp" style="margin: 0; font-size: 40px">{{ sim.total }}</p></div>
+<p style="margin: 0; grid-column: 1 / -1; font-size: 13px; line-height: 1.6; color: #DDD4E0">{{ sim.note }}</p>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="disp2" style="margin: 0; font-size: 28px">Evento de lançamento · 21 de maio de 2026</p>
+<div class="card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: start">
+<div>
+<div class="agenda"><strong>08h00</strong><span>Boas-vindas e abertura oficial</span></div>
+<div class="agenda"><strong>08h10</strong><span>Apresentação do programa: como nasceu e seus objetivos</span></div>
+<div class="agenda"><strong>08h20</strong><span>Regras de participação e premiação</span></div>
+<div class="agenda"><strong>08h30</strong><span>Fluxo operacional e controle de vendas</span></div>
+</div>
+<div>
+<div class="agenda"><strong>09h00</strong><span>Serviços disponíveis no programa: nota fiscal e boletos</span></div>
+<div class="agenda"><strong>09h10</strong><span>Treinamento: módulo de boletos</span></div>
+<div class="agenda"><strong>09h50</strong><span>Dúvidas, alinhamentos e encerramento</span></div>
+<p style="margin: 12px 0 0; font-size: 13px; color: #857A8C; line-height: 1.6">Duas horas, com treinamento prático no mesmo evento em que as regras foram apresentadas: o assessor saiu sabendo o que vender e como.</p>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="disp2" style="margin: 0; font-size: 28px">Comunicação de atualizações do sistema</p>
+<p class="body" style="margin: 0">Outra falha entre as empresas: atualizações do sistema entravam no ar sem agendamento nem aviso à rede. Funcionalidades e produtos novos apareciam sem que a assessoria soubesse, e o conflito vinha em seguida. O processo foi revisado junto com o programa.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
+<div class="card" style="display: flex; flex-direction: column; gap: 8px"><span class="kick">1 · Canal direto</span><p class="disp2" style="margin: 0; font-size: 20px">Canal de acesso direto à Central da Rede</p><p class="body" style="margin: 0; font-size: 14px">Toda atualização passa a ser anunciada antes, com data, horário, duração, impacto e orientação.</p></div>
+<div class="card" style="display: flex; flex-direction: column; gap: 8px"><span class="kick">2 · Documento padrão</span><p class="disp2" style="margin: 0; font-size: 20px">Comunicado padronizado em dois formatos</p><p class="body" style="margin: 0; font-size: 14px">Atualização pontual (emergência) e atualização programada (planejada, com passo a passo com telas e checklist de validação).</p></div>
+<div class="card" style="display: flex; flex-direction: column; gap: 8px"><span class="kick">3 · Central do Franqueado</span><p class="disp2" style="margin: 0; font-size: 20px">Publicação na plataforma da rede</p><p class="body" style="margin: 0; font-size: 14px">Assumi anexar o comunicado diretamente na Central do Franqueado, para evitar atritos e garantir que a informação chegue a quem atende.</p></div>
+<div class="card" style="display: flex; flex-direction: column; gap: 8px"><span class="kick">4 · Vídeos tutoriais</span><p class="disp2" style="margin: 0; font-size: 20px">Biblioteca de treinamentos por módulo</p><p class="body" style="margin: 0; font-size: 14px">Com QA (contratação extra): vídeos dos módulos que mais geravam dúvidas e de todos os produtos em piloto, publicados na Central e sinalizados à supervisora e à coordenadora.</p></div>
+</div>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap"><p class="disp2" style="margin: 0; font-size: 20px">Comunicado de atualização programada</p><span class="sim">Reconstrução · nomes fictícios</span></div>
+<button type="button" onClick="{{ open_comm }}" class="zoom-btn" aria-label="Ampliar: Comunicado de atualização programada" style="padding: 0; border: 0; background: transparent; cursor: zoom-in; border-radius: 20px; display: block; width: 100%; position: relative">
+<img src="assets/comunicado.jpg" alt="Primeira página do comunicado de atualização programada: data 14 de outubro de 2026, início às 20h, duração de 1 hora, três momentos (antes, durante, depois) com orientações, o que muda após a atualização e lembrete de limpeza de cache" width="1200" height="1030" style="width: 100%; height: auto; border-radius: 20px; border: 2px solid #E2D9D3; display: block">
+<span aria-hidden="true" class="pill" style="position: absolute; right: 14px; bottom: 14px; background: #2A1F33; color: #F8F4EF; font-size: 12px">Ampliar ⤢</span>
+</button>
+<figcaption style="font-size: 13px; line-height: 1.6; color: #4F4556">Página 1 do modelo de atualização programada (14 de outubro de 2026): antes, durante e depois com orientação para cada momento, resumo do que muda e lembrete operacional. As páginas 2 a 4 trazem passo a passo com telas e checklist de validação.</figcaption>
+</figure>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="disp2" style="margin: 0; font-size: 28px">Roteiro de triagem: experimente</p>
+<p style="margin: 0; font-size: 14px; color: #4F4556">Antes de abrir um chamado, o assessor responde três perguntas. Versão reconstruída com perguntas ilustrativas.</p>
+<div aria-live="polite" class="card" style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; gap: 6px" aria-hidden="true">
+<sc-for list="{{ dots }}" as="d" hint-placeholder-count="3"><span style="height: 6px; flex: 1; border-radius: 3px; background: {{ d.bg }}"></span></sc-for>
+</div>
+<sc-if value="{{ asking }}" hint-placeholder-val="{{ true }}">
+<p class="kick" style="margin: 0; font-size: 11px">Pergunta {{ qn }} de 3</p>
+<p class="disp2" style="margin: 0; font-size: clamp(24px,2.4vw,32px)">{{ q.text }}</p>
+<div style="display: flex; gap: 10px; flex-wrap: wrap">
+<button type="button" class="qbtn" onClick="{{ yes }}" style="background: #2A1F33; color: #F8F4EF; border: 2px solid #2A1F33">Sim</button>
+<button type="button" class="qbtn" onClick="{{ no }}" style="background: transparent; color: #2A1F33; border: 2px solid #2A1F33">Não</button>
+</div>
+</sc-if>
+<sc-if value="{{ done }}" hint-placeholder-val="{{ false }}">
+<p class="kick" style="margin: 0; font-size: 11px">Encaminhamento</p>
+<p class="disp2" style="margin: 0; font-size: clamp(28px,3vw,40px); color: #B5546A">{{ result.title }}</p>
+<p class="body" style="margin: 0">{{ result.text }}</p>
+<button type="button" class="qbtn" onClick="{{ reset }}" style="align-self: flex-start; background: transparent; color: #B5546A; border: 2px solid #B5546A">Recomeçar triagem</button>
+</sc-if>
+</div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s8"><div class="sec-label"><span class="n">08</span><h2 id="s8">Solução</h2></div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="body" style="margin: 0">O programa entregou quatro peças que funcionam juntas, e a revisão da comunicação acrescentou mais duas: o comunicado padronizado de atualizações e a biblioteca de vídeos.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px">
+<article class="card" style="display: flex; flex-direction: column; gap: 10px"><span class="pill" style="background: #E4DBE6; align-self: flex-start">Material de regras</span><p class="disp2" style="margin: 0; font-size: 22px">Uma página com pilares, premiação, ranking e desempate</p><p class="body" style="margin: 0; font-size: 14px">Divulgada à franqueadora e aos assessores, com exemplos numéricos de empate para não restar dúvida.</p></article>
+<article class="card" style="display: flex; flex-direction: column; gap: 10px"><span class="pill" style="background: #E4DBE6; align-self: flex-start">Evento e treinamento</span><p class="disp2" style="margin: 0; font-size: 22px">Convite, cronograma e treinamento prático no lançamento</p><p class="body" style="margin: 0; font-size: 14px">Regras e capacitação no mesmo dia, com a rede inteira de assessores.</p></article>
+<article class="card" style="display: flex; flex-direction: column; gap: 10px"><span class="pill" style="background: #E4DBE6; align-self: flex-start">Controle de vendas</span><p class="disp2" style="margin: 0; font-size: 22px">Planilha por assessor e painel de acompanhamento</p><p class="body" style="margin: 0; font-size: 14px">Data da venda, unidade, responsável, status de efetivação e data do pagamento do prêmio. CS preenche; eu e CS acompanhamos o ritmo. Painel com totais, efetivados, em fechamento e ranking.</p></article>
+<article class="card" style="display: flex; flex-direction: column; gap: 10px"><span class="pill" style="background: #E4DBE6; align-self: flex-start">Roteiro de triagem</span><p class="disp2" style="margin: 0; font-size: 22px">Perguntas antes de abrir chamado técnico</p><p class="body" style="margin: 0; font-size: 14px">Separa dúvida de uso, incidente e pedido de produto, e devolve a triagem para dentro da rede.</p></article>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap"><p class="disp2" style="margin: 0; font-size: 24px">Painel de acompanhamento · primeiro mês</p><span class="sim">Reconstrução · 24/06/2026 · nomes omitidos</span></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px">
+<div class="stat"><span class="v">5</span><p>notas fiscais vendidas<br>3 efetivadas · 2 em fechamento</p></div>
+<div class="stat"><span class="v">19</span><p>boletos vendidos<br>2 efetivados · 17 em fechamento</p></div>
+<div class="stat"><span class="v">24</span><p>serviços vendidos no total<br>5 efetivados · 19 em fechamento</p></div>
+<div class="stat"><span class="v">11</span><p>assessores envolvidos<br>de uma rede que começou o programa com 9</p></div>
+</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.6; color: #857A8C">"Efetivado" é venda com uso real pela unidade; "em fechamento" é venda registrada aguardando ativação. O ranking do mês premiou cinco assessores empatados em 1º com uma venda efetivada cada.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; align-items: start">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap"><p class="disp2" style="margin: 0; font-size: 20px">Flyer de divulgação do programa</p><span class="sim">Reconstrução · nomes fictícios</span></div>
+<button type="button" onClick="{{ open_flyer }}" class="zoom-btn" aria-label="Ampliar: Flyer de divulgação do programa" style="padding: 0; border: 0; background: transparent; cursor: zoom-in; border-radius: 20px; display: block; width: 100%; position: relative">
+<img src="assets/flyer-aurora-go.jpg" alt="Flyer do Programa Aurora Go!: título, chamada de até R$ 100 por serviço ativado, três pilares (Aprender, Vender, Crescer), premiação progressiva de R$ 50, 70 e 100, ranking mensal de R$ 500, 300 e 200, critérios de desempate e motivos para participar" width="1080" height="1388" style="width: 100%; height: auto; border-radius: 20px; border: 2px solid #E2D9D3; display: block">
+<span aria-hidden="true" class="pill" style="position: absolute; right: 14px; bottom: 14px; background: #2A1F33; color: #F8F4EF; font-size: 12px">Ampliar ⤢</span>
+</button>
+<figcaption style="font-size: 13px; line-height: 1.6; color: #4F4556">Peça criada por mim para a franqueadora e seus assessores: pilares, serviços, premiação progressiva, ranking, desempate com exemplos e motivos para participar. Identidade visual original substituída pela do portfólio.</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap"><p class="disp2" style="margin: 0; font-size: 20px">Painel de ranking dos assessores</p><span class="sim">Reconstrução · nomes fictícios</span></div>
+<button type="button" onClick="{{ open_rank }}" class="zoom-btn" aria-label="Ampliar: Painel de ranking dos assessores" style="padding: 0; border: 0; background: transparent; cursor: zoom-in; border-radius: 20px; display: block; width: 100%; position: relative">
+<img src="assets/ranking-assessores.jpg" alt="Painel de acompanhamento de vendas do programa em 24 de junho de 2026: 5 notas fiscais, 19 boletos, 24 serviços no total, 11 assessores envolvidos, e pódio com cinco assessores empatados em primeiro lugar com uma venda efetivada cada" width="1600" height="1000" style="width: 100%; height: auto; border-radius: 20px; border: 2px solid #E2D9D3; display: block">
+<span aria-hidden="true" class="pill" style="position: absolute; right: 14px; bottom: 14px; background: #2A1F33; color: #F8F4EF; font-size: 12px">Ampliar ⤢</span>
+</button>
+<figcaption style="font-size: 13px; line-height: 1.6; color: #4F4556">Painel de acompanhamento compartilhado com a rede após o primeiro mês: totais por serviço, efetivados e em fechamento, assessores envolvidos e pódio do mês com a regra de desempate aplicada.</figcaption>
+</figure>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s9"><div class="sec-label"><span class="n">09</span><h2 id="s9">Colaboração</h2></div>
+<div class="who">
+<div><b>Customer Success</b>Leu e validou o programa antes do orçamento, conduziu treinamentos e acompanhamento dos assessores e preenche o controle de vendas</div>
+<div><b>Supervisora da rede e coordenadora da Central</b>Parceiras de CS na condução dos assessores; recebem os comunicados de atualização e a sinalização dos novos vídeos</div>
+<div><b>QA</b>Contratação extra que produz os vídeos tutoriais dos módulos e dos produtos em piloto</div>
+<div><b>Suporte do sistema</b>Validou as regras e o roteiro de triagem; é quem deixou de receber chamados indevidos</div>
+<div><b>Diretoria</b>Liberou o orçamento de imediato após a leitura pela operação</div>
+<div><b>Assessores</b>Participaram do evento, dos treinamentos e passaram a vender e acompanhar os serviços</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s10"><div class="sec-label"><span class="n">10</span><h2 id="s10">Impacto</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<div class="card" style="background: #2A1F33; color: #F8F4EF; border-color: #2A1F33"><p class="disp" style="margin: 0; font-size: 56px; color: #D9A3B0">15 → 0</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5">chamados técnicos indevidos por mês: da média anterior para zero no primeiro mês do programa</p></div>
+<div class="card"><p class="disp" style="margin: 0; font-size: 56px; color: #B5546A">24</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5">serviços vendidos por 11 assessores no primeiro mês (até 24/06)</p></div>
+<div class="card"><p class="disp" style="margin: 0; font-size: 56px; color: #B5546A">41</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5">vendas registradas por 13 assessores até 10/11, com 18 efetivadas (13 boletos, 5 notas fiscais)</p></div>
+<div class="card"><p class="disp" style="margin: 0; font-size: 56px; color: #B5546A">22 dias</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5">é a mediana entre a venda e a efetivação com uso real (média de 33 dias)</p></div>
+</div>
+<div class="card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<div>
+<p class="kick" style="margin: 0 0 12px; font-size: 11px">Vendas registradas por mês · mai. a nov. 2026</p>
+<div role="img" aria-label="Barras: maio 9, junho 15, julho 1, agosto 5, setembro 7, outubro 0, novembro 4 (até dia 10)" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; align-items: end; height: 150px; border-bottom: 2px solid #2A1F33">
+<sc-for list="{{ sales }}" as="m" hint-placeholder-count="7"><div style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; height: 100%"><span style="font-size: 12px; font-weight: 700">{{ m.n }}</span><span style="width: 100%; height: {{ m.h }}; background: {{ m.bg }}; border-radius: 8px 8px 0 0"></span></div></sc-for>
+</div>
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; padding-top: 6px; font-size: 11px; color: #857A8C; text-align: center"><sc-for list="{{ sales }}" as="m" hint-placeholder-count="7"><span>{{ m.l }}</span></sc-for></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; justify-content: center">
+<p class="body" style="margin: 0; font-size: 14px">O pico é o lançamento (maio e junho: 24 vendas). Depois, o ritmo cai e se mantém em poucas vendas por mês, com efetivações chegando em agosto (8) à medida que as unidades ativam o serviço.</p>
+<p class="body" style="margin: 0; font-size: 14px">Leitura honesta: o programa resolveu o problema de suporte de forma imediata e abriu um canal de venda pela rede; sustentar o ritmo comercial após o lançamento é o próximo desafio.</p>
+</div>
+</div>
+<div style="background: #F3E3E3; border-radius: 20px; padding: 22px 24px; display: flex; flex-direction: column; gap: 8px">
+<p class="kick" style="margin: 0; font-size: 11px">Impacto além dos números</p>
+<p class="body" style="margin: 0; font-size: 15px">O programa virou um instrumento para a relação entre as duas empresas: ele explicita o que é um produto, quais etapas levam ao lançamento, como é a preparação e como funciona a assistência às unidades antes, durante e depois da aquisição. Com isso, ficou mais claro o que é responsabilidade da tecnologia e o que é da rede, sem romper a parceria.</p>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s11"><div class="sec-label"><span class="n">11</span><h2 id="s11">Aprendizados</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<blockquote style="margin: 0; background: #2A1F33; color: #F8F4EF; border-radius: 20px; padding: clamp(28px,4vw,48px)">
+<p class="disp2" style="margin: 0; font-size: clamp(28px,3vw,40px)">“Resolver um problema de experiência nem sempre exige desenvolver uma funcionalidade. Às vezes, exige redesenhar a relação entre <span style="color: #D9A3B0">pessoas, conhecimento e processos.</span>”</p>
+</blockquote>
+<ul class="two" style="margin: 0; padding: 0; list-style: none; gap: 10px">
+<li class="li">Incentivo sem conhecimento não funciona, e conhecimento sem incentivo não escala: os três pilares precisavam existir juntos.</li>
+<li class="li">Premiar só uso real protege o programa de virar corrida por cadastro e alinha o assessor com a clínica.</li>
+<li class="li">Em empresas com sócios em comum, parceria precisa de papéis escritos: o programa foi o documento que faltava.</li>
+<li class="li">Lançamento resolve o pico; o ritmo depois exige acompanhamento contínuo, não só regras.</li>
+<li class="li">Em muitos pontos de contato, o que faltava às duas empresas não era tecnologia: era comunicação combinada e processo com efeito visível.</li>
+</ul>
+</div></section>
+</div>
+
+<sc-if value="{{ zoom_flyer }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Flyer de divulgação do programa, ampliado" style="position: fixed; inset: 0; z-index: 100; background: rgba(42,31,51,.92); display: flex; flex-direction: column; padding: clamp(12px,2vw,28px); gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #F8F4EF">
+<p style="margin: 0; font-size: 14px; font-weight: 600">Flyer de divulgação do programa · reconstrução ilustrativa com nomes fictícios</p>
+<button type="button" onClick="{{ close_flyer }}" aria-label="Fechar ampliação" style="min-height: 44px; min-width: 44px; padding: 0 18px; border: 2px solid #F8F4EF; background: transparent; color: #F8F4EF; border-radius: 999px; font: 700 14px 'DM Sans', sans-serif; cursor: pointer">Fechar ✕</button>
+</div>
+<div style="flex: 1; min-height: 0; overflow: auto; border-radius: 16px; background: #F8F4EF; padding: 16px">
+<img src="assets/flyer-aurora-go.jpg" alt="Flyer do Programa Aurora Go!: título, chamada de até R$ 100 por serviço ativado, três pilares (Aprender, Vender, Crescer), premiação progressiva de R$ 50, 70 e 100, ranking mensal de R$ 500, 300 e 200, critérios de desempate e motivos para participar" width="1080" height="1388" style="display: block; width: min(100%, 860px); height: auto; margin: 0 auto">
+</div>
+<button type="button" onClick="{{ close_flyer }}" aria-label="Fechar ampliação" style="position: absolute; inset: 0; z-index: -1; border: 0; background: transparent; cursor: zoom-out"></button>
+</div>
+</sc-if>
+<sc-if value="{{ zoom_rank }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Painel de ranking dos assessores, ampliado" style="position: fixed; inset: 0; z-index: 100; background: rgba(42,31,51,.92); display: flex; flex-direction: column; padding: clamp(12px,2vw,28px); gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #F8F4EF">
+<p style="margin: 0; font-size: 14px; font-weight: 600">Painel de ranking dos assessores · reconstrução ilustrativa com nomes fictícios</p>
+<button type="button" onClick="{{ close_rank }}" aria-label="Fechar ampliação" style="min-height: 44px; min-width: 44px; padding: 0 18px; border: 2px solid #F8F4EF; background: transparent; color: #F8F4EF; border-radius: 999px; font: 700 14px 'DM Sans', sans-serif; cursor: pointer">Fechar ✕</button>
+</div>
+<div style="flex: 1; min-height: 0; overflow: auto; border-radius: 16px; background: #F8F4EF; display: flex; justify-content: center">
+<img src="assets/ranking-assessores.jpg" alt="Painel de acompanhamento de vendas do programa em 24 de junho de 2026: 5 notas fiscais, 19 boletos, 24 serviços no total, 11 assessores envolvidos, e pódio com cinco assessores empatados em primeiro lugar com uma venda efetivada cada" width="1600" height="1000" style="display: block; width: auto; max-width: 100%; min-width: min(900px, 100%); height: auto">
+</div>
+<button type="button" onClick="{{ close_rank }}" aria-label="Fechar ampliação" style="position: absolute; inset: 0; z-index: -1; border: 0; background: transparent; cursor: zoom-out"></button>
+</div>
+</sc-if>
+<sc-if value="{{ zoom_comm }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Comunicado de atualização programada, ampliado" style="position: fixed; inset: 0; z-index: 100; background: rgba(42,31,51,.92); display: flex; flex-direction: column; padding: clamp(12px,2vw,28px); gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #F8F4EF">
+<p style="margin: 0; font-size: 14px; font-weight: 600">Comunicado de atualização programada · reconstrução ilustrativa com nomes fictícios</p>
+<button type="button" onClick="{{ close_comm }}" aria-label="Fechar ampliação" style="min-height: 44px; min-width: 44px; padding: 0 18px; border: 2px solid #F8F4EF; background: transparent; color: #F8F4EF; border-radius: 999px; font: 700 14px 'DM Sans', sans-serif; cursor: pointer">Fechar ✕</button>
+</div>
+<div style="flex: 1; min-height: 0; overflow: auto; border-radius: 16px; background: #F8F4EF; display: flex; justify-content: center">
+<img src="assets/comunicado.jpg" alt="Primeira página do comunicado de atualização programada: data 14 de outubro de 2026, início às 20h, duração de 1 hora, três momentos (antes, durante, depois) com orientações, o que muda após a atualização e lembrete de limpeza de cache" width="1200" height="1030" style="display: block; width: auto; max-width: 100%; min-width: min(900px, 100%); height: auto">
+</div>
+<button type="button" onClick="{{ close_comm }}" aria-label="Fechar ampliação" style="position: absolute; inset: 0; z-index: -1; border: 0; background: transparent; cursor: zoom-out"></button>
+</div>
+</sc-if>
+</main>
+
+<footer style="border-top: 2px solid #E2D9D3; margin-top: 48px; padding: 32px 0 48px">
+<div class="wrap" style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center">
+<a href="case-01.html" style="font-size: 14px; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center">← Case 01</a>
+<a href="case-03.html" style="text-decoration: none; color: #2A1F33; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; min-height: 44px"><span class="kick" style="font-size: 11px">Próximo · Case 03</span><span class="disp2" style="font-size: 28px">Roteamento Inteligente de Demandas →</span></a>
+</div>
+</footer>
+</div>
+</template>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":8600}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { step: 0, result: null, n: 1, zoom: null }; }
+  renderVals() {
+    const s = this.state;
+    const qs = [
+      { text: 'O sistema está fora do ar ou exibindo uma mensagem de erro?', yes: 'inc' },
+      { text: 'A dificuldade é sobre como usar uma funcionalidade existente?', yes: 'uso' },
+      { text: 'É um pedido de melhoria ou de algo que o sistema ainda não faz?', yes: 'prod', no: 'cs' }
+    ];
+    const results = {
+      inc: { title: 'Incidente técnico', text: 'Abrir chamado para o suporte do sistema, com a descrição do erro e o passo a passo para reproduzi-lo.' },
+      uso: { title: 'Orientação de uso', text: 'Resolver com o material do programa ou com um assessor capacitado. Não é chamado técnico.' },
+      prod: { title: 'Solicitação de produto', text: 'Registrar a sugestão para avaliação do time de produto, sem interromper o desenvolvimento em curso.' },
+      cs: { title: 'Customer Success', text: 'Encaminhar ao Customer Success para entender o caso com a unidade.' }
+    };
+    const done = !!s.result;
+    const q = qs[Math.min(s.step, 2)];
+    const yes = () => this.setState({ result: results[q.yes] });
+    const no = () => { if (s.step >= 2) this.setState({ result: results[q.no] }); else this.setState({ step: s.step + 1 }); };
+    const dots = [0, 1, 2].map((i) => ({ bg: i <= s.step ? '#B5546A' : '#EFE8E1' }));
+
+    const n = s.n;
+    const each = n >= 3 ? 100 : n === 2 ? 70 : 50;
+    const simOpts = [1, 2, 3, 4, 5].map((k) => ({ label: k === 5 ? '5+' : String(k), on: k === n ? 'true' : 'false', pick: () => this.setState({ n: k }) }));
+    const sim = { each: 'R$ ' + each, total: 'R$ ' + (each * n), note: n === 1 ? 'Uma ativação com uso real já é premiada.' : n === 2 ? 'Na segunda ativação, o valor de cada serviço sobe 40%.' : 'A partir da terceira ativação, cada serviço vale o dobro da primeira faixa. Soma-se ainda o ranking mensal.' };
+
+    const sales = [
+      { l: 'Mai', n: '9', h: '60%', bg: '#B5546A' }, { l: 'Jun', n: '15', h: '100%', bg: '#B5546A' }, { l: 'Jul', n: '1', h: '7%', bg: '#E4DBE6' },
+      { l: 'Ago', n: '5', h: '33%', bg: '#E4DBE6' }, { l: 'Set', n: '7', h: '47%', bg: '#E4DBE6' }, { l: 'Out', n: '0', h: '2%', bg: '#E4DBE6' }, { l: 'Nov*', n: '4', h: '27%', bg: '#D9A3B0' }
+    ];
+    const z = s.zoom;
+    const zoomVals = { zoom_flyer: z === 'flyer', zoom_rank: z === 'rank', zoom_comm: z === 'comm', open_flyer: () => this.setState({ zoom: 'flyer' }), open_rank: () => this.setState({ zoom: 'rank' }), open_comm: () => this.setState({ zoom: 'comm' }), close_flyer: () => this.setState({ zoom: null }), close_rank: () => this.setState({ zoom: null }), close_comm: () => this.setState({ zoom: null }) };
+    return { ...zoomVals, asking: !done, done, q, qn: s.step + 1, yes, no, result: s.result || results.inc, reset: () => this.setState({ step: 0, result: null }), dots, simOpts, sim, sales };
+  }
+}
+</script>
+</body>
+</html>

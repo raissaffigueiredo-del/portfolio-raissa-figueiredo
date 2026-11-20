@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Estudo de caso de Raissa Figueiredo: Mutirão de Incidentes, cerca de 120 chamados em aberto resolvidos e um novo processo de triagem com etiquetas.">
+<title>Case 03 · Mutirão de Incidentes · Raissa Figueiredo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8F4EF;color:#2A1F33;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#B5546A}a:hover{color:#2A1F33}
+:focus-visible{outline:3px solid #B5546A;outline-offset:3px;border-radius:8px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.serif{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#B5546A}
+.body{font-size:16px;line-height:1.7;color:#4F4556}
+.sec{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(24px,4vw,64px);padding:clamp(40px,5vw,64px) 0;border-top:2px solid #E2D9D3}
+.sec-label{display:flex;flex-direction:column;gap:6px}
+.sec-label .n{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;font-size:28px;color:#B5546A}
+.sec-label h2{margin:0;font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em;font-size:34px;line-height:1.05}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:1px solid #2A1F33;padding-top:24px}
+.todo{border:2px dashed #D9CFC4;border-radius:20px;padding:20px;font-size:14px;line-height:1.6;color:#857A8C;background:#FFFFFF}
+.sim{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#F8F4EF;background:#B5546A;border-radius:999px;padding:7px 12px}
+.router{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:20px}
+.card{background:#FFFFFF;border:2px solid #E2D9D3;border-radius:20px;padding:22px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.tag{display:inline-flex;align-items:center;font-size:12px;font-weight:700;border-radius:999px;padding:5px 11px}
+.li{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.li li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:10px;font-size:15px;line-height:1.6;color:#4F4556}
+.li li::before{content:"";width:8px;height:8px;border-radius:50%;background:#B5546A;margin-top:9px}
+.opt{width:100%;min-height:48px;text-align:left;padding:12px 16px;border-radius:12px;font:500 14px 'DM Sans',sans-serif;cursor:pointer;transition:background .2s,color .2s}
+@media (max-width:900px){.sec{grid-template-columns:minmax(0,1fr)}.meta{grid-template-columns:repeat(2,minmax(0,1fr))}.router{grid-template-columns:minmax(0,1fr)}.two{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<script src="assets/runtime.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<template data-dc>
+<div style="background: #F8F4EF; min-height: 100vh">
+
+<header style="border-bottom: 1px solid #E2D9D3">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; flex-wrap: wrap">
+<a href="index.html" style="text-decoration: none; color: #2A1F33; font-size: 14px; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 2px solid #2A1F33"><span aria-hidden="true">←</span> Voltar ao portfólio</a>
+<span class="serif" style="font-size: 22px">Raissa Figueiredo</span>
+<a href="case-04.html" style="text-decoration: none; font-size: 14px; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; gap: 8px">Próximo case <span aria-hidden="true">→</span></a>
+</div>
+</header>
+
+<main>
+<section style="padding: clamp(56px,8vw,112px) 0 clamp(40px,5vw,64px)">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+<p class="eyebrow" style="margin: 0">Case 03 · Process Design · Product Operations · Service Design</p>
+<h1 class="serif" style="margin: 0; font-size: clamp(48px,7vw,96px); line-height: .98; max-width: 1100px">Mutirão de Incidentes: <em style="color: #B5546A">cerca de 120 chamados</em> e uma nova triagem</h1>
+<p style="margin: 0; font-size: clamp(18px,1.6vw,21px); line-height: 1.6; color: #4F4556; max-width: 800px">Um acúmulo de chamados sem retorno, alguns com até 2 anos, virou uma ação contínua com meta semanal e, a partir dela, um processo de triagem que entrega aos devs chamados contextualizados desde a entrada.</p>
+<div class="meta">
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Contexto</p><p style="margin: 0; font-size: 15px">Aurora Tecnologia SaaS e Rede TodoSorriso (nomes fictícios)</p></div>
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Kickoff</p><p style="margin: 0; font-size: 15px">30 jun. 2026</p></div>
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Ferramenta</p><p style="margin: 0; font-size: 15px">Runrun.it · board de Incidentes</p></div>
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Status</p><p style="margin: 0; font-size: 15px">Acervo zerado em 13 nov. 2026 · triagem em vigor</p></div>
+</div>
+</div>
+</section>
+
+<div class="wrap">
+
+<section class="sec" aria-labelledby="s1"><div class="sec-label"><span class="n">01</span><h2 id="s1">Visão geral</h2></div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="body" style="margin: 0; font-size: 18px">A franqueadora da Rede TodoSorriso trouxe cerca de 120 chamados abertos na Central do Franqueado, encaminhados para "TI" e sem retorno. O conselho pediu ação imediata. Conduzi o kickoff do Mutirão, organizei com o time o fluxo, as etapas e as etiquetas da frente e acompanhei a vazão até o acervo zerar. O que o Mutirão revelou mudou a forma como os chamados entram no time.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px">
+<div class="card"><p class="serif" style="margin: 0; font-size: 44px; color: #B5546A">~120</p><p style="margin: 4px 0 0; font-size: 14px; color: #4F4556">chamados em aberto no início</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 44px; color: #B5546A">7</p><p style="margin: 4px 0 0; font-size: 14px; color: #4F4556">liberados no primeiro dia (01/07)</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 44px; color: #B5546A">50%</p><p style="margin: 4px 0 0; font-size: 14px; color: #4F4556">liberados na primeira semana (08/07)</p></div>
+<div class="card" style="background: #2A1F33; border-color: #2A1F33; color: #F8F4EF"><p class="serif" style="margin: 0; font-size: 44px; color: #D9A3B0">100%</p><p style="margin: 4px 0 0; font-size: 14px; color: #DDD4E0">resolvidos em 13/11/2026</p></div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s2"><div class="sec-label"><span class="n">02</span><h2 id="s2">Contexto</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="body" style="margin: 0">O Runrun.it é usado para a triagem de demandas desde o início da empresa. Por muito tempo, um chamado era basicamente um título, um responsável e o play do cronômetro. Não havia PO nem agilista: o acompanhamento ficava com o Tech Lead e com o CPO e o CTO, que também são devs e sócios.</p>
+<p class="body" style="margin: 0">Nos primeiros 4 anos atuei como UI/UX e fui sendo inserida aos poucos no acompanhamento das demandas, dos boards e das documentações. Do lado de design, sentia falta de chamados bem documentados e em linguagem de negócio: muitos cards traziam apenas o PR ou um print do banco de dados.</p>
+</div></section>
+
+<section class="sec" aria-labelledby="s3"><div class="sec-label"><span class="n">03</span><h2 id="s3">Problema</h2></div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="serif" style="margin: 0; font-size: clamp(26px,2.6vw,34px); line-height: 1.2">Cerca de 120 chamados abertos na Central do Franqueado, encaminhados para "TI" e sem retorno, alguns com até 2 anos.</p>
+<ul class="li">
+<li>Os indicadores dos dois lados eram prejudicados: o da franqueadora, que não conseguia responder às unidades, e o da Aurora, que acumulava pendências sem visibilidade.</li>
+<li>Por falta de retorno, os chamados voltavam a ser abertos, gerando duplicidade.</li>
+<li>Os chamados chegavam ao time técnico sem contexto de negócio, sem distinção de natureza e sem quem os lesse antes do dev.</li>
+</ul>
+</div></section>
+
+<section class="sec" aria-labelledby="s4"><div class="sec-label"><span class="n">04</span><h2 id="s4">Meu papel</h2></div>
+<div class="two">
+<div class="card" style="display: flex; flex-direction: column; gap: 12px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">O que conduzi</p>
+<ul class="li">
+<li>O kickoff do Mutirão, em 30/06/2026.</li>
+<li>A definição, com o time, de processos, fluxos, quem recebe e quem tria, etapas e etiquetas da frente.</li>
+<li>O acompanhamento da vazão e o reporte ao conselho.</li>
+<li>A orientação ao QA e ao time para etiquetar todo chamado na entrada.</li>
+</ul>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 12px; background: #F3E3E3; border-color: #F3E3E3">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Crédito ao time</p>
+<ul class="li">
+<li>Os devs com acesso ao banco de dados resolveram os chamados técnicos.</li>
+<li>O QA identificou que boa parte do acervo não exigia atuação de dev e passou a ser a referência da triagem.</li>
+<li>A Central da Rede acompanhou o board e encerrou os chamados na Central do Franqueado.</li>
+</ul>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s5"><div class="sec-label"><span class="n">05</span><h2 id="s5">Restrições</h2></div>
+<ul class="li">
+<li>Time enxuto: só os devs com acesso ao banco de dados podiam atuar nos chamados técnicos.</li>
+<li>Sem PO ou agilista, e com sócios-devs dividindo o tempo entre desenvolvimento e gestão.</li>
+<li>Os chamados vinham de outra ferramenta, a Central do Franqueado, e precisavam ser encerrados lá.</li>
+</ul></section>
+
+<section class="sec" aria-labelledby="s6"><div class="sec-label"><span class="n">06</span><h2 id="s6">Processo</h2></div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div class="card" style="display: flex; flex-direction: column; gap: 10px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Kickoff · 30/06/2026</p>
+<p class="body" style="margin: 0">Reuni o Tech Lead, o QA, o dev responsável pelos incidentes e pela TEF e os dois sócios-devs. Definimos o fluxo do board de Incidentes, quem recebe e quem tria, as etapas e as etiquetas que distinguem os chamados dessa frente, para contabilizar a vazão e reportá-la ao conselho. A Central da Rede passou a acompanhar o board diretamente.</p>
+</div>
+<div class="two">
+<div class="card" style="display: flex; flex-direction: column; gap: 8px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Compromisso combinado</p>
+<p class="serif" style="margin: 0; font-size: 28px; line-height: 1.15">Cada dev resolve no mínimo 1 chamado por semana: <span style="color: #B5546A">no mínimo 4 por semana</span>.</p>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 8px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Decisão de formato</p>
+<p class="body" style="margin: 0">Avaliamos uma janela fixa compartilhada às sextas. Optamos por uma janela semanal flexível, em que cada dev organiza o próprio horário, mantendo o compromisso mínimo.</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Evolução do acervo</p>
+<sc-for list="{{ steps }}" as="t" hint-placeholder-count="4">
+<div style="display: grid; grid-template-columns: 130px minmax(0,1fr) 56px; gap: 14px; align-items: center">
+<span style="font-size: 14px; font-weight: 700">{{ t.d }}</span>
+<span style="height: 14px; background: #EFE8E1; border-radius: 999px; overflow: hidden"><span style="display: block; height: 100%; width: {{ t.w }}; background: {{ t.bg }}; border-radius: 999px"></span></span>
+<span style="font-size: 14px; font-weight: 700; color: #B5546A; text-align: right">{{ t.v }}</span>
+</div>
+</sc-for>
+<p style="margin: 4px 0 0; font-size: 13px; color: #857A8C">Proporção de chamados liberados sobre o acervo inicial. No dia 01/07, 7 chamados liberados.</p>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s7"><div class="sec-label"><span class="n">07</span><h2 id="s7">Descoberta</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="serif" style="margin: 0; font-size: clamp(24px,2.4vw,30px); line-height: 1.25">Por que metade saiu tão rápido? Porque boa parte do acervo não precisava de um dev.</p>
+<p class="body" style="margin: 0">Durante o Mutirão, o QA percebeu que muitos chamados estavam prescritos, duplicados em outros boards, eram ajustes de configuração que o próprio suporte da franqueadora poderia fazer, ou se resolviam com a instrução correta ao usuário. O problema não era só de capacidade: era de triagem.</p>
+</div></section>
+
+<section class="sec" aria-labelledby="s8"><div class="sec-label"><span class="n">08</span><h2 id="s8">Solução</h2></div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<p class="body" style="margin: 0">A triagem foi reorganizada para começar pelo QA, que tem mais de 7 anos de experiência no suporte N1 da franqueadora e, somando o tempo na Aurora, mais de 10 anos de experiência. Conhece a operação das unidades por dentro. Orientei o QA e o time a etiquetar todo chamado na entrada, para que o dev receba o chamado já contextualizado, com evidências, sugestões e comentários do QA.</p>
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 13px; color: #857A8C; display: flex; gap: 10px; align-items: center; flex-wrap: wrap"><span class="sim">Simulação</span>Chamados e etiquetas fictícios, para ilustrar a lógica da triagem. Não reproduzem chamados reais.</p>
+<div class="card" style="padding: clamp(20px,3vw,32px)">
+<div class="router">
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+<legend class="eyebrow" style="font-size: 11px; margin-bottom: 10px">1 · Chamado na entrada</legend>
+<sc-for list="{{ tickets }}" as="k" hint-placeholder-count="5">
+<sc-if value="{{ k.sel }}" hint-placeholder-val="{{ false }}"><button type="button" class="opt" aria-pressed="true" style="background: #2A1F33; color: #F8F4EF; border: 2px solid #2A1F33"><strong style="display: block">{{ k.title }}</strong><span style="font-size: 12px; opacity: .85">{{ k.age }}</span></button></sc-if>
+<sc-if value="{{ k.unsel }}" hint-placeholder-val="{{ true }}"><button type="button" class="opt" aria-pressed="false" onClick="{{ k.pick }}" style="background: #F8F4EF; color: #2A1F33; border: 2px solid #E2D9D3"><strong style="display: block">{{ k.title }}</strong><span style="font-size: 12px; color: #857A8C">{{ k.age }}</span></button></sc-if>
+</sc-for>
+</fieldset>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p class="eyebrow" style="font-size: 11px; margin: 0 0 10px">2 · Leitura do QA</p>
+<div aria-live="polite" style="background: #2A1F33; color: #F8F4EF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+<span class="tag" style="align-self: flex-start; background: #D9A3B0; color: #2A1F33">{{ cur.tag }}</span>
+<p class="serif" style="margin: 0; font-size: 30px; line-height: 1.1">{{ cur.dest }}</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #DDD4E0">{{ cur.why }}</p>
+<p style="margin: 0; padding-top: 12px; border-top: 1px solid #4A3D55; font-size: 13px; line-height: 1.6; color: #DDD4E0"><strong style="color: #D9A3B0">Nota do QA:</strong> {{ cur.note }}</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Como o chamado chega ao dev</p>
+<div style="display: inline-flex; gap: 6px; padding: 6px; background: #EFE8E1; border-radius: 999px; align-self: flex-start" role="group" aria-label="Comparar antes e depois">
+<button type="button" onClick="{{ setBefore }}" aria-pressed="{{ pBefore }}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; font: 600 14px 'DM Sans',sans-serif; cursor: pointer; background: {{ bgBefore }}; color: {{ fgBefore }}">Antes</button>
+<button type="button" onClick="{{ setAfter }}" aria-pressed="{{ pAfter }}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; font: 600 14px 'DM Sans',sans-serif; cursor: pointer; background: {{ bgAfter }}; color: {{ fgAfter }}">Depois</button>
+</div>
+<sc-if value="{{ isBefore }}" hint-placeholder-val="{{ true }}">
+<div class="card" style="max-width: 640px; display: flex; flex-direction: column; gap: 12px">
+<p class="serif" style="margin: 0; font-size: 22px">Erro no relatório</p>
+<div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; font-size: 14px; color: #4F4556"><span class="tag" style="background: #EFE8E1; color: #4F4556">Responsável: dev</span><span class="tag" style="background: #EFE8E1; color: #4F4556">▶ 00:00:00</span></div>
+<div style="border: 2px dashed #D9CFC4; border-radius: 12px; padding: 14px; font-size: 13px; color: #857A8C">Anexo: print de consulta ao banco de dados</div>
+<p style="margin: 0; font-size: 13px; color: #857A8C">Sem natureza definida, sem contexto de negócio, sem evidência do usuário.</p>
+</div>
+</sc-if>
+<sc-if value="{{ isAfter }}" hint-placeholder-val="{{ false }}">
+<div class="card" style="max-width: 640px; display: flex; flex-direction: column; gap: 12px; border-color: #B5546A">
+<div style="display: flex; gap: 8px; flex-wrap: wrap"><span class="tag" style="background: #B5546A; color: #FFFFFF">Mutirão</span><span class="tag" style="background: #F3E3E3; color: #2A1F33">Atuação técnica</span><span class="tag" style="background: #E4DBE6; color: #2A1F33">Módulo financeiro</span></div>
+<p class="serif" style="margin: 0; font-size: 22px">Relatório de recebimentos não soma as parcelas do mês</p>
+<dl style="margin: 0; display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 8px 14px; font-size: 14px; line-height: 1.55">
+<dt style="font-weight: 700">Contexto</dt><dd style="margin: 0; color: #4F4556">A unidade fecha o caixa mensal por este relatório.</dd>
+<dt style="font-weight: 700">Evidência</dt><dd style="margin: 0; color: #4F4556">Prints da tela do usuário e passo a passo reproduzido pelo QA.</dd>
+<dt style="font-weight: 700">Sugestão</dt><dd style="margin: 0; color: #4F4556">Verificar o filtro de período aplicado às parcelas.</dd>
+<dt style="font-weight: 700">Comentários</dt><dd style="margin: 0; color: #4F4556">Sem duplicidade em outros boards.</dd>
+</dl>
+<p style="margin: 0; font-size: 13px; color: #857A8C">Exemplo fictício.</p>
+</div>
+</sc-if>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s9"><div class="sec-label"><span class="n">09</span><h2 id="s9">Colaboração</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Tech Lead e sócios-devs</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Atuação direta nos chamados técnicos, com acesso ao banco de dados.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Dev de incidentes e TEF</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Responsável pela frente de incidentes no dia a dia.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">QA</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Mais de 10 anos de experiência, 7 deles no suporte da franqueadora. Leitura do acervo e, depois, porta de entrada da triagem.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Central da Rede</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Acompanhamento do board e encerramento na Central do Franqueado.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Conselho</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Pediu a ação e recebeu o reporte da vazão.</p></div>
+</div></section>
+
+<section class="sec" aria-labelledby="s10"><div class="sec-label"><span class="n">10</span><h2 id="s10">Impacto</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="serif" style="margin: 0; font-size: clamp(26px,2.6vw,34px); line-height: 1.2">100% do acervo de cerca de 120 chamados resolvido em 13/11/2026, cerca de 1,5 vez o mínimo combinado.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px">
+<div class="card"><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Meta combinada</p><p class="serif" style="margin: 0; font-size: 40px; color: #B5546A">4</p><p style="margin: 4px 0 0; font-size: 14px; color: #4F4556">incidentes liberados por semana, no mínimo</p></div>
+<div class="card"><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Período</p><p class="serif" style="margin: 0; font-size: 40px; color: #B5546A">~19</p><p style="margin: 4px 0 0; font-size: 14px; color: #4F4556">semanas, de 30/06 a 13/11/2026</p></div>
+<div class="card"><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Mínimo previsto</p><p class="serif" style="margin: 0; font-size: 40px; color: #B5546A">~78</p><p style="margin: 4px 0 0; font-size: 14px; color: #4F4556">incidentes (4 × ~19 semanas)</p></div>
+<div class="card" style="background: #2A1F33; border-color: #2A1F33; color: #F8F4EF"><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px; color: #D9A3B0">Realizado</p><p class="serif" style="margin: 0; font-size: 40px; color: #D9A3B0">~120</p><p style="margin: 4px 0 0; font-size: 14px; color: #DDD4E0">média de cerca de 6 por semana, ~1,5x a meta</p></div>
+</div>
+<ul class="li">
+<li>7 chamados liberados no primeiro dia e 50% do acervo na primeira semana; a outra metade foi resolvida nas semanas seguintes, até 13/11/2026.</li>
+<li>A triagem passou a começar pelo QA, filtrando o que não exige dev antes de chegar ao time técnico.</li>
+<li>Os chamados chegam etiquetados e com contexto, evidências e sugestões. Segundo o time, o ganho de produtividade tem sido grande.</li>
+</ul>
+<div style="background: #F3E3E3; border-radius: 20px; padding: 20px 22px; display: flex; flex-direction: column; gap: 6px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Leitura honesta</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.6">O ganho de produtividade após a nova triagem é uma percepção do time, ainda sem indicador medido. A distribuição dos chamados por natureza não foi contabilizada e não é apresentada aqui. Os cálculos usam o acervo aproximado de 120 chamados.</p>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s11"><div class="sec-label"><span class="n">11</span><h2 id="s11">Aprendizados</h2></div>
+<div class="two">
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Triar antes de agir</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Metade do acervo saiu rápido porque não era trabalho de dev. Capacidade não resolve o que a triagem deveria filtrar.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">A pessoa certa na entrada</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Quem conhece a operação da rede lê o chamado melhor do que qualquer regra de roteamento.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Compromisso com flexibilidade</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Uma meta mínima por pessoa funcionou melhor do que uma janela fixa para todos.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Linguagem de negócio</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Etiqueta e contexto na entrada fazem o chamado ser entendido por quem resolve e por quem reporta.</p></div>
+</div></section>
+
+</div>
+</main>
+
+<footer style="border-top: 1px solid #E2D9D3; margin-top: 48px; padding: 32px 0 48px">
+<div class="wrap" style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center">
+<a href="case-02.html" style="font-size: 14px; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center">← Case 02</a>
+<a href="case-04.html" style="text-decoration: none; color: #2A1F33; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; min-height: 44px"><span class="eyebrow" style="font-size: 11px">Próximo · Case 04</span><span class="serif" style="font-size: 28px">Esteira de Acompanhamento →</span></a>
+</div>
+</footer>
+</div>
+</template>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { k: 0, v: 'a' }; }
+  renderVals() {
+    const T = [
+      { title: 'Não consigo emitir boleto', age: 'Aberto há 2 anos', tag: 'Prescrito', dest: 'Encerrar com retorno à Central', why: 'O fluxo citado mudou desde a abertura e o problema não se aplica mais.', note: 'Confirmar com a unidade e encerrar na Central do Franqueado.' },
+      { title: 'Agenda não mostra horários', age: 'Aberto há 8 meses', tag: 'Duplicado', dest: 'Vincular ao chamado original', why: 'O mesmo problema já está em outro board, em andamento.', note: 'Vincular e avisar a Central para não abrir de novo.' },
+      { title: 'Desconto não aparece no orçamento', age: 'Aberto há 5 meses', tag: 'Configuração da rede', dest: 'Suporte da franqueadora', why: 'É um parâmetro que o próprio suporte da rede consegue ajustar.', note: 'Enviar o caminho da configuração ao suporte N1.' },
+      { title: 'Relatório veio em branco', age: 'Aberto há 3 meses', tag: 'Instrução ao usuário', dest: 'Orientação à unidade', why: 'O filtro de período estava fora do intervalo com dados.', note: 'Responder com o passo a passo e o tutorial do módulo.' },
+      { title: 'Recebimentos não somam as parcelas', age: 'Aberto há 1 mês', tag: 'Atuação técnica', dest: 'Dev, já contextualizado', why: 'Comportamento reproduzido pelo QA e não explicado por configuração.', note: 'Evidências, passo a passo e sugestão anexados ao chamado.' }
+    ];
+    const s = this.state;
+    const tickets = T.map((t, i) => ({ ...t, sel: i === s.k, unsel: i !== s.k, pick: () => this.setState({ k: i }) }));
+    const steps = [
+      { d: '30/06 · kickoff', w: '0%', v: '0%', bg: '#D9A3B0' },
+      { d: '01/07', w: '6%', v: '7', bg: '#D9A3B0' },
+      { d: '08/07', w: '50%', v: '50%', bg: '#B5546A' },
+      { d: '13/11/2026', w: '100%', v: '100%', bg: '#2A1F33' }
+    ];
+    const b = s.v === 'a';
+    return {
+      tickets, cur: T[s.k], steps,
+      isBefore: b, isAfter: !b, pBefore: b ? 'true' : 'false', pAfter: b ? 'false' : 'true',
+      bgBefore: b ? '#2A1F33' : 'transparent', fgBefore: b ? '#F8F4EF' : '#2A1F33',
+      bgAfter: b ? 'transparent' : '#2A1F33', fgAfter: b ? '#2A1F33' : '#F8F4EF',
+      setBefore: () => this.setState({ v: 'a' }), setAfter: () => this.setState({ v: 'd' })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Estudo de caso de Raissa Figueiredo: Esteira de Acompanhamento, o formato visual que tornou os projetos do time técnico legíveis para o conselho.">
+<title>Case 04 · Esteira de Acompanhamento · Raissa Figueiredo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8F4EF;color:#2A1F33;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#B5546A}a:hover{color:#2A1F33}
+:focus-visible{outline:3px solid #B5546A;outline-offset:3px;border-radius:8px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.serif{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#B5546A}
+.body{font-size:16px;line-height:1.7;color:#4F4556}
+.sec{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(24px,4vw,64px);padding:clamp(40px,5vw,64px) 0;border-top:2px solid #E2D9D3}
+.sec-label{display:flex;flex-direction:column;gap:6px}
+.sec-label .n{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;font-size:28px;color:#B5546A}
+.sec-label h2{margin:0;font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em;font-size:34px;line-height:1.05}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:1px solid #2A1F33;padding-top:24px}
+.todo{border:2px dashed #D9CFC4;border-radius:20px;padding:20px;font-size:14px;line-height:1.6;color:#857A8C;background:#FFFFFF}
+.sim{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#F8F4EF;background:#B5546A;border-radius:999px;padding:7px 12px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.tab{min-height:44px;padding:0 18px;border-radius:999px;font:600 14px 'DM Sans',sans-serif;cursor:pointer}
+.lane{display:grid;grid-template-columns:repeat(6,minmax(140px,1fr));gap:10px;min-width:900px}
+.rm{display:grid;grid-template-columns:160px repeat(4,minmax(0,1fr));gap:0;min-width:720px}
+.card{background:#FFFFFF;border:2px solid #E2D9D3;border-radius:20px;padding:22px}
+.li{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.li li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:10px;font-size:15px;line-height:1.6;color:#4F4556}
+.li li::before{content:"";width:8px;height:8px;border-radius:50%;background:#B5546A;margin-top:9px}
+.zoom-btn:hover img{box-shadow:0 20px 40px -24px rgba(42,31,51,.5)}
+.pill{display:inline-flex;align-items:center;border-radius:999px;padding:6px 12px;font-weight:700}
+.mv{min-height:40px;min-width:40px;border-radius:999px;border:2px solid #2A1F33;background:#FFFFFF;color:#2A1F33;font:700 14px 'DM Sans',sans-serif;cursor:pointer}
+.mv:hover{background:#2A1F33;color:#F8F4EF}
+@media (max-width:900px){.sec{grid-template-columns:minmax(0,1fr)}.meta{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<script src="assets/runtime.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<template data-dc>
+<div style="background: #F8F4EF; min-height: 100vh">
+
+<header style="border-bottom: 1px solid #E2D9D3">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; flex-wrap: wrap">
+<a href="index.html" style="text-decoration: none; color: #2A1F33; font-size: 14px; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 2px solid #2A1F33"><span aria-hidden="true">←</span> Voltar ao portfólio</a>
+<span class="serif" style="font-size: 22px">Raissa Figueiredo</span>
+<a href="case-01.html" style="text-decoration: none; font-size: 14px; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; gap: 8px">Primeiro case <span aria-hidden="true">→</span></a>
+</div>
+</header>
+
+<main>
+<section style="padding: clamp(56px,8vw,112px) 0 clamp(40px,5vw,64px)">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+<p class="eyebrow" style="margin: 0">Case 04 · Product Ops · Information Design · Strategy</p>
+<h1 class="serif" style="margin: 0; font-size: clamp(48px,7vw,96px); line-height: .98; max-width: 1100px">Esteira de Acompanhamento: o time técnico <em style="color: #B5546A">legível</em> para o conselho</h1>
+<p style="margin: 0; font-size: clamp(18px,1.6vw,21px); line-height: 1.6; color: #4F4556; max-width: 800px">Um formato visual e semanal para que, ao bater o olho, o conselho saiba em que pé está cada projeto, quando a entrega está estimada, o que está bloqueado e o que depende de uma decisão da diretoria.</p>
+<div class="meta">
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Contexto</p><p style="margin: 0; font-size: 15px">Aurora Tecnologia SaaS (nome fictício) · SaaS B2B</p></div>
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Público</p><p style="margin: 0; font-size: 15px">Conselho, em reunião semanal presencial</p></div>
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Período</p><p style="margin: 0; font-size: 15px">Mar. a nov. 2026</p></div>
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Ritmo</p><p style="margin: 0; font-size: 15px">De 3 dias para 2 horas por apresentação</p></div>
+</div>
+</div>
+</section>
+
+<div class="wrap">
+
+<section class="sec" aria-labelledby="s1"><div class="sec-label"><span class="n">01</span><h2 id="s1">Visão geral</h2></div>
+<p class="body" style="margin: 0; font-size: 18px">Documentação e visibilidade sempre foram um problema na Aurora. Quando o conselho pediu para enxergar os projetos do time e a lógica das prioridades, criei um documento padronizado com barras de progresso e um roteiro curto por projeto, que passei a apresentar presencialmente toda semana. O formato evoluiu de uma lista de atividades para uma esteira com fila de prioridade, frentes paralelas e pontos de decisão explícitos.</p></section>
+
+<section class="sec" aria-labelledby="s2"><div class="sec-label"><span class="n">02</span><h2 id="s2">Contexto</h2></div>
+<p class="body" style="margin: 0">Após 4 anos de empresa, já em outro momento do negócio, o conselho quis mais visibilidade sobre os projetos em execução e sobre como a ordem de prioridades era definida. O time era enxuto e as informações viviam em linguagem técnica, em boards e conversas do próprio time.</p></section>
+
+<section class="sec" aria-labelledby="s3"><div class="sec-label"><span class="n">03</span><h2 id="s3">Problema</h2></div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="serif" style="margin: 0; font-size: clamp(26px,2.6vw,34px); line-height: 1.2">Trazer apenas texto era insuficiente. Não deveria ser necessário ser dev para entender o estado de um projeto.</p>
+<p class="body" style="margin: 0">O conselho precisava responder quatro perguntas sem tradução:</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Em que pé está?</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Quando entrega?</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Quanto já avançou?</p></div>
+<div class="card" style="background: #2A1F33; border-color: #2A1F33; color: #F8F4EF"><p class="serif" style="margin: 0; font-size: 22px">Há bloqueio que pede decisão da diretoria?</p></div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s4"><div class="sec-label"><span class="n">04</span><h2 id="s4">Descoberta</h2></div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="serif" style="margin: 0; font-size: clamp(24px,2.4vw,30px); line-height: 1.25">"Entregue" significava coisas diferentes para cada lado da mesa.</p>
+<p class="body" style="margin: 0">Estimativa de entrega era o ponto mais delicado da conversa. Alinhar essa comunicação levou três meses. Compare as duas leituras:</p>
+<div style="display: inline-flex; gap: 6px; padding: 6px; background: #EFE8E1; border-radius: 999px; align-self: flex-start" role="group" aria-label="Escolher a leitura de entrega">
+<button type="button" onClick="{{ setTec }}" aria-pressed="{{ pTec }}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; font: 600 14px 'DM Sans',sans-serif; cursor: pointer; background: {{ bgTec }}; color: {{ fgTec }}">Time técnico</button>
+<button type="button" onClick="{{ setNeg }}" aria-pressed="{{ pNeg }}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; font: 600 14px 'DM Sans',sans-serif; cursor: pointer; background: {{ bgNeg }}; color: {{ fgNeg }}">Negócio</button>
+</div>
+<div class="card" style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px" aria-live="polite">
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{ stages }}" as="g" hint-placeholder-count="8">
+<li style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 12px; font-size: 14px; background: {{ g.bg }}; color: {{ g.fg }}"><span aria-hidden="true" style="font-weight: 700; width: 16px">{{ g.mark }}</span>{{ g.label }}</li>
+</sc-for>
+</ol>
+<div style="display: flex; flex-direction: column; gap: 12px; justify-content: center">
+<p class="eyebrow" style="margin: 0; font-size: 11px">{{ ent.k }}</p>
+<p class="serif" style="margin: 0; font-size: 30px; line-height: 1.15">{{ ent.t }}</p>
+<p class="body" style="margin: 0; font-size: 15px">{{ ent.d }}</p>
+</div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s5"><div class="sec-label"><span class="n">05</span><h2 id="s5">Meu papel</h2></div>
+<div class="two">
+<div class="card" style="display: flex; flex-direction: column; gap: 12px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">O que conduzi</p>
+<ul class="li">
+<li>Passei a participar presencialmente das reuniões semanais do conselho.</li>
+<li>Criei o documento padronizado, com barras de progresso e um roteiro breve de avanços, bloqueios e próximos passos por projeto.</li>
+<li>Traduzi informações técnicas em linguagem visual e de negócio.</li>
+<li>Evoluí o formato ao longo do ano, incorporando IA à coleta, à análise e ao design.</li>
+</ul>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 12px; background: #F3E3E3; border-color: #F3E3E3">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Construído em conjunto</p>
+<ul class="li">
+<li>O documento padronizado nasceu de uma sugestão do meu gestor.</li>
+<li>A ordem de prioridade e o motivo de cada posição foram definidos em conjunto, para mostrar que o desenvolvimento está alinhado às expectativas do negócio.</li>
+</ul>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s6"><div class="sec-label"><span class="n">06</span><h2 id="s6">Processo</h2></div>
+<div style="display: flex; flex-direction: column; gap: 22px">
+<p class="body" style="margin: 0">Toda semana a esteira é atualizada e apresentada. Cada barra mostra o avanço acumulado em três cores (semanas anteriores, penúltima semana e última semana), para que o ritmo fique visível, e não só o percentual.</p>
+<p style="margin: 0; font-size: 13px; color: #857A8C; display: flex; gap: 10px; align-items: center; flex-wrap: wrap"><span class="sim">Modelo ilustrado</span>Reconstruções com nomes de projetos, pessoas e parceiros fictícios. Conteúdo financeiro e estratégico omitido.</p>
+<div style="display: inline-flex; gap: 6px; padding: 6px; background: #EFE8E1; border-radius: 999px; align-self: flex-start" role="group" aria-label="Escolher o modelo">
+<button type="button" onClick="{{ setA }}" aria-pressed="{{ pA }}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; font: 600 14px 'DM Sans',sans-serif; cursor: pointer; background: {{ bgA }}; color: {{ fgA }}">Modelo inicial · abr. 2026</button>
+<button type="button" onClick="{{ setB }}" aria-pressed="{{ pB }}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; font: 600 14px 'DM Sans',sans-serif; cursor: pointer; background: {{ bgB }}; color: {{ fgB }}">Modelo atual · nov. 2026</button>
+</div>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+<button type="button" onClick="{{ openZoom }}" class="zoom-btn" aria-label="Ampliar o modelo" style="padding: 0; border: 0; background: transparent; cursor: zoom-in; border-radius: 20px; display: block; width: 100%; position: relative">
+<img src="{{ img.src }}" alt="{{ img.alt }}" width="1600" height="900" style="width: 100%; height: auto; border-radius: 20px; border: 2px solid #E2D9D3; display: block">
+<span aria-hidden="true" class="pill" style="position: absolute; right: 14px; bottom: 14px; background: #2A1F33; color: #F8F4EF; font-size: 12px">Ampliar ⤢</span>
+</button>
+<figcaption style="font-size: 14px; line-height: 1.6; color: #4F4556">{{ img.cap }}</figcaption>
+</figure>
+<div class="two">
+<div class="card" style="display: flex; flex-direction: column; gap: 10px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Modelo inicial</p>
+<ul class="li">
+<li>Projetos agrupados por tipo e por pessoa.</li>
+<li>Barra de progresso, responsáveis e estimativa por projeto.</li>
+<li>Texto corrido de contexto e estimativas realista e pessimista.</li>
+</ul>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 10px; border-color: #B5546A">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Modelo atual</p>
+<ul class="li">
+<li>Fila do desenvolvimento numerada, separada das frentes com parceiros e das que estão fora da fila.</li>
+<li>Próximo marco com data em cada linha, prioridades estratégicas sinalizadas.</li>
+<li>Prancha própria por projeto prioritário, com o bloco "Atenção ou decisão do conselho".</li>
+</ul>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #4F4556">A prancha de um projeto específico, no formato atual, aparece no <a href="case-01.html" style="font-weight: 600">Case 01 · Pagamentos Integrados</a>.</p>
+</div></section>
+
+<sc-if value="{{ zoomOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="Modelo da esteira ampliado" style="position: fixed; inset: 0; z-index: 100; background: rgba(42,31,51,.92); display: flex; flex-direction: column; padding: clamp(12px,2vw,28px); gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #F8F4EF">
+<p style="margin: 0; font-size: 14px; font-weight: 600">{{ img.title }}</p>
+<button type="button" onClick="{{ closeZoom }}" aria-label="Fechar ampliação" style="min-height: 44px; min-width: 44px; padding: 0 18px; border: 2px solid #F8F4EF; background: transparent; color: #F8F4EF; border-radius: 999px; font: 700 14px 'DM Sans', sans-serif; cursor: pointer">Fechar ✕</button>
+</div>
+<div style="flex: 1; min-height: 0; overflow: auto; border-radius: 16px; background: #F8F4EF">
+<img src="{{ img.src }}" alt="{{ img.alt }}" width="1600" height="900" style="display: block; width: 100%; min-width: 1100px; height: auto">
+</div>
+<button type="button" onClick="{{ closeZoom }}" aria-label="Fechar ampliação" style="position: absolute; inset: 0; z-index: -1; border: 0; background: transparent; cursor: zoom-out"></button>
+</div>
+</sc-if>
+
+<section class="sec" aria-labelledby="s7"><div class="sec-label"><span class="n">07</span><h2 id="s7">Solução</h2></div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="serif" style="margin: 0; font-size: clamp(24px,2.4vw,30px); line-height: 1.25">Ordem de prioridade com motivo: subir um projeto necessariamente empurra os outros para baixo.</p>
+<p class="body" style="margin: 0">Só a fila do desenvolvimento disputa capacidade. Cada posição tem um motivo registrado e, quando o conselho sobe um projeto, a esteira mostra quem desce. As frentes com parceiros e as que estão fora da fila não entram nessa troca.</p>
+<p style="margin: 0; font-size: 13px; color: #857A8C; display: flex; gap: 10px; align-items: center; flex-wrap: wrap"><span class="sim">Simulação</span>Projetos e motivos ilustrativos. Experimente subir um projeto.</p>
+<div class="card" style="display: flex; flex-direction: column; gap: 10px; padding: clamp(18px,3vw,28px)">
+<sc-for list="{{ queue }}" as="q" hint-placeholder-count="4">
+<div style="display: grid; grid-template-columns: 56px minmax(0,1fr) auto; gap: 16px; align-items: center; padding: 14px 16px; border-radius: 14px; background: {{ q.bg }}">
+<span class="serif" style="font-size: 30px; color: #B5546A">{{ q.pos }}</span>
+<div><p class="serif" style="margin: 0; font-size: 20px">{{ q.name }}</p><p style="margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: #4F4556">{{ q.why }}</p></div>
+<sc-if value="{{ q.canUp }}" hint-placeholder-val="{{ true }}"><button type="button" class="mv" onClick="{{ q.up }}" aria-label="{{ q.upLabel }}">↑ Subir</button></sc-if>
+</div>
+</sc-for>
+<p aria-live="polite" style="margin: 6px 0 0; padding-top: 14px; border-top: 1px solid #EFE8E1; font-size: 15px; line-height: 1.6">{{ moveNote }}</p>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s8"><div class="sec-label"><span class="n">08</span><h2 id="s8">IA na rotina</h2></div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="body" style="margin: 0">A evolução do modelo inicial para o atual acompanhou a entrada da IA na minha rotina e na do time. Uso IA na coleta de informações, em resumos, propostas e análises estratégicas, e também no design e na apresentação visual do conteúdo.</p>
+<div style="display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: 16px; align-items: stretch">
+<div class="card" style="display: flex; flex-direction: column; gap: 6px"><p class="eyebrow" style="margin: 0; font-size: 11px">No início</p><p class="serif" style="margin: 0; font-size: 56px; line-height: 1">3 dias</p><p style="margin: 0; font-size: 14px; color: #4F4556">para montar uma apresentação ao conselho</p></div>
+<span aria-hidden="true" class="serif" style="align-self: center; font-size: 36px; color: #B5546A">→</span>
+<div class="card" style="display: flex; flex-direction: column; gap: 6px; background: #2A1F33; border-color: #2A1F33; color: #F8F4EF"><p class="eyebrow" style="margin: 0; font-size: 11px; color: #D9A3B0">Hoje</p><p class="serif" style="margin: 0; font-size: 56px; line-height: 1; color: #D9A3B0">2 horas</p><p style="margin: 0; font-size: 14px; color: #DDD4E0">com um resultado que avalio como 5 vezes melhor</p></div>
+</div>
+<p style="margin: 0; font-size: 13px; color: #857A8C">Tempos da minha rotina de preparação. A comparação de qualidade é uma avaliação pessoal.</p>
+</div></section>
+
+<section class="sec" aria-labelledby="s9"><div class="sec-label"><span class="n">09</span><h2 id="s9">Colaboração</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Gestor</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Sugeriu o documento padronizado.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Time de desenvolvimento</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Fonte do andamento, dos bloqueios e das estimativas.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Conselho</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Valida a ordem de prioridade e decide sobre os pontos sinalizados.</p></div>
+</div></section>
+
+<section class="sec" aria-labelledby="s10"><div class="sec-label"><span class="n">10</span><h2 id="s10">Impacto</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="serif" style="margin: 0; font-size: clamp(26px,2.6vw,34px); line-height: 1.2">Mais confiança no time e no negócio, e uma visão do todo para decidir.</p>
+<ul class="li">
+<li>O conselho passou a analisar estrategicamente lançamentos de produtos, aquisição de clientes e expansão, e novas fontes de receita.</li>
+<li>A visão do todo sustenta mudanças de rota: acelerar ou desacelerar, contratar ou encerrar contratos, buscar ou encerrar parcerias, contratar ferramentas ou otimizar recursos.</li>
+<li>A definição de entrega ficou alinhada entre técnico e negócio, após três meses de ajuste.</li>
+<li>A preparação semanal caiu de 3 dias para 2 horas.</li>
+</ul>
+</div></section>
+
+<section class="sec" aria-labelledby="s11"><div class="sec-label"><span class="n">11</span><h2 id="s11">Aprendizados</h2></div>
+<div class="two">
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Defina "entregue" antes de estimar</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Sem um acordo sobre o que é entrega, qualquer data é mal-entendido.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Mostre o ritmo, não só o percentual</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">As três cores por semana contam se um projeto está andando ou parado.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Prioridade sem motivo não se sustenta</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">O motivo de cada posição é o que torna a troca de ordem uma decisão consciente.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Peça a decisão explicitamente</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Um bloco próprio para o que depende do conselho evita que o bloqueio se perca no relato.</p></div>
+</div></section>
+
+</div>
+</main>
+
+<footer style="border-top: 1px solid #E2D9D3; margin-top: 48px; padding: 32px 0 48px">
+<div class="wrap" style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center">
+<a href="case-03.html" style="font-size: 14px; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center">← Case 03</a>
+<a href="index.html" style="text-decoration: none; color: #2A1F33; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; min-height: 44px"><span class="eyebrow" style="font-size: 11px">Fim dos estudos de caso</span><span class="serif" style="font-size: 28px">Voltar ao portfólio →</span></a>
+</div>
+</footer>
+</div>
+</template>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7600}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { ent: 't', view: 'b', zoom: false, order: [0, 1, 2, 3], moved: -1 }; }
+  renderVals() {
+    const s = this.state;
+    const ST = ['Desenvolvido', 'Rodando em produção', 'Testes e refinos em produção', 'Pilotado', 'Validado', 'Valor de comercialização definido', 'Suporte de CS para sustentação e pós-venda', 'Operação sincronizada'];
+    const tec = s.ent === 't';
+    const limit = tec ? 3 : 8;
+    const stages = ST.map((label, i) => {
+      const on = i < limit;
+      return { label, mark: on ? '✓' : '·', bg: on ? (tec ? '#E4DBE6' : '#F3E3E3') : '#F8F4EF', fg: on ? '#2A1F33' : '#857A8C' };
+    });
+    const ent = tec
+      ? { k: 'Para o time técnico', t: 'Produto rodando em produção.', d: 'Mesmo que ainda precise de alguns testes e refinos em produção: "estava entregue".' }
+      : { k: 'Para o negócio', t: 'Produto pronto na prateleira, só para o cliente usar.', d: 'Já pilotado, validado, com valor de comercialização e suporte de CS para a sustentação e o pós-venda. Toda a operação sincronizada.' };
+    const IM = {
+      a: { src: 'assets/esteira-modelo-inicial.png', title: 'Modelo inicial · abr. 2026 · reconstrução com nomes fictícios', alt: 'Modelo inicial da esteira: lista de quatro projetos com barra de progresso em três cores por semana, responsáveis, data estimada e um parágrafo de contexto, com estimativas realista e pessimista ao final', cap: 'Modelo inicial, abril de 2026. Um bloco por projeto: barra de progresso, responsáveis, estimativa e um parágrafo de contexto.' },
+      b: { src: 'assets/esteira-modelo-atual.png', title: 'Modelo atual · nov. 2026 · reconstrução com nomes fictícios', alt: 'Modelo atual da esteira: fila do desenvolvimento numerada de 01 a 03, frentes em paralelo com parceiros e frentes fora da fila, cada linha com barra de progresso semanal, responsáveis e próximo marco com data', cap: 'Modelo atual, novembro de 2026. A visão geral abre a apresentação; em seguida vêm a ordem de prioridade com motivo e uma prancha por projeto.' }
+    };
+    const img = IM[s.view];
+    const P = [
+      { name: 'Atlas Insights', why: 'Substitui o BI antigo e abre o sistema a integrações.' },
+      { name: 'Assinatura Inteligente', why: 'Produto de grande interesse, com expectativa de adesão após o lançamento.' },
+      { name: 'Planos combinados', why: 'Compromisso com um cliente da rede.' },
+      { name: 'Expansão Nexo', why: 'Abertura para novos clientes.' }
+    ];
+    const order = s.order;
+    const queue = order.map((pi, idx) => ({
+      pos: '0' + (idx + 1), name: P[pi].name, why: P[pi].why, canUp: idx > 0,
+      upLabel: 'Subir ' + P[pi].name, bg: pi === s.moved ? '#F3E3E3' : '#F8F4EF',
+      up: () => { const o = s.order.slice(); const t = o[idx - 1]; o[idx - 1] = o[idx]; o[idx] = t; this.setState({ order: o, moved: o[idx - 1] }); }
+    }));
+    let moveNote = 'A ordem define o que o time entrega primeiro.';
+    if (s.moved >= 0) {
+      const k = order.indexOf(s.moved);
+      const down = order[k + 1];
+      moveNote = P[s.moved].name + ' subiu para 0' + (k + 1) + '. ' + P[down].name + ' desceu para 0' + (k + 2) + ' e tem o prazo revisto.';
+    }
+    const ab = (on) => ({ bg: on ? '#2A1F33' : 'transparent', fg: on ? '#F8F4EF' : '#2A1F33', p: on ? 'true' : 'false' });
+    const T = ab(tec), N = ab(!tec), A = ab(s.view === 'a'), B = ab(s.view === 'b');
+    return {
+      stages, ent, img, queue, moveNote, zoomOpen: s.zoom,
+      bgTec: T.bg, fgTec: T.fg, pTec: T.p, bgNeg: N.bg, fgNeg: N.fg, pNeg: N.p,
+      bgA: A.bg, fgA: A.fg, pA: A.p, bgB: B.bg, fgB: B.fg, pB: B.p,
+      setTec: () => this.setState({ ent: 't' }), setNeg: () => this.setState({ ent: 'n' }),
+      setA: () => this.setState({ view: 'a' }), setB: () => this.setState({ view: 'b' }),
+      openZoom: () => this.setState({ zoom: true }), closeZoom: () => this.setState({ zoom: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

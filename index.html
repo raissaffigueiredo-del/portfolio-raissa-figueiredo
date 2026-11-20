@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Raissa Figueiredo, Product Designer com experiência em UX/UI, Product Discovery, Service Design e SaaS B2B. Portfólio e estudos de caso.">
+<title>Raissa Figueiredo · Product Designer | UX/UI | SaaS B2B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8F4EF;color:#2A1F33;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+a{color:#2A1F33}
+:focus-visible{outline:3px solid #B5546A;outline-offset:3px;border-radius:6px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.disp{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:.96}
+.disp2{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.02}
+.kick{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.lead{font-size:clamp(18px,1.5vw,21px);line-height:1.55;color:#4F4556}
+.body{font-size:16px;line-height:1.65;color:#4F4556}
+.h2{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:.98;font-size:clamp(40px,5.4vw,76px);margin:0}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.b-ink{background:#2A1F33;color:#F8F4EF}.b-ink:hover{background:#B5546A;color:#F8F4EF}
+.b-coral{background:#B5546A;color:#F8F4EF}.b-coral:hover{background:#2A1F33;color:#F8F4EF}
+.b-out{border:2px solid #2A1F33;color:#2A1F33}.b-out:hover{background:#2A1F33;color:#F8F4EF}
+.b-cream{background:#F8F4EF;color:#2A1F33}.b-cream:hover{background:#B5546A;color:#F8F4EF}
+.navlink{text-decoration:none;color:#2A1F33;font-size:14px;font-weight:600;padding:8px 12px;border-radius:999px;transition:background .2s}
+.navlink:hover{background:#EFE8E1}
+.navlink.on{background:#2A1F33;color:#F8F4EF}
+.nav-desk{display:flex}.nav-mob{display:none}
+.hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:clamp(32px,5vw,72px);align-items:center}
+.arch{position:relative;aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;background:#E4DBE6}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block}
+.marq{overflow:hidden;white-space:nowrap;background:#2A1F33;color:#F8F4EF}
+.marq-in{display:inline-flex;gap:0;animation:slide 28s linear infinite}
+.marq-in span{padding:14px 28px;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:28px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.case{border-radius:28px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:22px;position:relative;overflow:hidden;color:#2A1F33;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.case:hover{transform:translateY(-6px);box-shadow:0 30px 60px -36px rgba(36,26,46,.45)}
+.stack{position:relative;height:250px;perspective:1200px}
+.layer{position:absolute;left:0;right:0;background:#FFFFFF;border:1px solid #E2D9D3;border-radius:16px;box-shadow:0 14px 30px -18px rgba(36,26,46,.4);padding:16px 18px;display:flex;flex-direction:column;gap:10px;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.l1{top:0;transform:translateY(0) scale(.92);opacity:.85}
+.l2{top:34px;transform:translateY(0) scale(.96);opacity:.95}
+.l3{top:68px;transform:translateY(0)}
+.case:hover .l1{transform:translateY(-14px) scale(.92) rotate(-1.2deg)}
+.case:hover .l2{transform:translateY(-6px) scale(.96) rotate(.6deg)}
+.case:hover .l3{transform:translateY(4px) rotate(-.4deg)}
+.seg{display:inline-flex;background:rgba(36,26,46,.08);border-radius:999px;padding:4px;gap:2px}
+.seg button{border:0;background:transparent;border-radius:999px;min-height:40px;padding:0 16px;font:600 13px 'DM Sans',sans-serif;color:#2A1F33;cursor:pointer;transition:background .2s,color .2s}
+.seg button[aria-pressed="true"]{background:#2A1F33;color:#F8F4EF}
+.bar{height:10px;border-radius:999px;background:#EFE8E1;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px}
+.line{height:8px;border-radius:999px;background:#EFE8E1}
+.track{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.yr{height:64px;border-radius:12px;display:flex;flex-direction:column;justify-content:flex-end;padding:8px 10px;font-size:15px;font-weight:700}
+.steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.step{border-radius:20px;padding:22px 20px;min-height:200px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;transition:transform .3s}
+.step:hover{transform:translateY(-4px) rotate(-.5deg)}
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:14px;font-weight:600;padding:9px 14px;border-radius:999px;border:2px solid transparent}
+.tl-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;padding:24px 0;border-bottom:1px solid #E2D9D3}
+.tl-when{display:flex;flex-direction:column;gap:4px}
+.tl-what{display:flex;flex-direction:column;gap:12px}
+.tl-chip{background:#EFE8E1;font-size:13px;padding:7px 12px}
+.tl-chip-dark{background:#2A1F33;color:#F8F4EF;font-size:13px;padding:7px 12px}
+details summary::-webkit-details-marker{display:none}
+.edu{display:grid;grid-template-columns:70px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:2px dashed #E2D9D3;font-size:15px}
+.fade{animation:up 1s ease both}.fade2{animation:up 1s .15s ease both}.fade3{animation:up 1s .3s ease both}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (max-width:1080px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:900px){.hero,.cases,.skills,.tl-row{grid-template-columns:minmax(0,1fr)}.nav-desk{display:none}.nav-mob{display:flex}.track{grid-template-columns:repeat(3,minmax(0,1fr))}.tl-before{grid-template-columns:minmax(0,1fr)!important}}
+@media (max-width:600px){.steps{grid-template-columns:minmax(0,1fr)}.stack{height:270px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.marq-in{animation:none!important;flex-wrap:wrap;white-space:normal}}
+</style>
+<script src="assets/runtime.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<template data-dc>
+
+<div style="background: #F8F4EF; color: #2A1F33; min-height: 100vh">
+<a href="#inicio" style="position: absolute; left: -9999px; top: 8px; background: #2A1F33; color: #F8F4EF; padding: 12px 16px; z-index: 60; text-decoration: none; font-size: 14px">Pular para o conteúdo</a>
+
+<!-- NAV -->
+<header style="position: sticky; top: 0; z-index: 40; background: rgba(251,246,238,.9); backdrop-filter: blur(12px)">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px">
+<a href="#inicio" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 999px 999px 8px 8px; background: #B5546A; display: inline-block"></span>
+<span class="disp2" style="font-size: 20px">Raissa Figueiredo</span>
+</a>
+<nav aria-label="Navegação principal" class="nav-desk" style="align-items: center; gap: 4px; background: #FFFFFF; border-radius: 999px; padding: 6px; box-shadow: 0 8px 24px -16px rgba(36,26,46,.35)">
+<sc-for list="{{ nav }}" as="item" hint-placeholder-count="6">
+<sc-if value="{{ item.active }}" hint-placeholder-val="{{ false }}"><a href="{{ item.href }}" class="navlink on" aria-current="true">{{ item.label }}</a></sc-if>
+<sc-if value="{{ item.inactive }}" hint-placeholder-val="{{ true }}"><a href="{{ item.href }}" class="navlink" onClick="{{ item.go }}">{{ item.label }}</a></sc-if>
+</sc-for>
+</nav>
+<div style="display: flex; gap: 8px; align-items: center">
+<a href="#contato" class="btn b-ink nav-desk" style="min-height: 46px; padding: 0 20px; font-size: 14px">Vamos conversar</a>
+<div class="nav-mob">
+<button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-controls="menu-mobile" style="min-height: 46px; min-width: 46px; padding: 0 18px; border: 2px solid #2A1F33; background: #FFFFFF; border-radius: 999px; font: 700 14px 'DM Sans', sans-serif; color: #2A1F33; cursor: pointer">{{ menuLabel }}</button>
+</div>
+</div>
+</div>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<nav id="menu-mobile" aria-label="Navegação mobile" style="background: #F8F4EF; border-bottom: 2px solid #2A1F33">
+<div class="wrap" style="display: flex; flex-direction: column; padding-top: 8px; padding-bottom: 24px">
+<sc-for list="{{ nav }}" as="item" hint-placeholder-count="6">
+<a href="{{ item.href }}" onClick="{{ item.goClose }}" class="disp2" style="text-decoration: none; font-size: 34px; padding: 12px 0; border-bottom: 1px solid #E2D9D3">{{ item.label }}</a>
+</sc-for>
+<a href="#contato" onClick="{{ closeMenu }}" class="btn b-coral" style="margin-top: 20px; justify-content: center">Vamos conversar</a>
+</div>
+</nav>
+</sc-if>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="inicio" data-section="1" aria-labelledby="hero-title" style="padding: clamp(40px,6vw,88px) 0 clamp(56px,7vw,96px)">
+<div class="wrap hero">
+<div style="display: flex; flex-direction: column; gap: 28px">
+<div class="fade" style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="pill" style="background: #2A1F33; color: #F8F4EF">Product Designer</span>
+<span class="pill" style="background: #FFFFFF; border: 2px solid #2A1F33">UX/UI</span>
+<span class="pill" style="background: #FFFFFF; border: 2px solid #2A1F33">SaaS B2B</span>
+<span class="pill" style="background: #FFFFFF; border: 2px solid #2A1F33"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #B5546A; display: inline-block"></span>Aberta a oportunidades remotas no Brasil</span>
+</div>
+<h1 id="hero-title" class="disp fade2" style="margin: 0; font-size: clamp(52px,7.6vw,116px)">Design que transforma complexidade em <span style="color: #B5546A; font-style: italic; font-weight: 700">clareza.</span></h1>
+<p class="lead fade3" style="margin: 0; max-width: 580px">Conecto experiência do usuário, estratégia de produto e necessidades de negócio para estruturar soluções digitais que fazem sentido para pessoas e organizações.</p>
+<div class="fade3" style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#projetos" class="btn b-coral">Explorar projetos <span aria-hidden="true">↓</span></a>
+<a href="#trajetoria" class="btn b-out">Conhecer minha trajetória</a>
+</div>
+<p class="fade3" style="margin: 0; font-size: 14px; color: #4F4556; display: flex; gap: 10px; align-items: center; flex-wrap: wrap"><span style="font-weight: 700">UX/UI</span><span aria-hidden="true" style="color: #B5546A">→</span><span style="font-weight: 700">Product Design</span><span aria-hidden="true" style="color: #B5546A">→</span><span style="font-weight: 700">Produto e Estratégia</span><span style="color: #857A8C">· desde 2021 em produtos SaaS B2B, com 4 estudos de caso documentados.</span></p>
+</div>
+<div class="fade2" style="position: relative; max-width: 440px; width: 100%; justify-self: end">
+<div aria-hidden="true" style="position: absolute; inset: 18px -18px -18px 18px; border-radius: 999px 999px 28px 28px; background: #B5546A"></div>
+<figure class="arch" style="margin: 0">
+<img src="assets/raissa.jpg" alt="Retrato de Raissa Figueiredo sorrindo, com cabelos escuros ondulados e blusa azul-marinho de poás, em fundo claro" width="900" height="1131">
+</figure>
+<span aria-hidden="true" class="pill" style="position: absolute; left: -18px; bottom: 56px; background: #FFFFFF; transform: rotate(-6deg); box-shadow: 0 10px 24px -14px rgba(36,26,46,.5)">Clarity by Design</span>
+<span aria-hidden="true" class="pill" style="position: absolute; right: -10px; top: 32px; background: #2A1F33; color: #F8F4EF; transform: rotate(5deg)">desde 2021 em SaaS B2B</span>
+</div>
+</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marq" aria-hidden="true">
+<div class="marq-in">
+<span>Product Discovery <i style="font-style: normal">✦</i> Service Design <i style="font-style: normal">✦</i> Information Architecture <i style="font-style: normal">✦</i> UX Writing <i style="font-style: normal">✦</i> Product Strategy <i style="font-style: normal">✦</i> Product Operations <i style="font-style: normal">✦</i> Prototipação <i style="font-style: normal">✦</i> Stakeholder Management <i style="font-style: normal">✦</i></span>
+<span>Product Discovery <i style="font-style: normal">✦</i> Service Design <i style="font-style: normal">✦</i> Information Architecture <i style="font-style: normal">✦</i> UX Writing <i style="font-style: normal">✦</i> Product Strategy <i style="font-style: normal">✦</i> Product Operations <i style="font-style: normal">✦</i> Prototipação <i style="font-style: normal">✦</i> Stakeholder Management <i style="font-style: normal">✦</i></span>
+</div>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre" data-section="1" aria-labelledby="sobre-title" style="padding: clamp(80px,10vw,136px) 0">
+<div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px,5vw,80px); align-items: start">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<p class="kick" style="margin: 0; color: #B5546A">Sobre mim</p>
+<h2 id="sobre-title" class="h2">Projetar sempre foi a minha forma de compreender o mundo.</h2>
+<div style="background: #2A1F33; color: #F8F4EF; border-radius: 24px; padding: 28px 30px; display: flex; flex-direction: column; gap: 10px">
+<span aria-hidden="true" class="disp" style="font-size: 56px; color: #B5546A; line-height: .6">“</span>
+<p class="disp2" style="margin: 0; font-size: clamp(22px,2vw,28px)">Meu trabalho começa antes da interface: começa na compreensão do problema.</p>
+</div>
+</div>
+<div class="body" style="display: flex; flex-direction: column; gap: 16px; font-size: 17px">
+<p style="margin: 0">Sou Product Designer e atuo desde 2021 em uma empresa de tecnologia SaaS B2B, onde comecei em UX/UI Design, com interfaces, design visual e prototipação.</p>
+<p style="margin: 0">Com o tempo, meu repertório se ampliou para além das interfaces. Passei a trabalhar com discovery, estruturação de jornadas, documentação funcional, gestão de prioridades, comunicação entre negócio e tecnologia e desenho de processos e serviços.</p>
+<p style="margin: 0">Atuar em um ambiente com recursos limitados, equipes enxutas e múltiplos stakeholders me ensinou que uma boa experiência não depende apenas de uma interface bem resolvida. Ela depende também de clareza, colaboração, decisões consistentes e compreensão do ecossistema no qual o produto está inserido.</p>
+<p style="margin: 0">Minha formação em Arquitetura e Urbanismo é a base desse olhar: leitura de contexto, análise de restrições e foco em quem usa.</p>
+<p style="margin: 0; color: #2A1F33; font-weight: 600">Hoje, conecto design, pensamento analítico e estratégia de produto para transformar problemas complexos em soluções mais claras, viáveis e orientadas a resultados.</p>
+</div>
+</div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" data-section="1" aria-labelledby="proj-title" style="padding: clamp(80px,10vw,136px) 0; background: #EFE8E1; border-radius: 48px 48px 0 0">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 20px"><p class="kick" style="margin: 0; color: #B5546A">Projetos em destaque</p><h2 id="proj-title" class="h2">Alguns dos problemas que ajudei a transformar em soluções.</h2></div>
+<p class="lead" style="margin: 0">Selecionei experiências que demonstram diferentes dimensões da minha atuação: investigação de problemas, desenho de jornadas, organização de informações, construção de processos e estratégia de produto. <span style="font-size: 14px; color: #857A8C; display: block; margin-top: 8px">Nomes e dados fictícios. Artefatos reconstruídos para fins ilustrativos.</span></p>
+</div>
+
+<div class="cases">
+<sc-for list="{{ cases }}" as="c" hint-placeholder-count="4">
+<article class="case" style="background: {{ c.bg }}" aria-labelledby="{{ c.id }}">
+<div style="display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span class="kick" style="font-size: 12px; opacity: .8">Case {{ c.n }} · {{ c.cat }}</span>
+<h3 id="{{ c.id }}" class="disp2" style="margin: 0; font-size: clamp(28px,2.6vw,38px)">{{ c.title }}</h3>
+</div>
+<span class="pill" style="background: #2A1F33; color: #F8F4EF">{{ c.kind }}</span>
+</div>
+
+<div class="stack" aria-hidden="true">
+<div class="layer l1"><span style="font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #857A8C">{{ c.a1 }}</span><div class="line" style="width: 70%"></div><div class="line" style="width: 45%"></div></div>
+<div class="layer l2"><span style="font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #857A8C">{{ c.a2 }}</span><div style="display: flex; gap: 6px"><sc-for list="{{ c.pillsA }}" as="p" hint-placeholder-count="3"><span style="font-size: 11px; font-weight: 700; padding: 5px 9px; border-radius: 999px; background: #EFE8E1">{{ p }}</span></sc-for></div></div>
+<div class="layer l3"><span style="font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #857A8C">{{ c.a3 }}</span>
+<sc-for list="{{ c.bars }}" as="b" hint-placeholder-count="3"><div style="display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 10px; align-items: center; font-size: 12px; font-weight: 600"><span>{{ b.l }}</span><div class="bar"><i style="width: {{ b.w }}; background: {{ c.acc }}"></i></div></div></sc-for>
+</div>
+</div>
+
+<div class="seg" role="group" aria-label="Ver detalhes do case {{ c.n }}">
+<button type="button" aria-pressed="{{ c.pP }}" onClick="{{ c.setP }}">Problema</button>
+<button type="button" aria-pressed="{{ c.pD }}" onClick="{{ c.setD }}">Minha contribuição</button>
+<button type="button" aria-pressed="{{ c.pR }}" onClick="{{ c.setR }}">Resultado</button>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 15px; line-height: 1.6; min-height: 72px; color: #2A1F33">{{ c.text }}</p>
+
+<a href="{{ c.href }}" class="btn b-ink" style="align-self: flex-start" aria-label="Abrir estudo de caso completo: {{ c.title }}">Abrir estudo de caso <span aria-hidden="true">→</span></a>
+</article>
+</sc-for>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<div style="background: #FFFFFF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><span class="pill" style="background: #EFE8E1; align-self: flex-start">Product Discovery</span><p class="disp2" style="margin: 6px 0 0; font-size: 24px">Discovery Assíncrono</p><p class="body" style="margin: 0; font-size: 14px">Lean Inception e Matriz CSD adaptadas para estruturar hipóteses, validações e escopo de MVP com profissionais de diferentes áreas.</p></div>
+<div style="background: #FFFFFF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><span class="pill" style="background: #EFE8E1; align-self: flex-start">Diagnóstico</span><p class="disp2" style="margin: 6px 0 0; font-size: 24px">Diagnóstico TodoSorriso 360</p><p class="body" style="margin: 0; font-size: 14px">Construído com coordenação de Desenvolvimento/Produto/Inovação e Customer Success. Informações operacionais das unidades viram necessidades e oportunidades de produto.</p></div>
+<div style="background: #FFFFFF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 8px"><span class="pill" style="background: #EFE8E1; align-self: flex-start">Estratégia</span><p class="disp2" style="margin: 6px 0 0; font-size: 24px">Expansão Nexo</p><p class="body" style="margin: 0; font-size: 14px">Estratégia comercial que concebi e estruturei, validada pela área de negócios. Cenários de planejamento, não resultados realizados.</p></div>
+<div style="background: #2A1F33; color: #F8F4EF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 10px"><span class="kick" style="color: #B5546A; font-size: 12px">Ecossistema SaaS · contexto</span><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; font-weight: 600; border: 1px solid #5E5368; border-radius: 999px; padding: 5px 10px">Cobrança Digital</span><span style="font-size: 12px; font-weight: 600; border: 1px solid #5E5368; border-radius: 999px; padding: 5px 10px">Assinatura Inteligente</span><span style="font-size: 12px; font-weight: 600; border: 1px solid #5E5368; border-radius: 999px; padding: 5px 10px">Pagamentos Integrados</span><span style="font-size: 12px; font-weight: 600; border: 1px solid #5E5368; border-radius: 999px; padding: 5px 10px">Gestão Fiscal</span><span style="font-size: 12px; font-weight: 600; border: 1px solid #5E5368; border-radius: 999px; padding: 5px 10px">Atlas Insights</span><span style="font-size: 12px; font-weight: 600; border: 1px solid #5E5368; border-radius: 999px; padding: 5px 10px">Plataforma Nexo</span></div></div>
+</div>
+</div>
+</section>
+
+<!-- TRAJETÓRIA -->
+<section id="trajetoria" data-section="1" aria-labelledby="traj-title" style="padding: clamp(80px,10vw,136px) 0; background: #EFE8E1">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 40px; background: #FFFFFF; border-radius: 32px; padding: clamp(28px,4vw,56px)">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 20px"><p class="kick" style="margin: 0; color: #B5546A">Trajetória</p><h2 id="traj-title" class="h2" style="font-size: clamp(36px,4.6vw,64px)">Uma trajetória de evolução, repertório e propósito.</h2></div>
+<p class="body" style="margin: 0">Desde dezembro de 2021 atuo em produtos digitais SaaS B2B. Comecei em UX/UI, com interfaces e prototipação, avancei para fluxos, jornadas, pesquisa e arquitetura da informação e, desde 2025, amplio a atuação para produto e estratégia: discovery, priorização, product operations e comunicação entre negócio e tecnologia.</p>
+</div>
+
+<div role="img" aria-label="Régua de 2021 a 2026: UX/UI Design desde dezembro de 2021, Produto e Estratégia em 2025 e 2026" class="track">
+<sc-for list="{{ years }}" as="y" hint-placeholder-count="6"><div class="yr" style="background: {{ y.bg }}; color: {{ y.fg }}">{{ y.label }}</div></sc-for>
+</div>
+<div style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; font-weight: 600"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 14px; height: 14px; border-radius: 4px; background: #E4DBE6; display: inline-block"></span>UX/UI Design em SaaS B2B</span><span style="display: flex; align-items: center; gap: 8px"><span style="width: 14px; height: 14px; border-radius: 4px; background: #B5546A; display: inline-block"></span>Produto e Estratégia</span></div>
+
+<div style="display: flex; flex-direction: column; gap: 0; border-top: 2px solid #2A1F33">
+<p class="kick" style="margin: 20px 0 4px; color: #B5546A; font-size: 12px">Produtos digitais · desde dezembro de 2021 · Empresa SaaS B2B (identidade preservada)</p>
+
+<div class="tl-row">
+<div class="tl-when"><span class="disp" style="font-size: 36px; color: #B5546A">2021</span><span style="font-size: 12px; font-weight: 700; color: #857A8C">dez. · entrada em tecnologia</span></div>
+<div class="tl-what">
+<h3 class="disp2" style="margin: 0; font-size: 24px">UX/UI Designer: transição para produtos digitais</h3>
+<p class="body" style="margin: 0; font-size: 15px">Início da atuação em uma empresa de tecnologia SaaS B2B, com foco em design visual, estruturação de interfaces e prototipação. No mesmo ano, mentoria UI/UX Designer (Notorious Design, com Jeff Albuquerque).</p>
+<div class="chips"><span class="chip tl-chip">Design visual</span><span class="chip tl-chip">Interfaces</span><span class="chip tl-chip">Prototipação</span></div>
+</div>
+</div>
+
+<div class="tl-row">
+<div class="tl-when"><span class="disp" style="font-size: 36px; color: #B5546A">2022</span><span style="font-size: 12px; font-weight: 700; color: #857A8C">a 2023 · consolidação</span></div>
+<div class="tl-what">
+<h3 class="disp2" style="margin: 0; font-size: 24px">Fluxos, jornadas e colaboração com tecnologia</h3>
+<p class="body" style="margin: 0; font-size: 15px">Estruturação de fluxos e jornadas e trabalho próximo a profissionais de tecnologia. Repertório ampliado com Introdução ao UX Design (Awari · UX NTT DATA), Design Emocional (Mergo), UI BOOST (Gilberto Prado), Métricas de Negócios Digitais (PM3) e BizTech Leadership Week (IFTL).</p>
+<div class="chips"><span class="chip tl-chip">Fluxos</span><span class="chip tl-chip">Jornadas de usuários</span><span class="chip tl-chip">Métricas de negócios digitais</span></div>
+</div>
+</div>
+
+<div class="tl-row">
+<div class="tl-when"><span class="disp" style="font-size: 36px; color: #B5546A">2024</span><span style="font-size: 12px; font-weight: 700; color: #857A8C">pesquisa e estrutura</span></div>
+<div class="tl-what">
+<h3 class="disp2" style="margin: 0; font-size: 24px">Arquitetura da informação, pesquisa e testes</h3>
+<p class="body" style="margin: 0; font-size: 15px">Atuação registrada em arquitetura da informação, pesquisa com usuários e testes de usabilidade. É o período em que o trabalho começa a sair da interface e entrar na organização da informação e dos processos.</p>
+<div class="chips"><span class="chip tl-chip">Arquitetura da informação</span><span class="chip tl-chip">Pesquisa com usuários</span><span class="chip tl-chip">Testes de usabilidade</span></div>
+</div>
+</div>
+
+<div class="tl-row" style="background: #F3E3E3; border-radius: 20px; padding: 24px; border-bottom: 0; margin-top: 8px">
+<div class="tl-when"><span class="disp" style="font-size: 36px; color: #B5546A">2025</span><span style="font-size: 12px; font-weight: 700; color: #857A8C">a 2026 · produto e estratégia</span></div>
+<div class="tl-what">
+<h3 class="disp2" style="margin: 0; font-size: 24px">Ampliação da atuação em Produto e Estratégia</h3>
+<p class="body" style="margin: 0; font-size: 15px">Ampliação de responsabilidades, sem mudança formal de cargo: discovery, evolução de produtos SaaS, service design, gestão de stakeholders, product operations, governança de demandas, priorização, estratégias de adoção e comunicação entre negócio e tecnologia. Em 2026, formação em Product Management (PM3 · 70 horas · 90% de aproveitamento). Período dos cases <a href="case-01.html" style="color: #B5546A; font-weight: 600">Pagamentos Integrados</a>, <a href="case-02.html" style="color: #B5546A; font-weight: 600">Programa Aurora Go!</a>, <a href="case-03.html" style="color: #B5546A; font-weight: 600">Mutirão de Incidentes</a> e <a href="case-04.html" style="color: #B5546A; font-weight: 600">Esteira de Acompanhamento</a>.</p>
+<div class="chips"><span class="chip tl-chip-dark">Product Discovery</span><span class="chip tl-chip-dark">Service Design</span><span class="chip tl-chip-dark">Stakeholder Management</span><span class="chip tl-chip-dark">Product Operations</span><span class="chip tl-chip-dark">Governança de demandas</span><span class="chip tl-chip-dark">Priorização</span><span class="chip tl-chip-dark">Estratégias de adoção</span></div>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 24px; padding-top: 24px; border-top: 1px solid #E2D9D3" class="tl-before">
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #857A8C">Antes disso<br><span style="font-weight: 600; letter-spacing: 0; text-transform: none">Arquitetura e Urbanismo · 2010 a 2021</span></p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; font-size: 13px; line-height: 1.55; color: #857A8C">
+<p style="margin: 0"><strong style="color: #4F4556">2010 a 2015 · Formação</strong><br>Graduação em Arquitetura e Urbanismo, UNILESTE.</p>
+<p style="margin: 0"><strong style="color: #4F4556">2014 a 2016 · Estágio</strong><br>Empresa do setor siderúrgico e colaboração em projetos arquitetônicos.</p>
+<p style="margin: 0"><strong style="color: #4F4556">2018 a 2021 · Arquiteta e Urbanista</strong><br>Escritório de Arquitetura e Engenharia: projetos, interiores e consultoria.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ABORDAGEM -->
+<section aria-labelledby="ab-title" style="padding: clamp(80px,10vw,136px) 0; background: #EFE8E1; border-radius: 0 0 48px 48px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 820px"><p class="kick" style="margin: 0; color: #B5546A">Minha abordagem</p><h2 id="ab-title" class="h2">Entender. Conectar. Estruturar. Transformar.</h2><p class="body" style="margin: 0">Síntese do meu repertório, não uma metodologia aplicada de forma idêntica em todos os projetos.</p></div>
+<ol class="steps" style="margin: 0; padding: 0; list-style: none">
+<li class="step" style="background: #FFFFFF"><span class="disp" style="font-size: 44px; color: #B5546A">01</span><div><p class="disp2" style="margin: 0 0 6px; font-size: 24px">Descobrir</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4F4556">Compreender pessoas, necessidades, contexto e oportunidades.</p></div></li>
+<li class="step" style="background: #FFFFFF"><span class="disp" style="font-size: 44px; color: #B5546A">02</span><div><p class="disp2" style="margin: 0 0 6px; font-size: 24px">Definir</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4F4556">Organizar informações, hipóteses, prioridades e restrições.</p></div></li>
+<li class="step" style="background: #FFFFFF"><span class="disp" style="font-size: 44px; color: #B5546A">03</span><div><p class="disp2" style="margin: 0 0 6px; font-size: 24px">Projetar</p><p style="margin: 0; font-size: 14px; line-height: 1.5">Construir jornadas, fluxos, interfaces e estruturas funcionais.</p></div></li>
+<li class="step" style="background: #FFFFFF"><span class="disp" style="font-size: 44px; color: #B5546A">04</span><div><p class="disp2" style="margin: 0 0 6px; font-size: 24px">Colaborar</p><p style="margin: 0; font-size: 14px; line-height: 1.5">Articular diferentes áreas, perspectivas e responsabilidades.</p></div></li>
+<li class="step" style="background: #FFFFFF"><span class="disp" style="font-size: 44px; color: #B5546A">05</span><div><p class="disp2" style="margin: 0 0 6px; font-size: 24px">Entregar</p><p style="margin: 0; font-size: 14px; line-height: 1.5">Estruturar entregáveis compreensíveis, viáveis e alinhados aos objetivos.</p></div></li>
+<li class="step" style="background: #2A1F33; color: #F8F4EF"><span class="disp" style="font-size: 44px; color: #B5546A">06</span><div><p class="disp2" style="margin: 0 0 6px; font-size: 24px">Evoluir</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #DDD4E0">Observar resultados, aprender com o contexto e identificar melhorias.</p></div></li>
+</ol>
+</div>
+</section>
+
+<!-- COMPETÊNCIAS -->
+<section id="competencias" data-section="1" aria-labelledby="comp-title" style="padding: clamp(80px,10vw,136px) 0">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 20px"><p class="kick" style="margin: 0; color: #B5546A">Competências</p><h2 id="comp-title" class="h2">Entre a sensibilidade do design e a lógica do produto.</h2></div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; font-weight: 600"><span class="chip" style="background: #2A1F33; color: #F8F4EF">Demonstrada em estudo de caso</span><span class="chip" style="border-color: #2A1F33">Declarada no currículo</span></div>
+</div>
+<div class="skills">
+<sc-for list="{{ skillGroups }}" as="g" hint-placeholder-count="4">
+<div style="background: {{ g.bg }}; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 18px">
+<h3 class="disp2" style="margin: 0; font-size: 26px">{{ g.title }}</h3>
+<div class="chips">
+<sc-for list="{{ g.items }}" as="s" hint-placeholder-count="8">
+<sc-if value="{{ s.demo }}" hint-placeholder-val="{{ false }}"><span class="chip" style="background: #2A1F33; color: #F8F4EF"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Demonstrada em estudo de caso: </span>{{ s.label }}</span></sc-if>
+<sc-if value="{{ s.decl }}" hint-placeholder-val="{{ true }}"><span class="chip" style="border-color: #2A1F33; background: transparent"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Declarada no currículo: </span>{{ s.label }}</span></sc-if>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="background: #FFFFFF; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
+<h3 class="disp2" style="margin: 0; font-size: 24px">Ferramentas</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 10px"><p class="kick" style="margin: 0; font-size: 12px; color: #B5546A">Design e prototipação</p><div class="chips"><span class="chip" style="background: #EFE8E1">Figma</span><span class="chip" style="background: #EFE8E1">FigJam</span><span class="chip" style="background: #EFE8E1">Canva</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><p class="kick" style="margin: 0; font-size: 12px; color: #B5546A">Gestão e documentação</p><div class="chips"><span class="chip" style="background: #EFE8E1">Runrun.it</span><span class="chip" style="background: #EFE8E1">Notion</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><p class="kick" style="margin: 0; font-size: 12px; color: #B5546A">Inteligência artificial</p><div class="chips"><span class="chip" style="background: #EFE8E1">ChatGPT</span><span class="chip" style="background: #EFE8E1">Claude</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FORMAÇÃO -->
+<section aria-labelledby="form-title" style="padding: 0 0 clamp(80px,10vw,136px)">
+<div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(28px,4vw,64px)">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="kick" style="margin: 0; color: #B5546A">Formação e desenvolvimento</p>
+<h2 id="form-title" class="h2" style="font-size: clamp(36px,4.6vw,64px)">Aprender faz parte de como eu evoluo.</h2>
+<div style="background: #2A1F33; color: #F8F4EF; border-radius: 24px; padding: 26px 28px; display: flex; flex-direction: column; gap: 6px"><p class="kick" style="margin: 0 0 4px; color: #D9A3B0; font-size: 12px">Destaque · 2026</p><p class="disp2" style="margin: 0; font-size: 28px">Product Management</p><p style="margin: 0; font-size: 14px; color: #DDD4E0">PM3 · 70 horas · 90% de aproveitamento na avaliação final</p></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"><div style="background: #F3E3E3; border-radius: 20px; padding: 20px"><p class="disp2" style="margin: 0; font-size: 36px; color: #B5546A">7</p><p style="margin: 4px 0 0; font-size: 14px; line-height: 1.5">cursos e formações em design, produto e negócios digitais desde 2021</p></div><div style="background: #F3E3E3; border-radius: 20px; padding: 20px"><p class="disp2" style="margin: 0; font-size: 36px; color: #B5546A">2021</p><p style="margin: 4px 0 0; font-size: 14px; line-height: 1.5">início da atuação em produtos SaaS B2B</p></div></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+<div style="background: #FFFFFF; border-radius: 20px; padding: 20px"><p class="kick" style="margin: 0 0 6px; font-size: 11px; color: #857A8C">Inglês</p><p style="margin: 0; font-size: 14px; line-height: 1.5">Formação pelo CCAA.<br>Nível: intermediário</p></div>
+<div style="background: #FFFFFF; border-radius: 20px; padding: 20px"><p class="kick" style="margin: 0 0 6px; font-size: 11px; color: #857A8C">Espanhol</p><p style="margin: 0; font-size: 14px; line-height: 1.5">Nível: básico</p></div>
+<div style="grid-column: 1 / -1; border: 2px dashed #D9CFC4; border-radius: 20px; padding: 18px 20px"><p class="kick" style="margin: 0 0 6px; font-size: 11px; color: #857A8C">Base acadêmica</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #4F4556">Graduação em Arquitetura e Urbanismo · UNILESTE · 2010 a 2015</p></div>
+</div>
+</div>
+<div style="background: #FFFFFF; border-radius: 24px; padding: 28px; display: flex; flex-direction: column">
+<p class="kick" style="margin: 0 0 8px; color: #B5546A; font-size: 12px">Formação em design e produto</p>
+<sc-for list="{{ courses }}" as="c" hint-placeholder-count="7">
+<div class="edu"><span class="disp2" style="font-size: 22px; color: #B5546A">{{ c.year }}</span><span><strong>{{ c.title }}</strong><br><span style="font-size: 13px; color: #857A8C">{{ c.meta }}</span></span></div>
+</sc-for>
+<button type="button" onClick="{{ toggleCreds }}" aria-expanded="{{ credsExpanded }}" style="margin-top: 18px; align-self: flex-start; min-height: 44px; padding: 0 18px; border: 2px solid #2A1F33; background: transparent; border-radius: 999px; font: 700 13px 'DM Sans', sans-serif; cursor: pointer">{{ credsLabel }}</button>
+<sc-if value="{{ credsOpen }}" hint-placeholder-val="{{ false }}"><p style="margin: 12px 0 0; font-size: 13px; color: #857A8C; line-height: 1.6">Links de verificação das credenciais serão inseridos quando disponíveis. Nenhuma certificação internacional de proficiência é presumida.</p></sc-if>
+</div>
+</div>
+</section>
+
+<!-- FILOSOFIA -->
+<section aria-labelledby="filo-title" style="background: #2A1F33; color: #F8F4EF; padding: clamp(96px,12vw,160px) 0; border-radius: 48px 48px 0 0">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<p class="kick" style="margin: 0; color: #B5546A">Filosofia profissional</p>
+<h2 id="filo-title" class="disp" style="margin: 0; font-size: clamp(40px,6vw,96px); max-width: 15ch">O design começa quando aprendemos a enxergar o problema por <span style="color: #D9A3B0">diferentes perspectivas.</span></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #DDD4E0; background: rgba(255,255,255,.06); border-radius: 20px; padding: 22px">Acredito no design como uma ferramenta de transformação que combina empatia, funcionalidade e pensamento crítico.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #DDD4E0; background: rgba(255,255,255,.06); border-radius: 20px; padding: 22px">Minha trajetória me ensinou que soluções relevantes precisam considerar tanto a experiência das pessoas quanto o contexto em que serão construídas.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #DDD4E0; background: rgba(255,255,255,.06); border-radius: 20px; padding: 22px">Gosto de projetos que exigem investigação, colaboração e capacidade de transformar informações dispersas em uma direção comum.</p>
+</div>
+</div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" data-section="1" aria-labelledby="cont-title" style="background: #F3E3E3; padding: clamp(80px,10vw,144px) 0 clamp(48px,6vw,72px)">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+<p class="kick" style="margin: 0; color: #B5546A">Contato</p>
+<h2 id="cont-title" class="disp" style="margin: 0; font-size: clamp(52px,8vw,128px)">Temos bons problemas para resolver?</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p class="lead" style="margin: 0; color: #2A1F33">Estou aberta a oportunidades de Product Designer Pleno em equipes que valorizem colaboração, autonomia, pensamento estratégico e experiências centradas nas pessoas.</p>
+<p style="margin: 0; font-size: 14px; font-weight: 700">Product Designer · UX/UI · SaaS B2B<br><span style="font-weight: 500">Disponível para oportunidades remotas no Brasil.</span></p>
+<dl style="margin: 8px 0 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 16px; font-size: 15px">
+<sc-if value="{{ hasEmail }}" hint-placeholder-val="{{ true }}"><dt style="font-weight: 700">E-mail</dt><dd style="margin: 0"><a href="{{ emailHref }}" style="color: #B5546A; font-weight: 600">{{ email }}</a></dd></sc-if>
+<sc-if value="{{ hasPhone }}" hint-placeholder-val="{{ true }}"><dt style="font-weight: 700">Contato</dt><dd style="margin: 0"><a href="{{ waHref }}" target="_blank" rel="noopener noreferrer" style="color: #B5546A; font-weight: 600">{{ phone }}</a></dd></sc-if>
+</dl>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-content: flex-start">
+<sc-if value="{{ hasEmail }}" hint-placeholder-val="{{ false }}"><a href="{{ emailHref }}" class="btn b-ink">Entrar em contato <span aria-hidden="true">→</span></a></sc-if>
+<sc-if value="{{ noEmail }}" hint-placeholder-val="{{ true }}"><span class="btn" style="border: 2px dashed #2A1F33; font-weight: 600">Entrar em contato · e-mail a configurar</span></sc-if>
+<sc-if value="{{ hasPhone }}" hint-placeholder-val="{{ true }}"><a href="{{ waHref }}" target="_blank" rel="noopener noreferrer" class="btn b-out">WhatsApp ↗</a></sc-if>
+<sc-if value="{{ hasLinkedin }}" hint-placeholder-val="{{ false }}"><a href="{{ linkedinUrl }}" target="_blank" rel="noopener noreferrer" class="btn b-out">Acessar LinkedIn ↗</a></sc-if>
+<sc-if value="{{ noLinkedin }}" hint-placeholder-val="{{ true }}"><span class="btn" style="border: 2px dashed #2A1F33; font-weight: 600">LinkedIn · link a configurar</span></sc-if>
+<sc-if value="{{ hasCv }}" hint-placeholder-val="{{ false }}"><a href="{{ cvUrl }}" target="_blank" rel="noopener noreferrer" download="Curriculo_Raissa_Figueiredo_Product_Designer.pdf" class="btn b-out">Baixar currículo ↓</a></sc-if>
+<sc-if value="{{ noCv }}" hint-placeholder-val="{{ true }}"><span class="btn" style="border: 2px dashed #2A1F33; font-weight: 600">Currículo · arquivo a configurar</span></sc-if>
+<a href="#projetos" class="btn b-out">Explorar portfólio ↑</a>
+</div>
+</div>
+<footer style="border-top: 2px solid #2A1F33; padding-top: 24px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px">
+<span class="disp2" style="font-size: 18px">Raissa Figueiredo · Clarity by Design.</span>
+<span style="max-width: 560px; line-height: 1.5">Os estudos de caso usam nomes fictícios (Aurora Tecnologia SaaS, Rede TodoSorriso e outros) e dados simulados para preservar a confidencialidade.</span>
+</footer>
+</div>
+</section>
+
+</main>
+</div>
+</template>
+<script type="text/x-dc" data-dc-script data-props='{"email":{"editor":"text","default":"raissaffigueiredo@gmail.com","section":"Links de contato"},"phone":{"editor":"text","default":"(31) 98644-9139","section":"Links de contato"},"linkedinUrl":{"editor":"text","default":"https://www.linkedin.com/in/raissafigueiredo/","section":"Links de contato"},"cvUrl":{"editor":"text","default":"assets/Curriculo_Raissa_Figueiredo_Product_Designer.pdf","section":"Links de contato"},"$preview":{"width":1440,"height":10200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { active: 'inicio', menuOpen: false, credsOpen: false, tabs: { c1: 'p', c2: 'p', c3: 'p', c4: 'p' } };
+  }
+  componentDidMount() {
+    this.t = setTimeout(() => {
+      try {
+        const els = document.querySelectorAll('[data-section]');
+        this.io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting && e.target.id) this.setState({ active: e.target.id }); });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        els.forEach((el) => this.io.observe(el));
+      } catch (err) {}
+    }, 300);
+  }
+  componentWillUnmount() { clearTimeout(this.t); if (this.io) this.io.disconnect(); }
+  setTab(id, v) { this.setState({ tabs: { ...this.state.tabs, [id]: v } }); }
+  renderVals() {
+    const s = this.state;
+    const links = [['inicio', 'Início'], ['sobre', 'Sobre'], ['projetos', 'Projetos'], ['trajetoria', 'Trajetória'], ['competencias', 'Competências'], ['contato', 'Contato']];
+    const nav = links.map(([id, label]) => ({ id, label, href: '#' + id, active: s.active === id, inactive: s.active !== id, go: () => this.setState({ active: id }), goClose: () => this.setState({ active: id, menuOpen: false }) }));
+
+    const raw = [
+      { id: 'c1', n: '01', title: 'Pagamentos Integrados: do piloto ao lançamento', cat: 'Product Management · Service Design · UX Writing', kind: 'Lançamento', bg: '#E4DBE6', acc: '#B5546A', href: 'case-01.html',
+        a1: 'Esteira de Acompanhamento', a2: 'Quatro pilotos em duas ondas', a3: 'Manuais, treinamento e lançamento', pillsA: ['Jun. 2026', 'Set. 2026', '9 nov. 2026'], bars: [{ l: 'Piloto 1', w: '50%' }, { l: 'Piloto 2', w: '75%' }, { l: 'Rede', w: '100%' }],
+        p: 'De maio a dezembro de 2025, o projeto de pagamentos para uma rede de clínicas odontológicas andava sem visibilidade de ritmo: o conselho não sabia o que gerava valor, o time acompanhava só por tickets e não havia estimativa real de lançamento.',
+        d: 'Desde fevereiro de 2026, na gestão do produto: esteira semanal de prioridades e progresso para o conselho, alinhamento com desenvolvedor, CS, integradora e parceiro financeiro, quatro pilotos com a rede em duas ondas, manuais de apoio, board de onboarding e suporte no Runrun.it e apresentação do lançamento com CS.',
+        r: '1.307 transações nas 4 unidades piloto entre julho e meados de outubro, com crescimento de 4,4x entre julho e setembro e 27% das transações de outubro já por PIX. Lançamento em 9 de novembro de 2026 na reunião mensal da rede: oito unidades demonstraram interesse imediato, já com o parceiro financeiro para abrir conta e iniciar a TEF.' },
+      { id: 'c2', n: '02', title: 'Programa Aurora Go!', cat: 'Service Design · Product Strategy · CX', kind: 'Programa', bg: '#FFFFFF', acc: '#B5546A', href: 'case-02.html',
+        a1: 'Regras e premiação progressiva', a2: 'Evento de lançamento · 21 mai. 2026', a3: 'Painel de vendas e triagem', pillsA: ['Aprender', 'Vender', 'Crescer'], bars: [{ l: 'Chamados', w: '8%' }, { l: 'Vendas', w: '90%' }, { l: 'Efetivadas', w: '45%' }],
+        p: 'Dificuldades de uso chegavam ao suporte como incidentes técnicos: os assessores da franqueadora não conheciam os produtos e a triagem da rede era pulada. Isso interrompia o desenvolvimento e gerava atrito entre as duas empresas.',
+        d: 'Concebi um programa de capacitação e premiação para os assessores: três pilares, premiação progressiva por serviço ativado com uso real, ranking mensal, critérios de desempate, evento de lançamento com treinamento e roteiro de triagem. CS conduziu com a supervisora da rede.',
+        r: 'No primeiro mês, os chamados técnicos indevidos foram de uma média de 15 por mês para zero. 24 serviços vendidos por 11 assessores no primeiro mês; 41 vendas e 18 efetivadas até novembro.' },
+      { id: 'c3', n: '03', title: 'Mutirão de Incidentes', cat: 'Process Design · Product Operations · Service Design', kind: 'Processo', bg: '#FFFFFF', acc: '#B5546A', href: 'case-03.html',
+        a1: 'Acervo em aberto', a2: 'Triagem pelo QA', a3: 'Chamado contextualizado', pillsA: ['Prescrito', 'Duplicado', 'Configuração', 'Atuação técnica'], bars: [{ l: '01/07', w: '6%' }, { l: '08/07', w: '50%' }, { l: '13/11', w: '100%' }],
+        p: 'Cerca de 120 chamados abertos pela rede franqueadora e encaminhados para "TI" sem retorno, alguns com até 2 anos. Duplicidades, indicadores prejudicados dos dois lados e chamados sem contexto de negócio.',
+        d: 'Conduzi o kickoff do Mutirão em 30/06/2026 e defini com o time fluxo, etapas, triagem e etiquetas da frente, com compromisso mínimo de 1 chamado por dev por semana. Depois, reorganizei a triagem para começar pelo QA, com etiquetas na entrada.',
+        r: '7 chamados liberados no primeiro dia, 50% do acervo na primeira semana e 100% resolvidos em 13/11/2026: cerca de 120 incidentes em ~19 semanas, cerca de 1,5 vez o mínimo combinado de 4 por semana. Os chamados passaram a chegar aos devs contextualizados.' },
+      { id: 'c4', n: '04', title: 'Esteira de Acompanhamento', cat: 'Product Ops · Information Design · Strategy', kind: 'Governança', bg: '#F3E3E3', acc: '#B5546A', href: 'case-04.html',
+        a1: 'Barras de progresso semanais', a2: 'Ordem de prioridade com motivo', a3: 'Decisões do conselho', pillsA: ['Fila', 'Em paralelo', 'Fora da fila'], bars: [{ l: 'Avanço', w: '70%' }, { l: 'Bloqueios', w: '20%' }, { l: 'Decisões', w: '35%' }],
+        p: 'O conselho queria visibilidade sobre os projetos e sobre a lógica das prioridades, mas a informação vivia em linguagem técnica. E "entregue" significava coisas diferentes para o time técnico e para o negócio.',
+        d: 'Passei a apresentar presencialmente, toda semana, um documento padronizado com barras de progresso e um roteiro de avanços, bloqueios e próximos passos. Definimos a ordem de prioridade com o motivo de cada posição. Com IA na rotina, o formato evoluiu para uma esteira com fila, frentes paralelas e pontos de decisão.',
+        r: 'Mais confiança no time e no negócio, e base para decisões estratégicas sobre lançamentos, expansão e receita. A definição de entrega foi alinhada em três meses, e a preparação semanal caiu de 3 dias para 2 horas.' }
+    ];
+    const cases = raw.map((c) => {
+      const t = s.tabs[c.id];
+      return { ...c, text: t === 'p' ? c.p : t === 'd' ? c.d : c.r, pP: t === 'p' ? 'true' : 'false', pD: t === 'd' ? 'true' : 'false', pR: t === 'r' ? 'true' : 'false',
+        setP: () => this.setTab(c.id, 'p'), setD: () => this.setTab(c.id, 'd'), setR: () => this.setTab(c.id, 'r') };
+    });
+
+    const years = [];
+    for (let y = 2021; y <= 2026; y++) {
+      let bg = '#E4DBE6', fg = '#2A1F33';
+      if (y >= 2025) { bg = '#B5546A'; fg = '#F8F4EF'; } else if (y === 2021) { bg = 'linear-gradient(90deg, #F8F4EF 0 88%, #E4DBE6 88%)'; }
+      years.push({ label: String(y), bg, fg });
+    }
+
+    const d = (label) => ({ label, demo: true, decl: false });
+    const r = (label) => ({ label, demo: false, decl: true });
+    const skillGroups = [
+      { title: 'UX/UI & Product Design', bg: '#FFFFFF', items: [r('Design de interfaces'), r('Design visual'), d('Prototipação'), d('Arquitetura da informação'), d('Jornadas de usuários'), d('UX Writing'), d('Design de serviços'), d('Design de informação'), r('Pesquisa com usuários'), r('Testes de usabilidade')] },
+      { title: 'Product Management', bg: '#F3E3E3', items: [d('Product Discovery'), d('Lean Inception'), d('Matriz CSD'), d('Definição de escopo'), d('Planejamento de MVP'), d('Organização de demandas'), d('Priorização'), d('Stakeholder Management'), d('Product Operations')] },
+      { title: 'Business & Strategy', bg: '#FFFFFF', items: [d('Pensamento sistêmico'), d('Product Strategy'), r('Análise de negócio'), d('Comunicação executiva'), r('Métricas de negócios digitais'), d('Estratégias de adoção'), d('Planejamento de expansão'), d('Gestão de expectativas')] },
+      { title: 'Comportamentais', bg: '#E4DBE6', items: [r('Pensamento crítico'), r('Criatividade'), r('Responsabilidade'), r('Adaptabilidade'), r('Autonomia'), d('Colaboração multidisciplinar'), r('Capacidade analítica'), r('Comunicação'), r('Resolução de problemas'), r('Empatia')] }
+    ];
+    const courses = [
+      { year: '2026', title: 'Product Management', meta: 'PM3 · 70 horas · 90% de aproveitamento na avaliação final' },
+      { year: '2023', title: 'BizTech Leadership Week', meta: 'IFTL · 6 horas' },
+      { year: '2023', title: 'Métricas de Negócios Digitais', meta: 'PM3 · 5 horas' },
+      { year: '2023', title: 'UI BOOST', meta: 'Gilberto Prado' },
+      { year: '2022', title: 'Design Emocional', meta: 'Mergo User Experience' },
+      { year: '2022', title: 'Introdução ao UX Design', meta: 'Awari · UX NTT DATA · aproximadamente 10 horas' },
+      { year: '2021', title: 'Mentoria UI/UX Designer', meta: 'Notorious Design, com Jeff Albuquerque' }
+    ];
+    const email = (this.props.email ?? '').trim();
+    const phone = (this.props.phone ?? '').trim();
+    const phoneDigits = phone.replace(/\D/g, '');
+    const waHref = 'https://wa.me/55' + phoneDigits;
+    const linkedinUrl = (this.props.linkedinUrl ?? '').trim();
+    const cvUrl = (this.props.cvUrl ?? '').trim();
+    return {
+      nav, cases, years, skillGroups, courses,
+      menuOpen: s.menuOpen, menuExpanded: s.menuOpen ? 'true' : 'false', menuLabel: s.menuOpen ? 'Fechar' : 'Menu',
+      toggleMenu: () => this.setState({ menuOpen: !s.menuOpen }), closeMenu: () => this.setState({ menuOpen: false }),
+      credsOpen: s.credsOpen, credsExpanded: s.credsOpen ? 'true' : 'false', credsLabel: s.credsOpen ? 'Ocultar credenciais' : 'Consultar credenciais',
+      toggleCreds: () => this.setState({ credsOpen: !s.credsOpen }),
+      hasEmail: !!email, noEmail: !email, emailHref: 'mailto:' + email, email,
+      hasPhone: !!phoneDigits, phone, waHref,
+      hasLinkedin: !!linkedinUrl, noLinkedin: !linkedinUrl, linkedinUrl,
+      hasCv: !!cvUrl, noCv: !cvUrl, cvUrl
+    };
+  }
+}
+</script>
+</body>
+</html>
