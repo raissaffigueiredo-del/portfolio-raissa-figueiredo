@@ -1,6 +1,6 @@
 # Portfólio · Raissa Figueiredo
 
-Site estático: página principal (`index.html`) e quatro estudos de caso (`case-01.html` a `case-04.html`).
+Site estático: página principal (`index.html`) e cinco estudos de caso (`case-01.html` a `case-05.html`).
 
 ## Como rodar no Cursor
 
@@ -19,9 +19,10 @@ case-01.html      Pagamentos Integrados
 case-02.html      Programa Aurora Go!
 case-03.html      Mutirão de Incidentes
 case-04.html      Esteira de Acompanhamento
+case-05.html      Medicado App
 assets/
   runtime.js      Pequeno motor que monta cada página e suas interações
-  *.jpg, *.png    Foto, flyer, ranking, comunicado, pranchas e esteiras
+  *.jpg, *.png    Foto, flyer, ranking, comunicado, pranchas, esteiras e telas do Medicado
   Curriculo_...pdf  Currículo baixado pelo botão da seção Contato
 ```
 

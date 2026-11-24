@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Estudo de caso de Raissa Figueiredo: Medicado, aplicativo de home care desenhado da Lean Inception ao MVP em alta fidelidade.">
+<title>Case 05 · Medicado App · Raissa Figueiredo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8F4EF;color:#2A1F33;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#B5546A}a:hover{color:#2A1F33}
+:focus-visible{outline:3px solid #B5546A;outline-offset:3px;border-radius:8px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.serif{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#B5546A}
+.body{font-size:16px;line-height:1.7;color:#4F4556}
+.sec{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(24px,4vw,64px);padding:clamp(40px,5vw,64px) 0;border-top:2px solid #E2D9D3}
+.sec-label{display:flex;flex-direction:column;gap:6px}
+.sec-label .n{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;font-size:28px;color:#B5546A}
+.sec-label h2{margin:0;font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:700;letter-spacing:-.02em;font-size:34px;line-height:1.05}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:1px solid #2A1F33;padding-top:24px}
+.todo{border:2px dashed #D9CFC4;border-radius:20px;padding:20px;font-size:14px;line-height:1.6;color:#857A8C;background:#FFFFFF}
+.sim{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#F8F4EF;background:#B5546A;border-radius:999px;padding:7px 12px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.tab{min-height:44px;padding:0 18px;border-radius:999px;font:600 14px 'DM Sans',sans-serif;cursor:pointer}
+.lane{display:grid;grid-template-columns:repeat(6,minmax(140px,1fr));gap:10px;min-width:900px}
+.rm{display:grid;grid-template-columns:160px repeat(4,minmax(0,1fr));gap:0;min-width:720px}
+.card{background:#FFFFFF;border:2px solid #E2D9D3;border-radius:20px;padding:22px}
+.li{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.li li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:10px;font-size:15px;line-height:1.6;color:#4F4556}
+.li li::before{content:"";width:8px;height:8px;border-radius:50%;background:#B5546A;margin-top:9px}
+.zoom-btn:hover img{box-shadow:0 20px 40px -24px rgba(42,31,51,.5)}
+.pill{display:inline-flex;align-items:center;border-radius:999px;padding:6px 12px;font-weight:700}
+.mv{min-height:40px;min-width:40px;border-radius:999px;border:2px solid #2A1F33;background:#FFFFFF;color:#2A1F33;font:700 14px 'DM Sans',sans-serif;cursor:pointer}
+.mv:hover{background:#2A1F33;color:#F8F4EF}
+.phone{background:#FFFFFF;border:2px solid #E2D9D3;border-radius:28px;padding:8px;box-shadow:0 30px 60px -36px rgba(42,31,51,.45)}
+.phone img{display:block;width:100%;height:auto;aspect-ratio:9/20;object-fit:contain;object-position:top;background:#F8F4EF;border-radius:20px}
+.shot{padding:0;border:0;background:transparent;cursor:zoom-in;text-align:left;display:flex;flex-direction:column;gap:10px;font:inherit;color:inherit}
+.shot:hover .phone{transform:translateY(-3px)}.phone{transition:transform .2s}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs button{min-height:44px;padding:0 16px;border-radius:999px;font:600 14px 'DM Sans',sans-serif;cursor:pointer;border:2px solid #2A1F33}
+.day{min-height:96px;border-radius:16px;padding:14px;text-align:left;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;flex-direction:column;gap:6px;border:2px solid #E2D9D3}
+.days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.quad{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sticky{font-size:13px;line-height:1.45;padding:10px 12px;border-radius:10px}
+.hero-ph{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:end}
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.days{grid-template-columns:repeat(2,minmax(0,1fr))}.quad{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.sec{grid-template-columns:minmax(0,1fr)}.meta{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<script src="assets/runtime.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<template data-dc>
+<div style="background: #F8F4EF; min-height: 100vh">
+
+<header style="border-bottom: 1px solid #E2D9D3">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; flex-wrap: wrap">
+<a href="index.html" style="text-decoration: none; color: #2A1F33; font-size: 14px; font-weight: 700; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 2px solid #2A1F33"><span aria-hidden="true">←</span> Voltar ao portfólio</a>
+<span class="serif" style="font-size: 22px">Raissa Figueiredo</span>
+<a href="case-01.html" style="text-decoration: none; font-size: 14px; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; gap: 8px">Primeiro case <span aria-hidden="true">→</span></a>
+</div>
+</header>
+
+<main>
+<section style="padding: clamp(48px,7vw,96px) 0 clamp(40px,5vw,64px)">
+<div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: clamp(32px,5vw,64px); align-items: center">
+<div style="display: flex; flex-direction: column; gap: 28px">
+<p class="eyebrow" style="margin: 0">Case 05 · UX/UI Design · Product Discovery · Lean Inception</p>
+<h1 class="serif" style="margin: 0; font-size: clamp(46px,6.4vw,88px); line-height: .98">Medicado: home care <em style="color: #B5546A">na palma da mão</em></h1>
+<p style="margin: 0; font-size: clamp(18px,1.6vw,21px); line-height: 1.6; color: #4F4556; max-width: 620px">Um aplicativo que conecta pacientes, famílias e empresas de home care a profissionais de saúde. Facilitei a Lean Inception que definiu o MVP e desenhei a experiência do zero, das jornadas ao protótipo em alta fidelidade. O produto chegou ao mercado em 2026.</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<a href="https://www.medicado.com.br/" target="_blank" rel="noopener" style="text-decoration: none; min-height: 48px; display: inline-flex; align-items: center; gap: 8px; padding: 0 20px; border-radius: 999px; background: #2A1F33; color: #F8F4EF; font-weight: 700; font-size: 14px">Conhecer o produto <span aria-hidden="true">↗</span></a>
+<a href="https://play.google.com/store/apps/details?id=com.medicadoapp&amp;hl=pt_BR" target="_blank" rel="noopener" style="text-decoration: none; min-height: 48px; display: inline-flex; align-items: center; gap: 8px; padding: 0 20px; border-radius: 999px; border: 2px solid #2A1F33; color: #2A1F33; font-weight: 700; font-size: 14px">Ver na Google Play <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+<div class="hero-ph" aria-label="Três telas do aplicativo">
+<div class="phone" style="transform: translateY(24px)"><img src="assets/med-001.jpg" alt="Tela de apresentação do Medicado com logotipo, escolha entre Pessoa Física e Empresa e botões de login e cadastro" width="720" height="1600"></div>
+<div class="phone"><img src="assets/med-018.jpg" alt="Perfil da paciente com tipo sanguíneo, peso, temperatura, batimentos e pressão, profissionais em atendimento e botão Solicite um profissional" width="720" height="1600"></div>
+<div class="phone" style="transform: translateY(24px)"><img src="assets/med-112.jpg" alt="Perfil da profissional com alerta de nova solicitação: complexidade baixa, paciente a 15 minutos, tempo para expirar e botões para ver o perfil ou recusar" width="720" height="1600"></div>
+</div>
+</div>
+<div class="wrap" style="margin-top: clamp(40px,5vw,64px)">
+<div class="meta">
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Produto</p><p style="margin: 0; font-size: 15px">Medicado · healthtech de home care, Android e iOS</p></div>
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Meu papel</p><p style="margin: 0; font-size: 15px">UX/UI Designer e facilitadora da Lean Inception</p></div>
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Time</p><p style="margin: 0; font-size: 15px">Eu, um sócio enfermeiro especialista em home care e um sócio desenvolvedor</p></div>
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Período</p><p style="margin: 0; font-size: 15px">Início em 2023 · no mercado em 2026</p></div>
+</div>
+</div>
+</section>
+
+<div class="wrap">
+
+<section class="sec" aria-labelledby="s1"><div class="sec-label"><span class="n">01</span><h2 id="s1">Visão geral</h2></div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="body" style="margin: 0; font-size: 18px">Entrei no time para organizar o projeto e entregar a visão do todo. Facilitei a Lean Inception com os dois sócios, conduzi a Matriz CSD, os objetivos de negócio, o É/Não é, as protopersonas, as funcionalidades e as jornadas, pesquisei concorrentes e referências e desenhei o aplicativo no Figma, com fluxos para quem pede o cuidado e para quem cuida.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px">
+<div class="card"><p class="serif" style="margin: 0; font-size: 44px; color: #B5546A">5</p><p style="margin: 4px 0 0; font-size: 14px; color: #4F4556">dias de Lean Inception, facilitada por mim</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 44px; color: #B5546A">9</p><p style="margin: 4px 0 0; font-size: 14px; color: #4F4556">jornadas de usuário mapeadas, do cadastro ao pagamento</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 44px; color: #B5546A">172</p><p style="margin: 4px 0 0; font-size: 14px; color: #4F4556">telas em alta fidelidade no Figma</p></div>
+<div class="card" style="background: #2A1F33; border-color: #2A1F33; color: #F8F4EF"><p class="serif" style="margin: 0; font-size: 44px; color: #D9A3B0">2026</p><p style="margin: 4px 0 0; font-size: 14px; color: #DDD4E0">produto no mercado, em Android e iOS</p></div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s2"><div class="sec-label"><span class="n">02</span><h2 id="s2">Contexto</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="body" style="margin: 0">O cuidado domiciliar envolve muita gente e pouca coordenação: a família que precisa de um profissional com urgência, o profissional que precisa saber o que vai encontrar na casa do paciente e a empresa de home care que precisa de gente qualificada disponível. A ideia do Medicado nasceu de quem conhece essa operação por dentro.</p>
+<div class="two">
+<div class="card" style="display: flex; flex-direction: column; gap: 8px"><p class="eyebrow" style="margin: 0; font-size: 11px">Dois segmentos</p><p class="body" style="margin: 0; font-size: 15px">O paciente particular, que contrata direto pelo app, e as empresas de home care (convênio), que buscam profissionais para seus pacientes.</p></div>
+<div class="card" style="display: flex; flex-direction: column; gap: 8px"><p class="eyebrow" style="margin: 0; font-size: 11px">Três perfis</p><p class="body" style="margin: 0; font-size: 15px">Paciente e família, profissional de saúde e administrador, cada um com a sua jornada e as suas permissões.</p></div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s3"><div class="sec-label"><span class="n">03</span><h2 id="s3">Problema</h2></div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<p class="serif" style="margin: 0; font-size: clamp(26px,2.6vw,34px); line-height: 1.2">Havia know-how de sobra sobre a operação e nenhuma definição do que seria o produto, nem por onde começar.</p>
+<ul class="li">
+<li>O conhecimento do negócio estava na cabeça de um dos sócios, em linguagem de enfermagem, e precisava virar escopo que o desenvolvimento conseguisse construir.</li>
+<li>Um produto de dois lados: se a família não confia no profissional, ou o profissional não sabe o que vai encontrar, o atendimento não acontece.</li>
+<li>Faltava um cronograma e um recorte de MVP que coubessem em um time de três pessoas.</li>
+</ul>
+</div></section>
+
+<section class="sec" aria-labelledby="s4"><div class="sec-label"><span class="n">04</span><h2 id="s4">Meu papel</h2></div>
+<div class="two">
+<div class="card" style="display: flex; flex-direction: column; gap: 12px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">O que eu conduzi</p>
+<ul class="li">
+<li>Facilitação da Lean Inception, da agenda ao registro no FigJam.</li>
+<li>Matriz CSD, objetivos de negócio, É/Não é, protopersonas, funcionalidades e jornadas.</li>
+<li>Pesquisa de concorrentes e de referências de layout e design de tela.</li>
+<li>Organização do cronograma do projeto e da visão do todo.</li>
+<li>UI/UX de ponta a ponta no Figma: fluxos, telas, estados e protótipo.</li>
+</ul>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 12px; background: #F3E3E3; border-color: #F3E3E3">
+<p class="eyebrow" style="margin: 0; font-size: 11px">O time</p>
+<ul class="li">
+<li><span><strong>Reinaldo</strong>, sócio e enfermeiro com anos de experiência em home care: especialista do negócio e da operação.</span></li>
+<li><span><strong>Lucas</strong>, sócio e líder técnico: desenvolvimento de ponta a ponta.</span></li>
+<li><span><strong>Eu</strong>, UX/UI Designer: facilitação, produto e experiência.</span></li>
+</ul>
+<p style="margin: 6px 0 0; font-size: 13px; color: #4F4556">Em toda a minha trajetória, já facilitei mais de 15 Lean Inceptions.</p>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s5"><div class="sec-label"><span class="n">05</span><h2 id="s5">Os dois lados</h2></div>
+<div style="background: #2A1F33; color: #F8F4EF; border-radius: 24px; padding: clamp(24px,4vw,44px); display: flex; flex-direction: column; gap: 14px">
+<p class="serif" style="margin: 0; font-size: clamp(24px,2.4vw,32px); line-height: 1.25">Eu também conheço o home care pelo lado da família.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #DDD4E0">Minha primeira filha recebeu cuidados domiciliares de enfermagem por mais de um ano. Essa vivência me trouxe para mais perto do produto: enquanto o sócio enfermeiro trazia a visão da operação, eu trazia a de quem recebe o profissional em casa. Decisões como saber quem vai chegar, acompanhar o trajeto e confirmar a entrada com um código refletem esse olhar.</p>
+</div></section>
+
+<section class="sec" aria-labelledby="s6"><div class="sec-label"><span class="n">06</span><h2 id="s6">Descoberta</h2></div>
+<div style="display: flex; flex-direction: column; gap: 22px">
+<p class="body" style="margin: 0">Usei a Lean Inception como fio condutor do discovery, com a Matriz CSD para separar certezas, suposições e dúvidas antes de decidir qualquer funcionalidade. Selecione um dia para ver o que foi feito.</p>
+<div class="days" role="group" aria-label="Dias da Lean Inception">
+<sc-for list="{{ days }}" as="d" hint-placeholder-count="5">
+<button type="button" class="day" aria-pressed="{{ d.pressed }}" onClick="{{ d.pick }}" style="background: {{ d.bg }}; color: {{ d.fg }}; border-color: {{ d.bd }}"><span style="font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: .8">{{ d.n }}</span><span class="serif" style="font-size: 19px; line-height: 1.15">{{ d.t }}</span></button>
+</sc-for>
+</div>
+<div class="card" aria-live="polite" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+<div><p class="eyebrow" style="margin: 0 0 8px; font-size: 11px">{{ day.n }} · manhã</p><p class="body" style="margin: 0; font-size: 15px">{{ day.am }}</p></div>
+<div><p class="eyebrow" style="margin: 0 0 8px; font-size: 11px">{{ day.n }} · tarde</p><p class="body" style="margin: 0; font-size: 15px">{{ day.pm }}</p></div>
+<div style="background: #F3E3E3; border-radius: 14px; padding: 16px"><p class="eyebrow" style="margin: 0 0 8px; font-size: 11px">O que saiu</p><p style="margin: 0; font-size: 14px; line-height: 1.6">{{ day.out }}</p></div>
+</div>
+<div class="two">
+<button type="button" class="shot" onClick="{{ zDia1 }}" aria-label="Ampliar o quadro do primeiro dia da Lean Inception">
+<img src="assets/li-dia1.jpg" alt="Quadro do FigJam do primeiro dia da Lean Inception: kickoff com os três participantes, objetivos de negócio, agenda de cinco dias, É/Não é, Faz/Não faz e estacionamento de ideias" width="1320" height="2170" style="width: 100%; height: 420px; object-fit: cover; object-position: top; border-radius: 20px; border: 2px solid #E2D9D3; display: block; background: #FFFFFF">
+<span style="font-size: 14px; color: #4F4556">Quadro do dia 1 no FigJam: kickoff, objetivos, agenda e É/Não é · <strong style="color: #B5546A">ampliar</strong></span>
+</button>
+<button type="button" class="shot" onClick="{{ zJor }}" aria-label="Ampliar as jornadas de usuário">
+<img src="assets/li-jor.jpg" alt="Quadro do FigJam com as jornadas de usuário 1 a 4: cadastro do profissional, cadastro do paciente, saída do profissional para o atendimento e solicitação do paciente" width="1140" height="1700" style="width: 100%; height: 420px; object-fit: cover; object-position: top; border-radius: 20px; border: 2px solid #E2D9D3; display: block; background: #FFFFFF">
+<span style="font-size: 14px; color: #4F4556">Jornadas de usuário validadas com o time · <strong style="color: #B5546A">ampliar</strong></span>
+</button>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s7"><div class="sec-label"><span class="n">07</span><h2 id="s7">Definição do MVP</h2></div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Objetivos de negócio</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="pill" style="background: #E4DBE6; padding: 10px 14px; font-size: 14px">Boa qualificação profissional</span>
+<span class="pill" style="background: #E4DBE6; padding: 10px 14px; font-size: 14px">Bom tratamento com o paciente</span>
+<span class="pill" style="background: #E4DBE6; padding: 10px 14px; font-size: 14px">Rapidez e eficiência no atendimento</span>
+<span class="pill" style="background: #E4DBE6; padding: 10px 14px; font-size: 14px">Agilidade em situações emergenciais</span>
+<span class="pill" style="background: #2A1F33; color: #F8F4EF; padding: 10px 14px; font-size: 14px">Segurança para o paciente</span>
+</div>
+</div>
+<div class="quad">
+<div class="card" style="display: flex; flex-direction: column; gap: 10px"><p class="eyebrow" style="margin: 0; font-size: 11px">É</p><p class="sticky" style="margin: 0; background: #E4DBE6">Plataforma de recrutamento para home care</p><p class="sticky" style="margin: 0; background: #E4DBE6">Intermediador de solicitações de atendimento de saúde</p></div>
+<div class="card" style="display: flex; flex-direction: column; gap: 10px"><p class="eyebrow" style="margin: 0; font-size: 11px; color: #857A8C">Não é</p><p class="sticky" style="margin: 0; background: #EFE8E1">Rede social</p><p class="sticky" style="margin: 0; background: #EFE8E1">Agenda de consultas</p><p class="sticky" style="margin: 0; background: #EFE8E1">Home care</p></div>
+<div class="card" style="display: flex; flex-direction: column; gap: 10px"><p class="eyebrow" style="margin: 0; font-size: 11px">Faz</p><p class="sticky" style="margin: 0; background: #F3E3E3">Recruta profissionais por área de atuação</p><p class="sticky" style="margin: 0; background: #F3E3E3">Oferece atendimento domiciliar e especializado</p><p class="sticky" style="margin: 0; background: #F3E3E3">Acompanha a evolução clínica do paciente</p></div>
+<div class="card" style="display: flex; flex-direction: column; gap: 10px"><p class="eyebrow" style="margin: 0; font-size: 11px; color: #857A8C">Não faz</p><p class="sticky" style="margin: 0; background: #EFE8E1">Agendamento autônomo</p><p class="sticky" style="margin: 0; background: #EFE8E1">Venda de produtos</p></div>
+</div>
+<div class="two">
+<div class="card" style="display: flex; flex-direction: column; gap: 10px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Protopersonas</p>
+<ul class="li">
+<li>Helena, paciente particular</li>
+<li>Maria Luísa, paciente de convênio</li>
+<li>Pedro, técnico de enfermagem</li>
+<li>Empresa de home care (convênio)</li>
+</ul>
+</div>
+<div class="card" style="display: flex; flex-direction: column; gap: 10px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Ficou para depois</p>
+<ul class="li">
+<li>IA para apoiar a análise e a seleção do profissional.</li>
+<li>Entrega de medicamentos antes da chegada do profissional, prevista para uma 2ª versão.</li>
+<li>Jornadas de link dinâmico para empresas, riscadas do MVP durante a validação.</li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s8"><div class="sec-label"><span class="n">08</span><h2 id="s8">Solução</h2></div>
+<div style="display: flex; flex-direction: column; gap: 22px">
+<p class="body" style="margin: 0">Cada jornada do discovery virou um fluxo no Figma, e cada fluxo responde a um objetivo de negócio. Navegue pelas jornadas e clique em uma tela para ampliar.</p>
+<div class="tabs" role="group" aria-label="Escolher jornada">
+<sc-for list="{{ flows }}" as="f" hint-placeholder-count="5">
+<button type="button" aria-pressed="{{ f.pressed }}" onClick="{{ f.pick }}" style="background: {{ f.bg }}; color: {{ f.fg }}">{{ f.name }}</button>
+</sc-for>
+</div>
+<div class="card" aria-live="polite" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; background: #FFFFFF">
+<div><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">{{ flow.who }}</p><p class="serif" style="margin: 0; font-size: 26px; line-height: 1.15">{{ flow.name }}</p></div>
+<p class="body" style="margin: 0; font-size: 15px">{{ flow.text }}</p>
+<div style="background: #F3E3E3; border-radius: 14px; padding: 14px 16px"><p class="eyebrow" style="margin: 0 0 6px; font-size: 11px">Objetivo atendido</p><p style="margin: 0; font-size: 14px; line-height: 1.55">{{ flow.goal }}</p></div>
+</div>
+<div class="gal">
+<sc-for list="{{ shots }}" as="sh" hint-placeholder-count="4">
+<button type="button" class="shot" onClick="{{ sh.open }}" aria-label="{{ sh.label }}">
+<div class="phone" style="width: 100%"><img src="{{ sh.src }}" alt="{{ sh.alt }}" width="720" height="1600"></div>
+<span style="font-size: 13px; line-height: 1.45; color: #4F4556">{{ sh.cap }}</span>
+</button>
+</sc-for>
+</div>
+<div class="two">
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Complexidade antes de tudo</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">O cadastro classifica o paciente em baixa, média ou alta complexidade a partir dos cuidados de que ele precisa. Isso direciona o perfil de profissional e aparece em toda solicitação.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Código para entrar e sair</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">O check-in e o checkout dependem de um código informado pela família. A segurança do paciente vira um passo do fluxo, não uma promessa.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Tempo e distância visíveis</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">A solicitação mostra a que distância o paciente está e quanto tempo resta para aceitar. O trajeto aparece no mapa para os dois lados.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Estados que acolhem</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Erro de conexão, recusa e cancelamento têm telas próprias, com linguagem clara sobre reembolso e próximo passo.</p></div>
+</div>
+</div></section>
+
+<sc-if value="{{ zoomOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-modal="true" aria-label="{{ zoom.title }}" style="position: fixed; inset: 0; z-index: 100; background: rgba(42,31,51,.92); display: flex; flex-direction: column; padding: clamp(12px,2vw,28px); gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #F8F4EF">
+<p style="margin: 0; font-size: 14px; font-weight: 600">{{ zoom.title }}</p>
+<button type="button" onClick="{{ closeZoom }}" aria-label="Fechar ampliação" style="min-height: 44px; min-width: 44px; padding: 0 18px; border: 2px solid #F8F4EF; background: transparent; color: #F8F4EF; border-radius: 999px; font: 700 14px 'DM Sans', sans-serif; cursor: pointer">Fechar ✕</button>
+</div>
+<div style="flex: 1; min-height: 0; overflow: auto; border-radius: 16px; display: flex; justify-content: center; align-items: flex-start; padding: 8px">
+<img src="{{ zoom.src }}" alt="{{ zoom.alt }}" style="display: block; width: {{ zoom.w }}; max-width: 100%; height: auto; border-radius: 16px; background: #FFFFFF">
+</div>
+<button type="button" onClick="{{ closeZoom }}" aria-label="Fechar ampliação" style="position: absolute; inset: 0; z-index: -1; border: 0; background: transparent; cursor: zoom-out"></button>
+</div>
+</sc-if>
+
+<section class="sec" aria-labelledby="s9"><div class="sec-label"><span class="n">09</span><h2 id="s9">Colaboração</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Especialista do negócio</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Reinaldo trouxe a experiência da operação, base para as regras de tipos de profissional, cuidados por complexidade, registro no COREN, prontuário e cobrança.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 20px">Líder técnico</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Lucas participou da análise técnica das funcionalidades e construiu o produto de ponta a ponta.</p></div>
+<div class="card" style="background: #F3E3E3; border-color: #F3E3E3"><p class="serif" style="margin: 0; font-size: 20px">Facilitação e design</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Eu traduzi as duas visões em escopo, cronograma, jornadas e telas, com o olhar de quem já esteve do lado da família.</p></div>
+</div></section>
+
+<section class="sec" aria-labelledby="s10"><div class="sec-label"><span class="n">10</span><h2 id="s10">Resultado</h2></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p class="serif" style="margin: 0; font-size: clamp(26px,2.6vw,34px); line-height: 1.2">Da ideia ao produto no mercado: o Medicado chegou às lojas em 2026, para Android e iOS.</p>
+<ul class="li">
+<li>Um MVP com escopo explícito: o que o produto é, faz, não é e não faz, acordado entre negócio, tecnologia e design.</li>
+<li>Nove jornadas mapeadas e validadas com o time antes do desenho das telas, incluindo as que ficaram fora do MVP.</li>
+<li>172 telas em alta fidelidade, com fluxos de paciente, profissional e empresa, estados de erro e de exceção.</li>
+</ul>
+<div style="background: #F3E3E3; border-radius: 20px; padding: 20px 22px; display: flex; flex-direction: column; gap: 6px">
+<p class="eyebrow" style="margin: 0; font-size: 11px">Leitura honesta</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.6">As telas mostradas aqui são do projeto no Figma. A versão publicada evoluiu a partir desse MVP. Não apresento métricas de uso porque não tenho acesso a esses dados.</p>
+</div>
+</div></section>
+
+<section class="sec" aria-labelledby="s11"><div class="sec-label"><span class="n">11</span><h2 id="s11">Aprendizados</h2></div>
+<div class="two">
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Facilitar é traduzir</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">O valor da Lean Inception esteve em transformar a linguagem da enfermagem em decisões que o desenvolvimento podia construir.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">O "não é" protege o MVP</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Dizer que o app não é uma rede social nem uma agenda de consultas evitou funcionalidades que pareciam óbvias e não sustentavam o objetivo.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Confiança é fluxo</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Em saúde, segurança não cabe em um selo: ela precisa estar nos passos, como o código de entrada e o trajeto visível.</p></div>
+<div class="card"><p class="serif" style="margin: 0; font-size: 22px">Vivência é repertório</p><p style="margin: 6px 0 0; font-size: 14px; color: #4F4556; line-height: 1.6">Ter estado do lado da família me deu perguntas que nenhuma pesquisa de mesa traria.</p></div>
+</div></section>
+
+</div>
+</main>
+
+<footer style="border-top: 1px solid #E2D9D3; margin-top: 48px; padding: 32px 0 48px">
+<div class="wrap" style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center">
+<a href="case-04.html" style="font-size: 14px; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center">← Case 04</a>
+<a href="index.html" style="text-decoration: none; color: #2A1F33; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; min-height: 44px"><span class="eyebrow" style="font-size: 11px">Fim dos estudos de caso</span><span class="serif" style="font-size: 28px">Voltar ao portfólio →</span></a>
+</div>
+</footer>
+</div>
+</template>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":8200}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { day: 0, flow: 0, zoom: null }; }
+  renderVals() {
+    const s = this.state;
+    const M={"c76f69e44747a48a1693e10b895c0dca": "raissa.jpg", "9f28faccd4cb4a6e5e565b7c4f8735ee": "Curriculo_Raissa_Figueiredo_Product_Designer.pdf", "0fbb030b8f67517d6fc4a366ef5e92b5": "prancha-tef.png", "21d85bcb4d1f90f228a5b21bc8c7a4bf": "esteira-modelo-inicial.png", "6a402bbcadc8373b1a96c1f386d976ef": "esteira-modelo-atual.png", "7cce751e70a9988f7518b4919b1663c2": "comunicado.jpg", "8883502401891b4f8ac1f3f5ed9b5313": "flyer-aurora-go.jpg", "c2d720281b1a7e454f426bd28a1d8778": "ranking-assessores.jpg", "0063516eb0a82e2e2230270ec345e8cf": "med-001.jpg", "68d124afeca62e2bd7664d3bb8912383": "med-051.jpg", "1d054878b430b0749e6c82062f1ae79b": "med-020.jpg", "dab501aed9d469cbe45c7ec41b4388d4": "med-129.jpg", "96c30086ccd7259d4063a0fc45503ac6": "med-139.jpg", "727e4fae38d9c0d761efe90efd8d0389": "med-pagamento.jpg", "ca5094b98eca13e9480be1f5c4d27581": "med-152.jpg", "dad2d879a0aa215208b89e3d5ead9cc6": "med-112.jpg", "ba97998edebd815fb4786a5ec47af28b": "med-117.jpg", "6ad76debe665e7e3ce4eb00fae4d92a5": "med-118.jpg", "08ad5469f8253370351391b9a80bf350": "med-120.jpg", "954c4aafc5ec01e7eaec1d92a5b72625": "med-018.jpg", "ad6249ed6a3dea522532937068fb0717": "med-115.jpg", "732f4346c64d2a7b47c56a4fc4a6e647": "med-167.jpg", "ecbdff2cdbe8778efc63fa13f11bea0b": "med-169.jpg", "2636c4289c339bd6f857c07c889c5238": "med-124.jpg", "a36b450442aa466fed6cc850f3e81b94": "med-126.jpg", "30e96818bd763a8cfef3afa228b0c122": "med-127.jpg", "b118efeedcb3bca10f4c590027e53d9a": "med-113.jpg", "f012533cca3a7ab29eb9e5f3dea3e1fd": "li-dia1.jpg", "0a7ce2e4d1e2e7c49fed57c674644930": "li-jor.jpg"}; const B = (id) => 'assets/' + M[id];
+    const DAYS = [
+      { n: 'Dia 1', t: 'Kickoff e objetivos', am: 'Manhã livre: a imersão começou à tarde, com os sócios.', pm: 'Apresentação da Lean Inception, objetivos de negócio e É/Não é, Faz/Não faz, com a participação dos sócios.', out: 'Cinco objetivos de negócio e um recorte claro do que o produto é e não é.' },
+      { n: 'Dia 2', t: 'CSD e funcionalidades', am: 'Matriz CSD: certezas, suposições e dúvidas sobre a operação de home care.', pm: 'Identificação das funcionalidades a partir de objetivos e protopersonas, e primeiras jornadas de usuário.', out: 'Protopersonas e funcionalidades ligadas a cada objetivo.' },
+      { n: 'Dia 3', t: 'Jornadas e valor', am: 'Rascunhos de baixa fidelidade para explicar funcionalidades.', pm: 'Apresentação de funcionalidades e jornadas, com levantamento de desejo do usuário e valor de negócio.', out: 'Jornadas validadas, com o que entra e o que sai do MVP.' },
+      { n: 'Dia 4', t: 'Análise técnica', am: 'Análise técnica com o líder técnico: esforço de cada funcionalidade.', pm: 'Sequenciamento das funcionalidades em ondas de entrega.', out: 'Funcionalidades classificadas por valor, desejo e esforço.' },
+      { n: 'Dia 5', t: 'MVP', am: 'Preenchimento do MVP Canvas.', pm: 'Apresentação do MVP para as partes interessadas.', out: 'Escopo do MVP alinhado com os sócios e base para o cronograma do projeto.' }
+    ];
+    const days = DAYS.map((d, i) => { const on = i === s.day; return { ...d, pressed: on ? 'true' : 'false', bg: on ? '#2A1F33' : '#FFFFFF', fg: on ? '#F8F4EF' : '#2A1F33', bd: on ? '#2A1F33' : '#E2D9D3', pick: () => this.setState({ day: i }) }; });
+    const FLOWS = [
+      { name: 'Cadastro e complexidade', who: 'Paciente e família', text: 'Escolha entre pessoa física e empresa, cadastro do paciente e do responsável e avaliação de complexidade a partir dos cuidados necessários.', goal: 'Boa qualificação profissional: o nível de complexidade direciona quem pode atender.', shots: [
+        ['0063516eb0a82e2e2230270ec345e8cf', 'Apresentação: pessoa física ou empresa', 'Tela de apresentação com escolha entre Pessoa Física e Empresa'],
+        ['68d124afeca62e2bd7664d3bb8912383', 'Avaliação de complexidade por cuidados', 'Checklist de cuidados do paciente para avaliação de complexidade, como troca de fraldas, técnica de banho e aferição de sinais vitais'],
+        ['1d054878b430b0749e6c82062f1ae79b', 'Boas-vindas com os serviços', 'Tela de boas-vindas com equipe multidisciplinar, auxiliar ou técnico de enfermagem, acompanhamento por geolocalização e prontuário on-line'],
+        ['954c4aafc5ec01e7eaec1d92a5b72625', 'Perfil com sinais vitais', 'Perfil da paciente com sinais vitais e profissionais em atendimento'] ] },
+      { name: 'Solicitar um profissional', who: 'Paciente e família', text: 'Tipo de atendimento (pontual ou contínuo), período, profissional, data e horário, revisão da solicitação e pagamento por cartão ou PIX.', goal: 'Rapidez e eficiência no atendimento: poucos passos, revisão antes de pagar.', shots: [
+        ['dab501aed9d469cbe45c7ec41b4388d4', 'Tipo de atendimento', 'Primeiro passo da solicitação: escolha do tipo de atendimento'],
+        ['96c30086ccd7259d4063a0fc45503ac6', 'Período, profissional e horários', 'Formulário de solicitação com período, profissional, datas e horários de entrada e saída'],
+        ['727e4fae38d9c0d761efe90efd8d0389', 'Revisão e forma de pagamento', 'Revisão da solicitação com folha de forma de pagamento: PIX ou cartões cadastrados, parcelas e botão Fazer pagamento'],
+        ['ca5094b98eca13e9480be1f5c4d27581', 'Pagamento por PIX', 'Pagamento por PIX com QR Code, código copia e cola, aviso sobre depósitos de terceiros e tempo para expirar'] ] },
+      { name: 'Atendimento em campo', who: 'Profissional de saúde', text: 'Alerta de nova solicitação com complexidade, distância e tempo para aceitar, trajeto até o paciente, check-in com código do cliente e checkout com a ficha de anamnese.', goal: 'Segurança para o paciente e agilidade em situações emergenciais.', shots: [
+        ['dad2d879a0aa215208b89e3d5ead9cc6', 'Nova solicitação com prazo', 'Alerta de solicitação de profissional com complexidade, distância e tempo para expirar'],
+        ['ba97998edebd815fb4786a5ec47af28b', 'Trajeto e código de check-in', 'Mapa com trajeto até o paciente e campo para o código do cliente antes do check-in'],
+        ['6ad76debe665e7e3ce4eb00fae4d92a5', 'Check-in confirmado', 'Confirmação de check-in realizado com código correto'],
+        ['08ad5469f8253370351391b9a80bf350', 'Checkout com anamnese', 'Checkout com envio de foto da ficha de anamnese e código do cliente para finalizar o atendimento'] ] },
+      { name: 'Prontuário e evolução', who: 'Paciente, família e profissionais', text: 'Sinais vitais em destaque, histórico de atualizações com filtro, SAE com diagnóstico e prescrição e anotações dos profissionais.', goal: 'Bom tratamento com o paciente: a evolução clínica fica registrada e visível para quem cuida.', shots: [
+        ['954c4aafc5ec01e7eaec1d92a5b72625', 'Sinais vitais do paciente', 'Perfil do paciente com sinais vitais'],
+        ['ad6249ed6a3dea522532937068fb0717', 'Histórico com filtro', 'Histórico de atualizações do paciente com filtro e registros dos profissionais'],
+        ['732f4346c64d2a7b47c56a4fc4a6e647', 'SAE: diagnóstico e prescrição', 'Etapa de SAE com diagnósticos e prescrições de enfermagem'],
+        ['ecbdff2cdbe8778efc63fa13f11bea0b', 'Anotações dos profissionais', 'Lista de anotações por profissional, com data e hora'] ] },
+      { name: 'Estados e exceções', who: 'Todos os perfis', text: 'Erro de comunicação, confirmação de cancelamento, solicitação cancelada com política de reembolso e solicitação recusada pelo profissional.', goal: 'Segurança e confiança: o usuário sempre sabe o que aconteceu e o que fazer em seguida.', shots: [
+        ['2636c4289c339bd6f857c07c889c5238', 'Erro de comunicação', 'Alerta de erro de comunicação com o servidor durante o check-in'],
+        ['a36b450442aa466fed6cc850f3e81b94', 'Confirmar cancelamento', 'Folha de confirmação de cancelamento com opções Sim, quero cancelar e Desistir'],
+        ['30e96818bd763a8cfef3afa228b0c122', 'Solicitação cancelada', 'Tela de solicitação cancelada com explicação sobre reembolso'],
+        ['b118efeedcb3bca10f4c590027e53d9a', 'Solicitação recusada', 'Aviso de solicitação recusada pelo profissional'] ] }
+    ];
+    const f = FLOWS[s.flow];
+    const flows = FLOWS.map((x, i) => { const on = i === s.flow; return { name: x.name, pressed: on ? 'true' : 'false', bg: on ? '#2A1F33' : '#FFFFFF', fg: on ? '#F8F4EF' : '#2A1F33', pick: () => this.setState({ flow: i }) }; });
+    const shots = f.shots.map(([id, cap, alt]) => ({ src: B(id), cap, alt, label: 'Ampliar a tela: ' + cap, open: () => this.setState({ zoom: { src: B(id), alt, title: f.name + ' · ' + cap, w: '420px' } }) }));
+    const z = s.zoom || { src: '', alt: '', title: '', w: '100%' };
+    return {
+      days, day: DAYS[s.day], flows, flow: f, shots, zoom: z, zoomOpen: !!s.zoom,
+      zDia1: () => this.setState({ zoom: { src: B('f012533cca3a7ab29eb9e5f3dea3e1fd'), alt: 'Quadro do primeiro dia da Lean Inception no FigJam', title: 'Lean Inception · dia 1 no FigJam', w: '1320px' } }),
+      zJor: () => this.setState({ zoom: { src: B('0a7ce2e4d1e2e7c49fed57c674644930'), alt: 'Jornadas de usuário 1 a 4 no FigJam', title: 'Lean Inception · jornadas de usuário', w: '1140px' } }),
+      closeZoom: () => this.setState({ zoom: null })
+    };
+  }
+}
+</script>
+</body>
+</html>

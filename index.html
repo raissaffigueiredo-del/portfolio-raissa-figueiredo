@@ -137,7 +137,7 @@ details summary::-webkit-details-marker{display:none}
 <a href="#projetos" class="btn b-coral">Explorar projetos <span aria-hidden="true">↓</span></a>
 <a href="#trajetoria" class="btn b-out">Conhecer minha trajetória</a>
 </div>
-<p class="fade3" style="margin: 0; font-size: 14px; color: #4F4556; display: flex; gap: 10px; align-items: center; flex-wrap: wrap"><span style="font-weight: 700">UX/UI</span><span aria-hidden="true" style="color: #B5546A">→</span><span style="font-weight: 700">Product Design</span><span aria-hidden="true" style="color: #B5546A">→</span><span style="font-weight: 700">Produto e Estratégia</span><span style="color: #857A8C">· desde 2021 em produtos SaaS B2B, com 4 estudos de caso documentados.</span></p>
+<p class="fade3" style="margin: 0; font-size: 14px; color: #4F4556; display: flex; gap: 10px; align-items: center; flex-wrap: wrap"><span style="font-weight: 700">UX/UI</span><span aria-hidden="true" style="color: #B5546A">→</span><span style="font-weight: 700">Product Design</span><span aria-hidden="true" style="color: #B5546A">→</span><span style="font-weight: 700">Produto e Estratégia</span><span style="color: #857A8C">· desde 2021 em produtos SaaS B2B, com 5 estudos de caso documentados.</span></p>
 </div>
 <div class="fade2" style="position: relative; max-width: 440px; width: 100%; justify-self: end">
 <div aria-hidden="true" style="position: absolute; inset: 18px -18px -18px 18px; border-radius: 999px 999px 28px 28px; background: #B5546A"></div>
@@ -188,7 +188,7 @@ details summary::-webkit-details-marker{display:none}
 </div>
 
 <div class="cases">
-<sc-for list="{{ cases }}" as="c" hint-placeholder-count="4">
+<sc-for list="{{ cases }}" as="c" hint-placeholder-count="5">
 <article class="case" style="background: {{ c.bg }}" aria-labelledby="{{ c.id }}">
 <div style="display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; flex-wrap: wrap">
 <div style="display: flex; flex-direction: column; gap: 8px">
@@ -256,7 +256,7 @@ details summary::-webkit-details-marker{display:none}
 <div class="tl-when"><span class="disp" style="font-size: 36px; color: #B5546A">2022</span><span style="font-size: 12px; font-weight: 700; color: #857A8C">a 2023 · consolidação</span></div>
 <div class="tl-what">
 <h3 class="disp2" style="margin: 0; font-size: 24px">Fluxos, jornadas e colaboração com tecnologia</h3>
-<p class="body" style="margin: 0; font-size: 15px">Estruturação de fluxos e jornadas e trabalho próximo a profissionais de tecnologia. Repertório ampliado com Introdução ao UX Design (Awari · UX NTT DATA), Design Emocional (Mergo), UI BOOST (Gilberto Prado), Métricas de Negócios Digitais (PM3) e BizTech Leadership Week (IFTL).</p>
+<p class="body" style="margin: 0; font-size: 15px">Estruturação de fluxos e jornadas e trabalho próximo a profissionais de tecnologia. A partir de 2023, em paralelo, UI/UX e facilitação da Lean Inception do <a href="case-05.html" style="color: #B5546A; font-weight: 600">Medicado App</a>, da concepção ao MVP (no mercado em 2026). Repertório ampliado com Introdução ao UX Design (Awari · UX NTT DATA), Design Emocional (Mergo), UI BOOST (Gilberto Prado), Métricas de Negócios Digitais (PM3) e BizTech Leadership Week (IFTL).</p>
 <div class="chips"><span class="chip tl-chip">Fluxos</span><span class="chip tl-chip">Jornadas de usuários</span><span class="chip tl-chip">Métricas de negócios digitais</span></div>
 </div>
 </div>
@@ -454,7 +454,12 @@ class Component extends DCLogic {
         a1: 'Barras de progresso semanais', a2: 'Ordem de prioridade com motivo', a3: 'Decisões do conselho', pillsA: ['Fila', 'Em paralelo', 'Fora da fila'], bars: [{ l: 'Avanço', w: '70%' }, { l: 'Bloqueios', w: '20%' }, { l: 'Decisões', w: '35%' }],
         p: 'O conselho queria visibilidade sobre os projetos e sobre a lógica das prioridades, mas a informação vivia em linguagem técnica. E "entregue" significava coisas diferentes para o time técnico e para o negócio.',
         d: 'Passei a apresentar presencialmente, toda semana, um documento padronizado com barras de progresso e um roteiro de avanços, bloqueios e próximos passos. Definimos a ordem de prioridade com o motivo de cada posição. Com IA na rotina, o formato evoluiu para uma esteira com fila, frentes paralelas e pontos de decisão.',
-        r: 'Mais confiança no time e no negócio, e base para decisões estratégicas sobre lançamentos, expansão e receita. A definição de entrega foi alinhada em três meses, e a preparação semanal caiu de 3 dias para 2 horas.' }
+        r: 'Mais confiança no time e no negócio, e base para decisões estratégicas sobre lançamentos, expansão e receita. A definição de entrega foi alinhada em três meses, e a preparação semanal caiu de 3 dias para 2 horas.' },
+{ id: 'c5', n: '05', title: 'Medicado: home care na palma da mão', cat: 'UX/UI Design · Product Discovery · Lean Inception', kind: 'App mobile', bg: '#E4DBE6', acc: '#B5546A', href: 'case-05.html',
+        a1: 'Lean Inception em 5 dias', a2: 'Jornadas do MVP', a3: 'Do discovery à loja', pillsA: ['Paciente', 'Profissional', 'Empresa'], bars: [{ l: 'Discovery', w: '35%' }, { l: 'UI no Figma', w: '75%' }, { l: 'No mercado', w: '100%' }],
+        p: 'Dois sócios, um enfermeiro com anos de home care e um desenvolvedor, tinham o know-how da operação, mas nenhuma definição do produto, do MVP ou do cronograma. Um app de dois lados: família e profissional precisavam confiar um no outro.',
+        d: 'Facilitei a Lean Inception (CSD, objetivos, É/Não é, protopersonas, funcionalidades e 9 jornadas), pesquisei concorrentes e referências e desenhei o app no Figma, de ponta a ponta. Trouxe também o olhar de quem já recebeu home care em casa.',
+        r: 'Um MVP com escopo acordado entre negócio, tecnologia e design, 172 telas em alta fidelidade com fluxos de paciente, profissional e empresa, e o produto no mercado em 2026, para Android e iOS.' }
     ];
     const cases = raw.map((c) => {
       const t = s.tabs[c.id];
@@ -472,8 +477,8 @@ class Component extends DCLogic {
     const d = (label) => ({ label, demo: true, decl: false });
     const r = (label) => ({ label, demo: false, decl: true });
     const skillGroups = [
-      { title: 'UX/UI & Product Design', bg: '#FFFFFF', items: [r('Design de interfaces'), r('Design visual'), d('Prototipação'), d('Arquitetura da informação'), d('Jornadas de usuários'), d('UX Writing'), d('Design de serviços'), d('Design de informação'), r('Pesquisa com usuários'), r('Testes de usabilidade')] },
-      { title: 'Product Management', bg: '#F3E3E3', items: [d('Product Discovery'), d('Lean Inception'), d('Matriz CSD'), d('Definição de escopo'), d('Planejamento de MVP'), d('Organização de demandas'), d('Priorização'), d('Stakeholder Management'), d('Product Operations')] },
+      { title: 'UX/UI & Product Design', bg: '#FFFFFF', items: [d('Design de interfaces'), d('Design visual'), d('Prototipação'), d('Arquitetura da informação'), d('Jornadas de usuários'), d('UX Writing'), d('Design de serviços'), d('Design de informação'), r('Pesquisa com usuários'), r('Testes de usabilidade')] },
+      { title: 'Product Management', bg: '#F3E3E3', items: [d('Product Discovery'), d('Lean Inception (15+ facilitadas)'), d('Matriz CSD'), d('Definição de escopo'), d('Planejamento de MVP'), d('Organização de demandas'), d('Priorização'), d('Stakeholder Management'), d('Product Operations')] },
       { title: 'Business & Strategy', bg: '#FFFFFF', items: [d('Pensamento sistêmico'), d('Product Strategy'), r('Análise de negócio'), d('Comunicação executiva'), r('Métricas de negócios digitais'), d('Estratégias de adoção'), d('Planejamento de expansão'), d('Gestão de expectativas')] },
       { title: 'Comportamentais', bg: '#E4DBE6', items: [r('Pensamento crítico'), r('Criatividade'), r('Responsabilidade'), r('Adaptabilidade'), r('Autonomia'), d('Colaboração multidisciplinar'), r('Capacidade analítica'), r('Comunicação'), r('Resolução de problemas'), r('Empatia')] }
     ];
